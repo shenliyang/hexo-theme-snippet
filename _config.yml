@@ -115,22 +115,22 @@ cc: |-
 ## 主题评论
 ### gitment
 gitment:
-  enable: true
-  owner: shenliyang
-  repo: shenliyang.github.io
-  client_id: 8c584fe9b546961c0130
-  client_secret: 15039ec78445c84b39cc54134092c95502b009ab
+  enable: false
+  owner: 
+  repo: 
+  client_id: 
+  client_secret: 
   perPage: 10
 
 
 ###友言评论
 uyan:
   enable: true
-  uyan_id: 1966422
+  uyan_id: 
 
 
 ## 网盟CNZZ网站统计
-cnzz_anaylytics: 1263868967
+cnzz_anaylytics: 
 
 ## 百度网站统计
 baidu_anaylytics: 
