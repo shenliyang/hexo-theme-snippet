@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages haha
+## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/shenliyang/hexo-theme-snippet/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
