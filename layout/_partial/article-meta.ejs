@@ -1,0 +1,33 @@
+<div class="post-meta">
+    <% if(!is_category()){ %>
+    <%
+        var _showLevel = (theme.whichCategory ? Math.min(theme.whichCategory, post.categories.data.length) : post.categories.data.length) - 1,
+                _data = post.categories.data[_showLevel],
+                _categoryInfo = _data ? _data.name : (theme.noCategoryText || "null");
+    %>
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span><%= _categoryInfo %></span>
+    </span>
+    <% } %>
+    <% if(!is_tag()){ %>
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            <% if(post.tags && post.tags.length > 0 && post.tags.data[0] && post.tags.data[0].name){ %>
+            <%= post.tags.data[0].name %>
+            <% }else{ %>
+            <%= "null" %>
+            <% } %>
+        </span>
+    </span>
+    <% } %>
+    <%  
+        var format = 'YYYY/MM/DD';
+        if (is_archive()) format = "MM/DD";
+    %>
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta"><%- date(post.date, format) %></span>
+    </span>
+</div>

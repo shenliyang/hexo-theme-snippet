@@ -1,0 +1,19 @@
+<%- partial('_partial/head') %>
+<%- partial('_partial/_head-sections/IE',null,{cache: !config.relative_link}) %>
+<body>
+    <%- partial('_partial/header') %>
+    <%- partial('_partial/nav') %>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content">
+                    <%- body %>
+                </main>
+                <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+            </div>
+        </div>
+    </section>
+    <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+    <%- partial('_partial/copyright') %>
+</body>
+</html>

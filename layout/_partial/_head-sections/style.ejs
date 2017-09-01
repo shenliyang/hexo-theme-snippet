@@ -1,0 +1,20 @@
+<%   
+    var _bootstrap = '//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4';
+    var _fontAwe =  theme.fontAwesome || '/css/thirdParty/font-awesome.min.css?rev=4.7.0';
+    var _gitmentStyle = '//imsun.github.io/gitment/style/default.css';
+    var _highlightStyle = '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/' + theme.highlightTheme + '.min.css?rev=9.12.0';
+    var style = '/css/style.css?rev=@@hash';
+%>
+
+<% if(theme.gitment.enable && is_post()){ %>
+    <%- css([_gitmentStyle]) %>
+<% } %>
+
+<% if(theme.highlightTheme && is_post()){ %>
+    <%- css([_highlightStyle]) %>
+<% } %>
+
+<%- css([_bootstrap, _fontAwe, style]) %>
+
+
+

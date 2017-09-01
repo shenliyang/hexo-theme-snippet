@@ -1,0 +1,15 @@
+<div id="main">
+  <div id="post-list">
+    <ul class="archives-post-list">
+        <% page.posts.each(function(post){ %>
+          <li class="post-items" _href="<%- url_for(post.path)%>">
+            <p class="info"><%= post.date.year()%></p>
+            <h2 class="post-item-title"><%= post.title%></h2>
+              <%- partial('_partial/article-meta', {post:post}) %>
+          </li>
+        <% }) %>
+    </ul>
+  </div>
+</div>
+<%- partial('_partial/pagination')%>
+

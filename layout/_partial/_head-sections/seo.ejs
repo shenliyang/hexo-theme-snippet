@@ -1,0 +1,10 @@
+<!--SEO-->
+<% if(config.description){ %>
+<meta name="description" content="<%= config.description%>"/>
+<% } %>
+
+<% var robotMeta = theme.robot||'all'; %>
+<meta name="robots" content="<%= robotMeta%>" />
+<meta name="google" content="<%= robotMeta%>" />
+<meta name="googlebot" content="<%= robotMeta%>" />
+<meta name="verify" content="<%= robotMeta%>" />

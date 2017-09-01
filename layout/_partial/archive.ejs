@@ -1,0 +1,37 @@
+<h3> 
+<% if(page.tag) { %>
+    <%= page.tag %> 
+<% } if(page.category) { %>
+    <%= page.category %> 
+<% } else { %>
+<% } %>
+</h3>
+<% page.posts.each(function(post){ %>
+    <article class="post">
+        <% if(post.img) { %>
+            <div class="post-media">
+                <a href="javascript:">
+                    <img class="img-ajax" src="<%= theme.placeholder %>"  data-src="<%- post.img %>"  alt="<%- post.title %>"> 
+                </a>
+            </div>
+        <% } %>
+        <div class="post-content">
+            <div class="post-head home-post-head">
+                <h1 class="post-title"> 
+                    <a href="<%- url_for(post.path) %>"><%- post.title %></a>
+                </h1>
+                <div class="post-meta">  &bull;
+                    <time class="post-date" datetime="" title="">
+                        <%- date(post.date,"YYYY年MM月DD日") %>
+                    </time>
+                </div>
+            </div>
+            <p class="brief">
+                <%- truncate(strip_html(post.content), {length: theme.excerptLength || 120, omission: '...'}) %>
+            </p> 
+        </div>
+    </article>
+ <% }) %>
+
+<%- partial('_partial/pagination') %>
+
