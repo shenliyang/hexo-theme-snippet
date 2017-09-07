@@ -10,7 +10,7 @@ gulp.task('less-task', function() {
     return gulp.src('./source/css/less/style.less')
     .pipe(less())
     .pipe(minifycss())
-    .pipe(gulp.dest('new'))
+    .pipe(gulp.dest('./source/css/'))
 });
 
 // 默认执行的任务
