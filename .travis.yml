@@ -14,6 +14,7 @@ script:
 after_script:
   - cd ./source/css/
   - git init
+  - git config user.name "shenliyang"
   - git add style.css
   - git commit -m "Build by Travis CI"
   - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
