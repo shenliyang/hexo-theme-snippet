@@ -12,7 +12,6 @@ script:
   - gulp default
 
 after_script:
-  - cd ./source/css/
   - git init
   - git config user.name "shenliyang"
   - git add .
