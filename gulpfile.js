@@ -1,15 +1,13 @@
 (function() {
     'use strict';
     var gulp = require('gulp'),
-        less = require('gulp-less'),
-        minifycss = require('gulp-minify-css');
+        less = require('gulp-less');
 
 
     // CSS预处理
     gulp.task('less-task', function() {
         return gulp.src('./source/css/less/*.less')
         .pipe(less())
-        .pipe(minifycss())
         .pipe(gulp.dest('./source/css/'))
     });
 

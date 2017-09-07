@@ -18,7 +18,6 @@
     "homepage": "https://github.com/shenliyang/hexo-theme-snippet#readme", 
     "dependencies": {
         "gulp": "^3.9.1", 
-        "gulp-less": "^3.3.2",
-        "gulp-minify-css": "^1.2.4"
+        "gulp-less": "^3.3.2"
     }
 }
