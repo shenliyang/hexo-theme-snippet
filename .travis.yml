@@ -17,7 +17,6 @@ script:
   - gulp
 
 after_script:
-  - cd ./source
   - git init
   - git config user.name "shenliyang"
   - git add .
