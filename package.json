@@ -1,0 +1,23 @@
+{
+    "name": "hexo-theme-snippet", 
+    "version": "1.0.0", 
+    "description": "Snippet 简洁而不简单，也许是一款你寻找已久的hexo主题", 
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    }, 
+    "repository": {
+        "type": "git", 
+        "url": "https://github.com/shenliyang/hexo-theme-snippet.git"
+    }, 
+    "author": "shenliyang", 
+    "license": "MIT", 
+    "private": true, 
+    "bugs": {
+        "url": "https://github.com/shenliyang/hexo-theme-snippet/issues"
+    }, 
+    "homepage": "https://github.com/shenliyang/hexo-theme-snippet#readme", 
+    "dependencies": {
+        "gulp": "^3.9.1", 
+        "gulp-less": "^3.3.2"
+    }
+}

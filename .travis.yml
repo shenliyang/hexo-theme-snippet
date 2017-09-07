@@ -1,0 +1,28 @@
+language: node_js
+node_js: stable
+
+# S: Build Lifecycle
+install:
+  - npm install
+
+before_script:
+  - npm install -g gulp 
+
+script:
+  - gulp default
+
+after_script:
+  - cd ./source/css/
+  - git init
+  - git add style.css
+  - git commit -m "Build by Travis CI"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+# E: Build LifeCycle
+
+branches:
+  only:
+    - master
+env:
+ global:
+   - GH_REF: github.com/shenliyang/hexo-theme-snippet.git
+
