@@ -19,7 +19,7 @@ script:
 after_script:
   - git init
   - git config user.name "shenliyang"
-  - git add -A
+  - git add .
   - git status
   - git commit -m "Build by Travis CI"
   - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
