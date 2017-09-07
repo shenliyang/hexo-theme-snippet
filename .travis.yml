@@ -14,9 +14,10 @@ before_script:
   - npm install -g gulp 
 
 script:
-  - gulp default
+  - gulp
 
 after_script:
+  - cd ./source
   - git init
   - git config user.name "shenliyang"
   - git add .
