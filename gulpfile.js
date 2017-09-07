@@ -11,7 +11,5 @@ gulp.task('less-task', function() {
 });
 
 // 默认执行的任务
-gulp.task('default',['less-task'],function(){
-  
-})
+gulp.task('default',['less-task'])
 
