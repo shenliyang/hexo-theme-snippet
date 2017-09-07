@@ -2,7 +2,7 @@
 'use strict';
 var gulp = require('gulp'),
     less = require('gulp-less'),
-    minifycss = require('gulp-minify-css'),
+    minifycss = require('gulp-minify-css');
 
 
 // CSS预处理
