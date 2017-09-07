@@ -1,6 +1,10 @@
 language: node_js
 node_js: stable
 
+# Travis-CI Caching
+#cache:
+#  directories:
+#    - node_modules
 
 # S: Build Lifecycle
 install:
