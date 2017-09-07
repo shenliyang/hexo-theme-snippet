@@ -5,9 +5,9 @@ var gulp = require('gulp'),
 
 // CSS预处理
 gulp.task('less-task', function() {
-    return gulp.src('./source/css/less/style.less')
+    return gulp.src('source/css/less/style.less')
     .pipe(less())
-    .pipe(gulp.dest('./source/css/'))
+    .pipe(gulp.dest('source/css/'))
 });
 
 // 默认执行的任务
