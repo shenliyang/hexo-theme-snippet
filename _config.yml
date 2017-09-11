@@ -92,7 +92,7 @@ warning:
 
 
 ## 首页文章简介的图片占位符
-placeholder: http://placeholder.cn/220x160/CCC/EEE
+placeholder: ./img/loading.gif
 
 ## 首页文章简介的图片
 defaultImgs:
