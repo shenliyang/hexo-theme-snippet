@@ -178,7 +178,7 @@ defaultImgs:
   - /img/default-1.jpg
   
 ## 懒加载图片占位符
-placeholder: http://via.placeholder.com/220x160
+placeholder: ./img/loading.gif
 
 
 ### 截取文章首页描述字数
