@@ -22,7 +22,7 @@ after_script:
   - git add .
   - git status
   - git commit -m "Synchronization Update Theme By Travis CI"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}/themes/snippet" master:write
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:write
 # E: Build LifeCycle
 
 branches:
