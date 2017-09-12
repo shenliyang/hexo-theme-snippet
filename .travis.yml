@@ -21,8 +21,8 @@ after_script:
   - git config user.name "shenliyang"
   - git add .
   - git status
-  - git commit -m "Synchronization Update Theme By Travis CI"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:write
+  - git commit -m "Update Theme By Travis CI"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
 # E: Build LifeCycle
 
 branches:
@@ -30,5 +30,5 @@ branches:
     - master
 env:
  global:
-   - GH_REF: github.com/shenliyang/shenliyang.github.io.git
+   - GH_REF: github.com/shenliyang/hexo-theme-snippet.git
 
