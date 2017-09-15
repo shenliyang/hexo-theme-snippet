@@ -28,7 +28,6 @@ after_success:
 after_failure:
 
 after_script:
-  - cd ./public
   - git init
   - git config user.name "shenliyang"
   - git config user.email ""
