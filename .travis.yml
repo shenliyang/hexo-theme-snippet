@@ -1,28 +1,38 @@
 language: node_js
 node_js: stable
 
-# Travis-CI Caching
+#cache
 cache:
   directories:
-    - node_modules
+    - "node_modules"
+
+notifications:
+  email:
+    recipients:
+      - 3075822809@qq.com
+    on_success: never
+    on_failure: always
 
 # S: Build Lifecycle
 install:
   - npm install
 
 before_script:
+  - export TZ='Asia/Shanghai'
   - npm install -g gulp 
+  - chmod +x _travis.sh
 
 script:
-  - gulp
+  - hexo g
+  - gulp 
+
+after_success:
+
+after_failure:
 
 after_script:
-  - git init
-  - git config user.name "shenliyang"
-  - git add .
-  - git status
-  - git commit -m "Update Theme By Travis CI"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+  - ./_travis.sh
+
 # E: Build LifeCycle
 
 branches:
@@ -30,5 +40,5 @@ branches:
     - master
 env:
  global:
-   - GH_REF: github.com/shenliyang/hexo-theme-snippet.git
+   - GH_REF: github.com/shenliyang/shenliyang.github.io.git
 
