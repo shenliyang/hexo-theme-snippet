@@ -18,12 +18,9 @@ install:
   - npm install
 
 before_script:
-  - export TZ='Asia/Shanghai'
   - npm install -g gulp 
-  - chmod +x _travis.sh
 
 script:
-  - hexo g
   - gulp 
 
 after_success:
@@ -31,7 +28,13 @@ after_success:
 after_failure:
 
 after_script:
-  - ./_travis.sh
+  - cd ./public
+  - git init
+  - git config user.name "shenliyang"
+  - git config user.email ""
+  - git add .
+  - git commit -m "Build by Travis CI"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
 
 # E: Build LifeCycle
 
@@ -40,5 +43,5 @@ branches:
     - master
 env:
  global:
-   - GH_REF: github.com/shenliyang/shenliyang.github.io.git
+   - GH_REF: github.com/shenliyang/hexo-theme-snippet.git
 
