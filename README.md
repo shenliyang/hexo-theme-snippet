@@ -1,6 +1,8 @@
 # hexo-theme-snippet
 
-Snippet 简洁而不简单，也许是一款你寻找已久的hexo主题
+Snippet 简洁而不简单，也许是一款你寻找已久的hexo主题。
+
+如果本主题也是你喜欢的菜，请动动手指:star: [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers) 支持一下:pray:。
 
 [![Build Status](https://www.travis-ci.org/shenliyang/hexo-theme-snippet.svg?branch=master)](https://www.travis-ci.org/shenliyang/hexo-theme-snippet)
 [![codebeat badge](https://codebeat.co/badges/6ef2dcd2-af90-40e0-9628-ac689441f774)](https://codebeat.co/projects/github-com-shenliyang-hexo-theme-snippet-master)
@@ -9,9 +11,9 @@ Snippet 简洁而不简单，也许是一款你寻找已久的hexo主题
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/shenliyang/hexo-theme-snippet/blob/master/LICENSE)
 
 
-[在线预览 Demo](http://shenliyang.github.io)
+[在线预览 Demo](http://shenliyang.github.io)  
 
-![hexo-theme-snippet](http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/snippet-screenshots1000.jpg)
+![hexo-theme-snippet](http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/snippet-screenshots2000.jpg)
 
 
 ## Features | 特点
@@ -29,6 +31,7 @@ Snippet 简洁而不简单，也许是一款你寻找已久的hexo主题
 - [x] 支持网站统计和文章推送
 - [x] 移动端的简洁设计
 - [x] 支持代码高亮并支持自定义高亮样式
+- [x] 支持Shell脚本一键使用Travis CI持续部署Hexo博客
 
 
 
@@ -233,9 +236,93 @@ since: 2017
 robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all，搜索 `meta name="robots"` 或请参考： https://support.google.com/webmasters/answer/79812?hl=zh-Hans
 version: 1.0.0
 
-
 ```
 
+
+
+## Manual deploy | 手动部署主题
+
+1. Gulp打包构建，压缩优化部署前的代码。  [Gulp入门指南](http://www.gulpjs.com.cn/docs/getting-started/)
+
+``` bash
+    npm install   //安装项目依赖
+```
+2. 拷贝gulpfile.js文件到项目根目录下(非主题目录)
+``` bash
+    gulp 或者 gulp default   //执行打包任务
+```
+
+3. 清空hexo静态文件和缓存，并重新生成
+``` bash
+    hexo clean && hexo g  //清空缓存并生成静态文件
+```
+
+4. 当gulp执行完成，并提示  `please execute： hexo d` 时，可以进行发布
+``` bash
+    hexo d 或者 gulp deploy  //部署发布
+```
+
+## Travis CI deploy | 持续集成自动部署
+CI即持续集成系统。对个人而言，就是让你的代码在提交到远程(这里是GitHub)，立即自动编译，并且在失败后可以自动给你发邮件的东西。当然，除了编译，还能做自动化测试、自动部署等。
+* 默认前提是已经通过Github进行授权登录Travis网站，并关联了GitHub上的仓库和相关配置。
+1. 拷贝主题下的`gulpfile.js` `travis.yml` `travis.sh` 到项目根目录
+
+2. 配置travis.yml 文件
+``` yml
+language: node_js #使用Node语言环境
+node_js: stable #安装稳定版Node
+
+sudo: false  
+
+#cache 启用缓存，加快构建速度
+cache: 
+  directories:
+    - "node_modules"
+
+notifications: #启用通知
+  email:
+    recipients:
+      - *****@qq.com #接收构建消息的邮件 不需要可设置为false
+    on_success: never #部署成功时，可设置alway never change
+    on_failure: always #部署失败时，同上
+
+# S: Build Lifecycle
+install:
+  - npm install  #安装依赖
+
+before_script:
+  - export TZ='Asia/Shanghai' #设置时区
+  - npm install -g gulp  #安装Gulp
+  - chmod +x _travis.sh  #授权脚本执行权限
+
+script:
+  - hexo clean && hexo g #清除缓存并生成静态文件
+  - gulp #执行gulp任务
+
+after_success: #实行成功时(以后扩展功能使用)
+
+after_script:
+  - ./_travis.sh #执行部署脚本
+# E: Build LifeCycle
+
+branches:
+  only:
+    - dev #需要监听部署的分支
+env:
+ global:
+   - GH_REF: github.com/shenliyang/shenliyang.github.io.git #更改为自己git地址
+```
+
+3. 提交代码到Github，实现自动部署
+4. 当 .travis.yml 配置文件修改完成后，将其提交到远程仓库的 hexo 分支下，此时如果之前的配置一切ok，我们应该能在 Travis CI 的博客项目主页页面中看到自动构建已经在开始执行了。上面会显示出构建过程中的日志信息及状态等。
+
+
+## Theme dev | 主题开发
+Gulp 执行启用主题二次开发模式
+``` bash
+    gulp dev 
+```
+会监听样式less或者JS文件的变动。然后执行上面的【主题发布】即可。
 
 
 ### Run | 运行预览
@@ -246,49 +333,6 @@ version: 1.0.0
 
 监听4000端口，使用浏览器打开地址`http://localhost:4000`进行预览。
 
-### Engineer | 打包构建工具 
-
-Gulp搭建使用： [Gulp入门指南
-](http://www.gulpjs.com.cn/docs/getting-started/)
-
-拷贝gulpfile.js文件到项目根目录下(非主题跟目录),安装Gulp项目依赖
-``` bash
-    npm install
-```
-
-***推荐插件:***
-
-如果你为了更好地写博客，推荐Hexo插件： `hexo-admin`。
-
-``` bash
-    npm install hexo-admin --save
-```
-提供类似后台的功能。使用参考[官方Repo](https://github.com/jaredly/hexo-admin)
-
-## Theme deploy | 主题发布
-
-1. 清空hexo静态文件和缓存，并重新生成
-``` bash
-    hexo clean && hexo g
-```
-
-2. gulp 执行默认任务，部署前代码处理
-``` bash
-    gulp 或者 gulp default
-```
-
-3. 当gulp执行完成，并提示  `please execute： hexo d` 时，可以进行发布
-``` bash
-    hexo d 或者 gulp deploy
-```
-
-## Theme dev | 主题开发
-gulp 执行启用主题开发模式
-``` bash
-    gulp dev 
-```
-会监听样式less或者JS文件的变动。然后执行上面的【主题发布】即可。
-
 
 ## Thanks | 感谢
 
@@ -297,13 +341,14 @@ gulp 执行启用主题开发模式
 ## Contribute | 贡献
 欢迎大家提issue或者pull request，主题还有很多不完善之处，开源项目也离不开大家的批评指正。
 
-如果觉得本主题还不错，欢迎[Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers)下，支持和鼓励才是后续更新最大的动力。
+如果觉得本主题还不错，欢迎  [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers)下，支持和鼓励才是后续更新最大的动力。
 
 ## Update log | 重要更新
 
 ### v1.0.0
 
 - 提交至官方hexo-theme-snippet仓库，Snippet主题正式上线
+- 增加Travis CI 持续集成自动部署
 
 ## License
 
