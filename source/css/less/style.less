@@ -328,6 +328,9 @@ pre {
 /*====================================================
     main post area
 ====================================================*/
+.main-content{
+    background-color:@color_4;
+}
 .post {
     padding: 20px;
     background: #fff;
@@ -807,6 +810,15 @@ pre {
             padding: 0;
             li {
                 list-style: none;
+            }
+        }
+        .archive-list-count , .category-list-count{
+            margin-left:5px;
+            &:before {
+                content: "(";
+            }
+            &:after{
+                content: ")";
             }
         }
     }

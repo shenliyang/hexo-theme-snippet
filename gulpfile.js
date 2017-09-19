@@ -3,7 +3,6 @@
     var gulp = require('gulp'),
         less = require('gulp-less');
 
-
     // CSS预处理
     gulp.task('less-task', function() {
         return gulp.src('./source/css/less/style.less')
