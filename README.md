@@ -341,7 +341,7 @@ Gulp 执行启用主题二次开发模式
 ## Contribute | 贡献
 欢迎大家提issue或者pull request，主题还有很多不完善之处，开源项目也离不开大家的批评指正。
 
-如果觉得本主题还不错，欢迎  [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers)下，支持和鼓励才是后续更新最大的动力。
+**如果觉得本主题还不错，欢迎  [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers)下，支持和鼓励才是后续更新最大的动力。**
 
 ## Update log | 重要更新
 
