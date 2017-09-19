@@ -203,7 +203,7 @@ pre {
 
 /* header */
 /*====================================================
-    header
+    header 
 ====================================================*/
 .main-header {
     position: relative;
@@ -328,6 +328,10 @@ pre {
 /*====================================================
     main post area
 ====================================================*/
+#main{
+    background: @color_4;
+    padding:10px 0;
+}
 .post {
     padding: 20px;
     background: #fff;
@@ -807,6 +811,15 @@ pre {
             padding: 0;
             li {
                 list-style: none;
+            }
+        }
+        .archive-list-count , .category-list-count{
+            margin-left:5px;
+            &:before {
+                content: "(";
+            }
+            &:after{
+                content: ")";
             }
         }
     }

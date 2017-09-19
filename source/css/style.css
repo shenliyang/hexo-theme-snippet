@@ -212,7 +212,7 @@ pre {
 }
 /* header */
 /*====================================================
-    header
+    header 
 ====================================================*/
 .main-header {
   position: relative;
@@ -327,8 +327,9 @@ pre {
 /*====================================================
     main post area
 ====================================================*/
-.main-content {
-  background-color: #fff;
+#main {
+  background: #fff;
+  padding: 10px 0;
 }
 .post {
   padding: 20px;

@@ -126,11 +126,11 @@ gitment:
 ###友言评论
 uyan:
   enable: true
-  uyan_id: 
+  uyan_id: 1966422
 
 
 ## 网盟CNZZ网站统计
-cnzz_anaylytics: 
+cnzz_anaylytics: 1263868967
 
 ## 百度网站统计
 baidu_anaylytics: 
