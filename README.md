@@ -2,7 +2,7 @@
 
 Snippet 简洁而不简单，也许是一款你寻找已久的hexo主题。
 
-如果本主题也是你喜欢的菜，请动动手指:star: [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers) 支持一下:pray:。
+如果本主题也是你喜欢的菜，请动动手指 [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers) 支持一下:pray:。
 
 [![Build Status](https://www.travis-ci.org/shenliyang/hexo-theme-snippet.svg?branch=master)](https://www.travis-ci.org/shenliyang/hexo-theme-snippet)
 [![codebeat badge](https://codebeat.co/badges/6ef2dcd2-af90-40e0-9628-ac689441f774)](https://codebeat.co/projects/github-com-shenliyang-hexo-theme-snippet-master)
@@ -14,7 +14,6 @@ Snippet 简洁而不简单，也许是一款你寻找已久的hexo主题。
 [在线预览 Demo](http://shenliyang.github.io)  
 
 ![hexo-theme-snippet](http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/snippet-screenshots2000.jpg)
-
 
 ## Features | 特点
 
@@ -34,17 +33,13 @@ Snippet 简洁而不简单，也许是一款你寻找已久的hexo主题。
 - [x] 支持Shell脚本一键使用Travis CI持续部署Hexo博客
 
 
-
 ##  Install | 安装前准备
 
-
 **如果你在此之前使用的是 `Hexo 2.x` 版本，为了避免未知的错误，请备份好数据，或者建立新的博客目录**
-
 
 ### Prerequisites | 环境搭建
 
 `Node.js` 环境、`Git` 环境以及 `Hexo` ,如果你尚未安装或者不了解 `Hexo`，请参考 [官方教程](https://hexo.io/zh-cn/docs/index.html) 进行了解以及安装。如果需要构建工具请自行安装，或使用本主题的Gulp方式。
-
 
 ### Dependencies | 安装依赖
 
@@ -79,7 +74,6 @@ Snippet 简洁而不简单，也许是一款你寻找已久的hexo主题。
 
 主题配置：
 
-
 ``` yaml
 
 # layout -- 布局相关
@@ -100,7 +94,6 @@ menu:
   url: /categories/javascript/
   icon: 
 
-
 ## favicon -- 网站图标位置{@favicon}
 favicon: /favicon.ico
 
@@ -118,14 +111,13 @@ widgets:
 - tagcloud
 - friends
 
-
 # 各个小工具的设置
 
 ## notification config --网站公告设置,支持 html 和 纯文本
 notification: |- 
-            <p>主题Snippet v1.1.0版本即将上线，敬请期待~！<br>
-            主题作者：<a href="https://github.com/shenliyang/hexo-theme-snippet"
-            title="fork me" target="_blank">Snippet</a></p>
+            <p>主题Snippet v1.1.0版本即将上线，敬请期待~ <br/>
+            主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+            <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request。<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a></p>
 
 ## 文章分类设置{@cate_config:{@show_count:是否显示数字，@show_current: 是否高亮当前category}}
 cate_config:
@@ -151,14 +143,12 @@ tagcloud_config:
 links:
 - 主题作者: http://www.shenliyang.com
 
-
 # 自定义内容设置
 
 ### 添加版权保护{@archiveCopyright: {enable:是否开启,tip:提示信息}}
 archiveCopyright:
   enable: true
   tip: '商业转载请联系作者获得授权,非商业转载请注明出处 © Snippet'
-
 
 ## 当无目录时的显示文字，默认为'无'
 noCategoryText: '无'
@@ -171,35 +161,30 @@ warning:
   days: 300 
   text: '本文于%d天之前发表，文中内容可能已经过时。'
   
-  
-### 首页文章简介的图片
-### 规则:Front-matter中的自定义'img'字段 > 文章内的图片(随机获取) > defaultImgs(随机获取) 
+### 首页文章缩略图
+### 加载规则: 自定义文章缩略图(在Front-matter中添加的'img'字段) > 文章内的图片 > defaultImgs(随机获取) > 无图模式列表
   
 ## 自定义随机图片
 defaultImgs:
-  - http://www.example.jpg
-  - /img/default-1.jpg
+  - http://www.example.jpg //远程图片链接样例
+  - /img/default-1.jpg //本地图片链接样例
   
 ## 懒加载图片占位符
-placeholder: ./img/loading.gif
-
+placeholder: ./img/loading.gif //为了友好，不建议改动
 
 ### 截取文章首页描述字数
-excerptLength: 120
-
+excerptLength: 120 //首页文章描述要截取的数量
 
 ## 代码高亮配置{@highlightTheme:/*参考网站：https://cdnjs.com/libraries/highlight.js*/}
 ## 可配置主题名称[default,github,foundation,googlecode,monokai-sublime,monokai,monokai,xcode,vs2015,tomorrow,hybrid]
 
 highlightTheme: default
 
-
 ## 版权声明文字，支持html/text，但不要使用<li>标签
 cc: |-
       <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
       知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
       </a>
-
 
 ## 主题评论
 ### gitment
@@ -217,7 +202,6 @@ gitment:
 uyan:
   enable: true
   uyan_id: 
-
 
 ## 网盟CNZZ网站统计 /*参考网站：http://www.umeng.com/ */
 cnzz_anaylytics: 
@@ -239,14 +223,13 @@ version: 1.0.0
 ```
 
 
-
 ## Manual deploy | 手动部署主题
 
 1. Gulp打包构建，压缩优化部署前的代码。  [Gulp入门指南](http://www.gulpjs.com.cn/docs/getting-started/)
-
 ``` bash
     npm install   //安装项目依赖
 ```
+
 2. 拷贝gulpfile.js文件到项目根目录下(非主题目录)
 ``` bash
     gulp 或者 gulp default   //执行打包任务
@@ -316,7 +299,6 @@ env:
 3. 提交代码到Github，实现自动部署
 4. 当 .travis.yml 配置文件修改完成后，将其提交到远程仓库的 hexo 分支下，此时如果之前的配置一切ok，我们应该能在 Travis CI 的博客项目主页页面中看到自动构建已经在开始执行了。上面会显示出构建过程中的日志信息及状态等。
 
-
 ## Theme dev | 主题开发
 Gulp 执行启用主题二次开发模式
 ``` bash
@@ -324,24 +306,22 @@ Gulp 执行启用主题二次开发模式
 ```
 会监听样式less或者JS文件的变动。然后执行上面的【主题发布】即可。
 
-
 ### Run | 运行预览
-
 ``` bash
     hexo clean && hexo g && hexo s -p 4000
 ```
 
 监听4000端口，使用浏览器打开地址`http://localhost:4000`进行预览。
 
-
 ## Thanks | 感谢
 
 在设计这款主题的时候参考了好多主题和博客的设计和创意，深表感谢！ 
 
 ## Contribute | 贡献
-欢迎大家提issue或者pull request，主题还有很多不完善之处，开源项目也离不开大家的批评指正。
+接受各种形式的贡献，包括但不限于提交问题或需求，修复代码。
+欢迎大家提Issue或者Pull Request。
 
-**如果觉得本主题还不错，欢迎  [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers)下，支持和鼓励才是后续更新最大的动力。**
+== 如果觉得本主题还不错，欢迎  [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers)下，您的支持和鼓励才是后续更新最大的动力。==
 
 ## Update log | 重要更新
 
