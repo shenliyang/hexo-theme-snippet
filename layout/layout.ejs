@@ -6,7 +6,7 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content">
+                <main class="col-md-8 main-content <%if(is_post()){%>m-post<%}%>">
                     <%- body %>
                 </main>
                 <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>

@@ -871,7 +871,6 @@ pre {
         }
     }
     background: #202020;
-    padding: 35px 0 0;
     color: @color_6;
 }
 
@@ -897,29 +896,6 @@ pre {
             bottom: -1px;
         }
     }
-    .recent-post {
-        .recent-single-post {
-            border-bottom: 1px dashed #ebebeb;
-            padding-bottom: 14px;
-            margin-bottom: 14px;
-            &:last-child {
-                margin-bottom: 0;
-            }
-            .post-title {
-                color: @color_1;
-                -webkit-transition: all 0.2s ease;
-                -o-transition: all 0.2s ease;
-                transition: all 0.2s ease;
-                &:hover {
-                    color: @color_3;
-                    text-decoration: none;
-                }
-            }
-            .date {
-                color: @color_6;
-            }
-        }
-    }
     .tag-cloud {
         a {
             .border(#ebebeb);
@@ -937,30 +913,9 @@ pre {
             }
         }
     }
-    .social {
-        padding: 0;
-        margin: 0;
-        li {
-            display: inline-block;
-            margin: 0 2px 5px 0;
-            text-align: center;
-            a {
-                i {
-                    width: 35px;
-                    height: 35px;
-                    line-height: 35px;
-                    border: 1px solid #ebebeb;
-                    color: @color_6;
-                    transition: all 0.2s;
-                }
-            }
-            &:hover {
-                i {
-                    color: @color_4;
-                    background: #e67e22;
-                    .border(#e67e22);
-                }
-            }
+    .friends-link {
+        a {
+            margin-right:10px
         }
     }
     .newsletter {
@@ -1073,6 +1028,7 @@ pre {
         }
     }
     .prev-next-wrap {
+        margin:15px;
         a {
             display: block;
         }
@@ -1099,7 +1055,11 @@ pre {
     .post-footer{
         display:none;
     }
-
+    .content-wrap {
+        .m-post{
+            padding:0px;    
+        }
+    }
 }
 
 @media (min-width: 768px) {
