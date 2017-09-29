@@ -831,9 +831,6 @@ pre {
   border: 1px solid #e67e22;
   text-decoration: none;
 }
-.widget .friends-link a {
-  margin-right: 10px;
-}
 .widget .social a {
   display: inline-block;
   text-align: center;
@@ -842,9 +839,9 @@ pre {
   line-height: 45px;
   color: #fff;
   background: #808080;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   margin-right: 10px;
   margin-bottom: 10px;
 }
@@ -858,6 +855,9 @@ pre {
 }
 .widget .social a i {
   font-size: 20px;
+}
+.widget .friends-link a {
+  margin-right: 15px;
 }
 .widget .ad {
   text-align: center;
