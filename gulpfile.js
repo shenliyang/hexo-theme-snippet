@@ -105,6 +105,4 @@
     gulp.task('default',['deploy'],function(e){
        console.log("[complete] please execute： hexo d");
     })
-
-
 })();

@@ -1,19 +1,24 @@
 /* _mixins.less */
 
 .text-shadow (@string: 0 1px 3px rgba(0, 0, 0, 0.25)) {
-  text-shadow: @string;
+   text-shadow: @string;
+}
+
+.transition(@string:all .2s){
+  -webkit-transition: @string;
+          transition: @string;
 }
 
 .box-shadow (@string) {
   -webkit-box-shadow: @string;
-  -moz-box-shadow: @string;
-  box-shadow: @string;
+     -moz-box-shadow: @string;
+          box-shadow: @string;
 }
 
 .box-sizing (@type: border-box) {
   -webkit-box-sizing: @type;
-  -moz-box-sizing: @type;
-  box-sizing: @type;
+     -moz-box-sizing: @type;
+          box-sizing: @type;
 }
 
 .border(@color: #303030){

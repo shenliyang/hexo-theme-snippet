@@ -20,6 +20,7 @@ Snippet 简洁而不简单，也许是一款你寻找已久的hexo主题。
 - [x] 原生JavaScript实现
 - [x] 样式支持CSS预处理器Less，方便主题自定义
 - [x] 文章过期提醒功能
+- [x] 文章阅读进度条
 - [x] 网站公告功能
 - [x] 首页图片懒加载
 - [x] 首页文章缩略图自动检索文章内图片，支持自动随机图片
@@ -106,6 +107,7 @@ date_format: YYYY-MM-DD HH:mm:ss
 ## widgets -- 6个左边小工具{@widgets:[notification,category,archive,tagcloud,friends]}
 widgets:
 - notification 
+- social
 - category
 - archive
 - tagcloud
@@ -115,10 +117,32 @@ widgets:
 
 ## notification config --网站公告设置,支持 html 和 纯文本
 notification: |- 
-            <p>主题Snippet v1.1.0版本即将上线，敬请期待~ <br/>
+            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
             主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
             <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request。<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a></p>
 
+## 社交设置{@name:社交工具名字，@icon:社交工具图标，@href:设置工具链接 /*参考图标：http://fontawesome.io/icons/*/}
+
+social:
+ - name: Github
+   icon: git
+   href: //github.com/shenliyang
+ - name: 联系QQ
+   icon: qq
+   href: //wpa.qq.com/msgrd?v=3&uin=59374966&site=qq&menu=yes
+ - name: 邮箱
+   icon: envelope-o
+   href: //mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=-cjEzsrJxMvLvYyM056SkA
+ - name: 微博
+   icon: weibo
+   href: /
+ - name: QQ群
+   icon: users
+   href: /
+ - name: RSS
+   icon: feed
+   href: /atom.xml
+   
 ## 文章分类设置{@cate_config:{@show_count:是否显示数字，@show_current: 是否高亮当前category}}
 cate_config:
    show_count: true
@@ -218,7 +242,7 @@ fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
 #网站主题配置
 since: 2017
 robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all，搜索 `meta name="robots"` 或请参考： https://support.google.com/webmasters/answer/79812?hl=zh-Hans
-version: 1.0.0
+version: 1.1.0
 
 ```
 
@@ -326,9 +350,17 @@ Gulp 执行启用主题二次开发模式
 ## Update log | 重要更新
 
 ### v1.0.0
-
 - 提交至官方hexo-theme-snippet仓库，Snippet主题正式上线
 - 增加Travis CI 持续集成自动部署
+
+### v1.1.0
+- 重构样式并优化Less文件，方便二次开发和自定义主题样式。
+- 新增 右侧社交边栏 小工具。
+
+## Next version update plan | v1.2.0版本更新计划
+- [x] 优化Js文件
+- [x] 增加文章导航目录功能
+- [x] 优化手机端显示
 
 ## License
 
