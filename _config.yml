@@ -52,12 +52,12 @@ social:
  - name: Github
    icon: git
    href: //github.com/shenliyang
- - name: 联系QQ
-   icon: qq
-   href: //wpa.qq.com/msgrd?v=3&uin=59374966&site=qq&menu=yes
  - name: 邮箱
    icon: envelope-o
-   href: //mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=-cjEzsrJxMvLvYyM056SkA
+   href: mailto:snippet@91h5.cc
+ - name: 联系QQ
+   icon: qq
+   href: /
  - name: 微博
    icon: weibo
    href: /
