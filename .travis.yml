@@ -1,6 +1,8 @@
 language: node_js
 node_js: stable
 
+sudo: false 
+
 #cache
 cache:
   directories:
@@ -9,38 +11,38 @@ cache:
 notifications:
   email:
     recipients:
-      - 3075822809@qq.com
+      - snippet@91h5.cc
     on_success: never
     on_failure: always
 
 # S: Build Lifecycle
 install:
   - npm install
+#  - gem install travis
+#  - travis login --pro --github-token ${GH_TOKEN}
 
 before_script:
+  - export TZ='Asia/Shanghai'
   - npm install -g gulp 
+  - chmod +x _travis.sh
 
 script:
+  - hexo clean && hexo g
   - gulp 
 
 after_success:
-
-after_failure:
+ # - LAST_BUILD_NUMBER=68
+ # - for i in $(seq 1 $LAST_BUILD_NUMBER ); do  travis logs $i --delete --force ; done
 
 after_script:
-  - git init
-  - git config user.name "shenliyang"
-  - git config user.email ""
-  - git add .
-  - git commit -m "Build by Travis CI"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+  - ./_travis.sh
 
 # E: Build LifeCycle
 
 branches:
   only:
-    - master
+    - dev
 env:
  global:
-   - GH_REF: github.com/shenliyang/hexo-theme-snippet.git
+   - GH_REF: github.com/shenliyang/shenliyang.github.io.git
 

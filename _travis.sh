@@ -1,7 +1,7 @@
 #--------------------------------------------
 #!/bin/bash
 # author：shenliyang
-# site：https://github.com/shenliyang
+# website：https://github.com/shenliyang
 # slogan：梦想还是要有的，万一实现了呢。
 #--------------------------------------------
 
@@ -31,11 +31,17 @@ function default(){
   cd ./public
 
 cat <<EOF >> README.md 
-持续集成 | 集成结果
----|---
-完成时间 | $time
-完成状态 | passing
-     
+部署状态 | 集成结果 | 参考值
+---|---|---
+完成时间 | $time | yyyy-mm-dd hh:mm:ss
+部署环境 | $TRAVIS_OS_NAME + $TRAVIS_NODE_VERSION | window \| linux + stable
+部署类型 | $TRAVIS_EVENT_TYPE | push \| pull_request \| api \| cron
+启用Sudo | $TRAVIS_SUDO | false \| true
+仓库地址 | $TRAVIS_REPO_SLUG | owner_name/repo_name
+提交分支 | $TRAVIS_COMMIT | hash 16位
+提交信息 | $TRAVIS_COMMIT_MESSAGE |
+Job ID   | $TRAVIS_JOB_ID | 
+Job NUM  | $TRAVIS_JOB_NUMBER | 
 EOF
 
   git init
@@ -45,7 +51,6 @@ EOF
   git commit -m "Build by Travis CI"
   git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
 } 
-
 
 case $1 in 
     "success")
