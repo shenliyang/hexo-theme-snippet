@@ -2,7 +2,7 @@
 
 Snippet 简洁而不简单，也许是一款你寻找已久的hexo主题。
 
-如果本主题也是你喜欢的菜，请动动手指 [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers) 支持一下:pray:。
+如果本主题也是你喜欢的菜，请动动手指 [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers) 支持一下:pray:
 
 [![Build Status](https://www.travis-ci.org/shenliyang/hexo-theme-snippet.svg?branch=master)](https://www.travis-ci.org/shenliyang/hexo-theme-snippet)
 [![codebeat badge](https://codebeat.co/badges/6ef2dcd2-af90-40e0-9628-ac689441f774)](https://codebeat.co/projects/github-com-shenliyang-hexo-theme-snippet-master)
@@ -85,15 +85,6 @@ menu:
 - page: home
   url: /
   icon: fa-home
-- page: Html5
-  url: /categories/html5/
-  icon: 
-- page: vue
-  url: /categories/vue/
-  icon: 
-- page: JavaScript
-  url: /categories/javascript/
-  icon: 
 
 ## favicon -- 网站图标位置{@favicon}
 favicon: /favicon.ico
@@ -117,7 +108,7 @@ widgets:
 
 ## notification config --网站公告设置,支持 html 和 纯文本
 notification: |- 
-            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
+            <p>主题Snippet v1.1.0版本已经上线！欢迎更新~ <br/>
             主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
             <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request。<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a></p>
 
@@ -127,12 +118,12 @@ social:
  - name: Github
    icon: git
    href: //github.com/shenliyang
- - name: 联系QQ
-   icon: qq
-   href: //wpa.qq.com/msgrd?v=3&uin=59374966&site=qq&menu=yes
  - name: 邮箱
    icon: envelope-o
-   href: //mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=-cjEzsrJxMvLvYyM056SkA
+   href: mailto:snippet@91h5.cc
+ - name: 联系QQ
+   icon: qq
+   href: /
  - name: 微博
    icon: weibo
    href: /
@@ -289,7 +280,7 @@ cache:
 notifications: #启用通知
   email:
     recipients:
-      - *****@qq.com #接收构建消息的邮件 不需要可设置为false
+      - snippet@91h5.cc #接收构建消息的邮件 不需要可设置为false
     on_success: never #部署成功时，可设置alway never change
     on_failure: always #部署失败时，同上
 
@@ -345,7 +336,7 @@ Gulp 执行启用主题二次开发模式
 接受各种形式的贡献，包括但不限于提交问题或需求，修复代码。
 欢迎大家提Issue或者Pull Request。
 
-== 如果觉得本主题还不错，欢迎  [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers)下，您的支持和鼓励才是后续更新最大的动力。==
+如果觉得本主题还不错，==欢迎  [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers)下==，您的支持和鼓励才是后续更新最大的动力
 
 ## Update log | 重要更新
 
@@ -357,7 +348,7 @@ Gulp 执行启用主题二次开发模式
 - 重构样式并优化Less文件，方便二次开发和自定义主题样式。
 - 新增 右侧社交边栏 小工具。
 
-## Next version update plan | v1.2.0版本更新计划
+## TODO | 更新计划
 - [x] 优化Js文件
 - [x] 增加文章导航目录功能
 - [x] 优化手机端显示
