@@ -1,5 +1,4 @@
 categories: Categories
-search: Search
 tags: Tags
 tagcloud: Tag Cloud
 tweets: Tweets
@@ -31,3 +30,12 @@ post_categories: Categories
 post_tags: Tags
 post_licence: License
 popular_post: Popular Posts
+
+search:
+  close: Close
+  name: Search
+
+state:
+  posts: Blog
+  categories: Categorie
+  tags: Tag

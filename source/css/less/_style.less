@@ -1014,3 +1014,43 @@ pre {
         }
     }
 }
+
+.busuanzi-count:before {
+    content: " ";
+    float: left;
+    width: 260px;
+    min-height: 25px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .busuanzi-count {
+        width: auto;
+    }
+    .busuanzi-count:before {
+        display: none;
+    }
+}
+@media (max-width: 767px) {
+    .busuanzi-count {
+        width: auto;
+    }
+    .busuanzi-count:before {
+        display: none;
+    }
+}
+.site-uv,
+.site-pv,
+.page-pv {
+    display: inline-block;
+}
+.site-uv .busuanzi-value,
+.site-pv .busuanzi-value,
+.page-pv .busuanzi-value {
+    margin: 0 5px;
+}
+.site-uv {
+    margin-right: 10px;
+}
+.site-uv::after {
+    content: "|";
+    padding-left: 10px;
+}

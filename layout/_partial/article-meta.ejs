@@ -30,4 +30,16 @@
         <i class="fa fa-clock-o"></i>
         <span class="date-meta"><%- date(post.date, format) %></span>
     </span>
+
+    <!--LeanCould PageView -->
+    <%  if (theme.leancloud_visitors.enable){  %>
+
+    <span id="<%- url_for(post.path) %>" class="leancloud_visitors" data-flag-title="<%- post.title %>">
+               <span class="fa-wrap">
+                     <i class="fa fa-eye"></i>
+                     <span class="leancloud-visitors-count"></span>
+                </span>
+              </span>
+    <%  } %>
+
 </div>

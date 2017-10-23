@@ -1,4 +1,5 @@
 <nav class="main-navigation">
+    <% var hasSearch = config.search %>
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -10,11 +11,23 @@
                 <div class="collapse navbar-collapse" id="main-menu">
                     <ul class="menu">
                         <% theme.menu.forEach(function (item) {%>
-                            <li role="presentation" class=""><a href="<%- item.url%>"><%= __(item.page+'') %></a></li>
+                            <li role="presentation" ><a href="<%- item.url%>"><i class="fa fa-fw <%- item.icon%>"></i><%= __(item.page+'') %></a></li>
                         <%})%>
+
+
+                        <% if(hasSearch){ %>
+                             <li role="presentation" ><a href="javascript:;" class="popup-trigger"><i class="fa fa-search "></i><%= __('search.name') %></a></li>
+                        <% } %>
+
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+
+    <% if(hasSearch){ %>
+    <div class="site-search">
+        <%- partial('search/localsearch') %>
+    </div>
+    <% } %>
 </nav>

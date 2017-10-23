@@ -1,12 +1,22 @@
 <% if(site.categories.length){ %>
+<% var excludeNames= theme.category.excludeNames %>
+
     <div class="widget">
         <h3 class="title"><%= __('categories') %></h3>
-        <%- list_categories({
-            showcount: theme.cate_config.show_count,
-            transform: function(name){
-                return '<i class="fa" aria-hidden="true">'+name+'</i>';
-            },
-            show_current: theme.cate_config.show_current
-            }) %>
+        <ul class="category-list">
+            <% site.categories.forEach(function (pageCategorie, i) { %>
+            <% if(_.indexOf(excludeNames,pageCategorie.name) == -1){ %>
+                 <div>
+                     <% if(theme.cate_config.show_count){%>
+                        <li class="category-list-item"><a href=" <%- url_for(pageCategorie.path) %>"><%= pageCategorie.name %></a>
+                            <span class="category-list-count"><%=pageCategorie.length%></span>
+                        </li>
+                     <%  } else{ %>
+                     <li class="category-list-item"><a href=" <%- url_for(pageCategorie.path) %>"><%= pageCategorie.name %></a>
+                     <%  }%>
+                 </div>
+                <%  } %>
+            <%  }) %>
+        </ul>
     </div>
 <% } %>
