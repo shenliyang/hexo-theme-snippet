@@ -15,15 +15,13 @@
 <article class="post">
     <% if(_photoUrl) {%>
         <div class="post-media">
-            <a href="javascript:">
-                <img class="img-ajax" src="<%= theme.placeholder %>"  data-src="<%- url_for(_photoUrl) %>"   alt="<%- post.title %>"> 
-            </a>
+                <img class="img-ajax" src="<%= theme.placeholder %>"  data-src="<%- url_for(_photoUrl) %>"   alt="<%- post.title %>">
         </div>
     <% } %>
     <div class="post-content">
         <div class="post-head home-post-head">
             <h1 class="post-title">
-                <a href="<%- url_for(post.path) %>"><%- post.title %></a>
+                <a class="post-title-link" href="<%- url_for(post.path) %>"><%- post.title %></a>
             </h1>
             <div class="post-meta">  &bull;
                 <time class="post-date" datetime="" title="">

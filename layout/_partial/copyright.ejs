@@ -1,15 +1,39 @@
 <div class="copyright">
     <div class="container">
         <div class="row">
+            <div class="col-sm-12">
+                <div  >
+                    Copyright
+                    <% var current = date(Date.now(), "YYYY") %>
+                    &copy; <% if (theme.since && theme.since != current){ %> <%- theme.since %>&nbsp;-<% } %>
+                    <%-current %>
+                    <span class="with-love">
+                        <i class="fa fa-heart"></i>
+                      </span>
+                    <span class="author" style="font-weight: bold; "><%- config.author %></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-sm-12"> 
-                <span>Copyright &copy; 2017 
-                </span> | 
                 <span>
                     Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
                 </span> | 
                 <span>
                     Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
                 </span>
+                <% if(theme.codeing_host_by.enable){ %>
+                | <span>
+                    Hosted by <a class="copyright-links" target="_blank" rel="external nofollow" href="https://pages.coding.me" >Coding Pages</a>
+                </span>
+                <% } %>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+            <%- partial('_vendor/cnzz_analytics') %>
+            <%- partial('../_scripts/third-party/analytics/busuanzi-counter') %>
             </div>
         </div>
     </div>

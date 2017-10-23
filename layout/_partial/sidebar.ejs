@@ -1,7 +1,41 @@
 <% if(theme.widgets&&theme.widgets.length >0){ %>
-    <aside class="col-md-4 sidebar">
+<div class="col-md-4 sidebar">
+<div class="sidebar-inner">
+<% var display_toc = (is_post() && theme.toc.enable) %>
+<% if (display_toc){ %>
+    <div class="widget" style="margin-bottom: 0px;">
+    <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            <%- __('sidebar.toc') %>
+        </li>
+        <li class="sidebar-nav-overview" data-target="site-overview">
+            <%- __('sidebar.overview') %>
+        </li>
+    </ul>
+    <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc">
+            <%var tocContent %>
+            <%if (page.toc_number === undefined){ %>
+            <% tocContent = toc(page.content, { "class": "nav", list_number: theme.toc.number }) %>
+            <% } else { %>
+            <% tocContent = toc(page.content, {"class": "nav", list_number: page.toc_number}) %>
+            <% } %>
+            <%if(tocContent.length <= 1){ %>
+            <p class="post-toc-empty"><%- __('post.toc_empty') %></p>
+            <% } else{ %>
+            <div class="post-toc-content"><%- tocContent %></div>
+            <% } %>
+        </div>
+    </section>
+
+    </div>
+<% }  %>
+
+    <aside class="site-overview sidebar-panel <%if ( !display_toc){ %>sidebar-panel-active <% } %>">
         <% theme.widgets.forEach(function(widget){ %>
         <%- partial('_widget/' + widget) %>
         <% }) %>
     </aside>
-<%}%>
+</div>
+</div>
+<% } %>

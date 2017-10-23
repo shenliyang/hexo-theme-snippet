@@ -1,25 +1,33 @@
 # layout -- 布局相关
-# language: zh-CN
+language: zh-CN
 
 ##menu 导航菜单显示
 menu:
-- page: home
+- page: 主页
   url: /
   icon: fa-home
 - page: 前端
-  url: /categories/前端/
-  icon: 
+  url: /categories/qianduan
+  icon: fa-th
 - page: 后端
-  url: /categories/后端/
-  icon: 
+  url: /categories/houduan
+  icon: fa-archive
 - page: 工具
-  url: /categories/工具/
-  icon: 
-- page: 资源
-  url: /categories/资源/
-  icon: 
+  url: /categories/tool
+  icon: fa-archive
+- page: 杂谈
+  url: /categories/zatan
+  icon: fa-archive
+- page: 关于
+  url: /about
+  icon: fa-user
+- page: 留言
+  url: /guestbook
+  icon: fa-commenting
 
 
+category:
+  excludeNames: ['tool','qianduan','houduan','zatan'] # 分类sidebar不显示的分类名称
 ## favicon 
 favicon: /favicon.ico
 
@@ -31,6 +39,7 @@ date_format: YYYY-MM-DD HH:mm:ss
 
 ## widgets
 widgets:
+- blog_info
 - notification
 - social
 - category
@@ -42,36 +51,44 @@ widgets:
 
 ## 网站公告设置
 notification: |-
-            <p>主题Snippet v1.1.0版本已经上线！欢迎更新~ <br/>
-            主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
-            <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request。<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
+            <p>Hello 欢迎来访~ <br/>
+
+            <hr/>
+            如果喜欢此博客，请保持持续关注哦，谢谢。
             </p>
 
 ## 社交设置
 social:
+ - name: 个人主页
+   icon: home
+   href: //wiliam.top
  - name: Github
    icon: git
-   href: //github.com/shenliyang
- - name: 邮箱
-   icon: envelope-o
-   href: mailto:snippet@91h5.cc
- - name: 联系QQ
-   icon: qq
-   href: /
+   href: //github.com/wiliam2015
  - name: 微博
    icon: weibo
-   href: /
- - name: QQ群
-   icon: users
-   href: /
- - name: RSS
-   icon: feed
-   href: /atom.xml
+   href: //weibo.com/guyuelong2012
+ - name: 简书
+   iconfont: true
+   icon: jianshu
+   href: //www.jianshu.com/u/046520e7e044
+ - name: CSDN
+   iconfont: true
+   icon: csdn
+   href: //blog.csdn.net/h396071018
 
 ## 文章分类设置
 cate_config:
    show_count: true
    show_current: true
+# Table Of Contents in the Sidebar
+toc:
+  enable: true
+
+  # Automatically add list number to toc.
+  number: false
+
+
 
 ## 文章归档设置
 arch_config:
@@ -90,7 +107,7 @@ tagcloud_config:
 
 ## 友链设置
 links:
-  - 个人博客: http://www.shenliyang.com
+  - Ehlxr's Blog: https://ehlxr.me
 
 
 # 自定义内容设置
@@ -98,7 +115,7 @@ links:
 ## 添加版权保护 
 archiveCopyright:
   enable: true
-  tip: '商业转载请联系作者获得授权,非商业转载请注明出处 © Snippet'
+  tip: '商业转载请联系作者获得授权,非商业转载请注明出处 © William'
 
 
 ## 当无目录时的显示文字，默认为'无'
@@ -114,7 +131,7 @@ warning:
 
 
 ## 首页文章简介的图片占位符
-placeholder: ./img/loading.gif
+placeholder: /img/loading.gif
 
 ## 首页文章简介的图片
 defaultImgs:
@@ -148,22 +165,102 @@ gitment:
 ###友言评论
 uyan:
   enable: true
-  uyan_id: 1966422
+  uyan_id: 2146844
 
 
 ## 网盟CNZZ网站统计
-cnzz_anaylytics: 1263868967
+cnzz_anaylytics:
+  enable: true  #是否启用
+  hiden: false    #使用显示文字
+  head: s13   #统计头
+  id: 1265515627  #站长统计的ID
 
 ## 百度网站统计
 baidu_anaylytics: 
 
 ## 百度文章推送
-baidu_push:
+baidu_push: true
 
 ## ICON配置
 fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
 
+## 阿里妈妈iconfont css文件
+iconfont:
+    enable: true
+    css_data:
+        - path: fonts/iconfont/default/iconfont.css
+
 #网站主题配置
-since: 2017
+since: 2016
 robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all，搜索 `meta name="robots"` 或请参考： https://support.google.com/webmasters/answer/79812?hl=zh-Hans
 version: 1.1.0
+
+codeing_host_by:
+  enable: true
+
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
+# Show number of visitors to each article.
+# You can visit https://leancloud.cn get AppID and AppKey.
+leancloud_visitors:
+  enable: true
+  app_id: vKK2gYgNyw6WBBB2Dj42AsLN-gzGzoHsz
+  app_key: lO1AXA5FHRqXIa8aum7QIuyd
+
+  
+
+# Show PV/UV of the website/page with busuanzi.
+# Get more information on http://ibruce.info/2015/04/04/busuanzi/
+busuanzi_count:
+  # count values only if the other configs are false
+  enable: true
+  # custom uv span for the whole site
+  # 效果：本站访客数12345人次
+  # site_uv: true
+  # site_uv_header: <i class="fa fa-user"></i> 本站访客数
+  # site_uv_footer: 人次
+  # # custom pv span for the whole site
+  # # 效果：本站总访问量12345次
+  # site_pv: true
+  # site_pv_header: <i class="fa fa-eye"></i> 本站总访问量
+  # site_pv_footer: 次
+  # # custom pv span for one page only
+  # # 效果：本文总阅读量12345次
+  # page_pv: false
+  # page_pv_header: <i class="fa fa-file-o"></i> 本文总阅读量
+  # page_pv_footer: 次
+  # custom uv span for the whole site
+  site_uv: true
+  #site_uv_header: <i class="fa fa-user"></i>
+  #site_uv_footer:
+  site_uv_header: <i class="fa fa-user"></i>本站访客数
+  site_uv_footer: 人次
+  # custom pv span for the whole site
+  site_pv: true
+  #site_pv_header: <i class="fa fa-eye"></i>
+  #site_pv_footer:
+  site_pv_header: <i class="fa fa-eye"></i>本站总访问量
+  site_pv_footer: 次
+  
+  # custom pv span for one page only
+  page_pv: false
+  #page_pv_header: <i class="fa fa-file-o"></i>
+  #page_pv_footer:
+  page_pv_header: <i class="fa fa-file-o"></i>本文总阅读量
+  page_pv_footer: 次
+
+  
+  
+# Tencent analytics ID
+# tencent_analytics:
+
+
+## 文章末尾是否显示打赏按钮
+reward_comment: 欣赏此文？求鼓励，求支持！
+wechatpay: http://ofv7c2awe.bkt.clouddn.com/wechatpay.gif
+# alipay: /images/alipay.JPG

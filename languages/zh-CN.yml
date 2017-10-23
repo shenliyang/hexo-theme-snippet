@@ -1,5 +1,4 @@
 categories: 分类
-search: 搜索
 tags: 标签
 tagcloud: 标签云
 tweets: 推文
@@ -31,3 +30,21 @@ post_categories: 文章分类
 post_tags: 文章标签
 post_licence: 版权声明
 popular_post: 热门文章
+
+qianduan: 前端
+houduan: 后端
+tool: 工具
+zatan: 杂谈
+
+search:
+  close: 关闭
+  name: 搜索
+
+state:
+  posts: 日志
+  categories: 分类
+  tags: 标签
+
+sidebar:
+  overview: 站点概览
+  toc: 文章目录

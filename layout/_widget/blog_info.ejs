@@ -1,0 +1,48 @@
+<div class="widget">
+    <div class="blog-info-inner">
+        <section class="site-overview sidebar-panel sidebar-panel-active">
+            <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+                <img class="site-author-image" itemprop="image"
+                     src="<%- url_for( config.avatar  ) %>"
+                     alt="<%- config.author  %>" />
+                <p class="site-author-name" itemprop="name"><%- config.author %></p>
+                <p class="site-description motion-element" itemprop="description"><%- config.description %></p>
+            </div>
+
+            <nav class="site-state motion-element">
+                <div class="site-state-item site-state-posts">
+                    <span class="site-state-item-count"><%- site.posts.length %></span>
+                    <span class="site-state-item-name"><%- __('state.posts') %></span>
+                </div>
+
+                <% if(site.categories.length > 0){ %>
+                <div class="site-state-item site-state-categories">
+                    <span class="site-state-item-count"><%- site.categories.length %></span>
+                    <span class="site-state-item-name"><%- __('state.categories') %></span>
+                </div>
+                <% } %>
+
+                <% if (site.tags.length > 0){ %>
+                <div class="site-state-item site-state-tags">
+                    <span class="site-state-item-count"><%- site.tags.length %></span>
+                    <span class="site-state-item-name"><%- __('state.tags') %></span>
+                </div>
+                <% } %>
+
+            </nav>
+
+            <% if (theme.rss){ %>
+            <div class="feed-link motion-element">
+                <a href="<%- url_for(theme.rss) %>" rel="alternate">
+                    <i class="fa fa-rss"></i>
+                    RSS
+                </a>
+            </div>
+            <% } %>
+
+
+
+        </section>
+    </div>
+
+</div>

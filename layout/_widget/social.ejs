@@ -3,9 +3,15 @@
       <h3 class="title">社交</h3> 
         <div class="content social">
             <% theme.social.forEach(function (item) {%>
-	            <a href="<%- item.href%>" rel="external nofollow" title="<%- item.name%>" target="_blank">
-			    	<i class="<%- item.icon%> fa fa-<%- item.icon%>"></i>
-			    </a>
+				<% if(theme.iconfont.enable && item.iconfont){%>
+					<a href="<%- item.href%>" rel="external nofollow" title="<%- item.name%>" target="_blank">
+						<i class="iconfont icon-<%- item.icon%>"></i>
+					</a>
+				<%} else {%>
+					<a href="<%- item.href%>" rel="external nofollow" title="<%- item.name%>" target="_blank">
+						<i class="<%- item.icon%> fa fa-<%- item.icon%>"></i>
+					</a>
+				<%}%>
             <%})%>
         </div>
     </div>

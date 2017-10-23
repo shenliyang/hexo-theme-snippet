@@ -1,7 +1,18 @@
-<%if(page.type && page.type=='about'){%>
-    <div id="main">
-        <div id="about">
-            <%- page.content%>
-        </div>
+
+<p id="process"></p>
+<article class="post">
+
+    <div class="post-body">
+        <%- page.content %>
     </div>
-<%}%>
+
+
+
+</article>
+
+
+<% if(page.comments){ %>
+<div id="comments">
+    <%- partial('_partial/comments', {page: page}) %>
+</div>
+<% } %>

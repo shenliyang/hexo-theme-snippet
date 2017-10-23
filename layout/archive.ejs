@@ -1,14 +1,36 @@
 <div id="main">
-  <div id="post-list">
+
+    <div id="post-list">
     <ul class="archives-post-list">
-    	<h1 class="info"><%= page.year %>年 <%= page.month %>月</h1>
-        <% page.posts.each(function(post){ %>
-          <li class="post-items" _href="<%- url_for(post.path)%>">
-            <h3 class="post-item-title">
-            	<a href="<%- url_for(post.path)%>"> <%= post.title%> </a>
-            </h3>  
-          </li>
-        <% }) %>
+       isMonth: <%- is_month() %>
+        <% if(is_month()){ %>
+            <h1 class="info"><%= page.year %>年 <%= page.month %>月</h1>
+
+            <% page.posts.each(function(post){ %>
+            <li class="post-items" _href="<%- url_for(post.path)%>">
+                <h3 class="post-item-title">
+                    <a href="<%- url_for(post.path)%>"><%= date(post.date, 'MM-DD') %> <%= post.title%> </a>
+                </h3>
+            </li>
+            <% }) %>
+
+        <% } else{ %>
+            <% var year %>
+            <% page.posts.each(function(post){ %>
+
+            <% var postYear = date(post.date, 'YYYY') %>
+            <% if(postYear !== year){ %>
+            <%  year = postYear %>
+            <h1 class="info"><%= year %>年</h1>
+            <% } %>
+            <li class="post-items" _href="<%- url_for(post.path)%>">
+                <h3 class="post-item-title">
+                    <a href="<%- url_for(post.path)%>"><%= date(post.date, 'MM-DD') %> <%= post.title%> </a>
+                </h3>
+            </li>
+            <% }) %>
+        <%  } %>
+
     </ul>
   </div>
 </div>
