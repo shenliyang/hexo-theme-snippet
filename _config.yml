@@ -16,7 +16,7 @@ menu:
   url: /categories/tool
   icon: fa-archive
 - page: 杂谈
-  url: /categories/杂谈
+  url: /categories/zatan
   icon: fa-archive
 - page: 关于
   url: /about
@@ -164,7 +164,7 @@ gitment:
 
 ###友言评论
 uyan:
-  enable: false
+  enable: true
   uyan_id: 2146844
 
 
