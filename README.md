@@ -1,5 +1,12 @@
 # hexo-theme-snippet
 
+---
+修改记录：
+-[x] 配置修改
+-[x] 新增resume布局
+
+---
+
 Snippet 简洁而不简单，也许是一款你寻找已久的hexo主题。
 
 如果本主题也是你喜欢的菜，请动动手指 [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers) 支持一下:pray:
