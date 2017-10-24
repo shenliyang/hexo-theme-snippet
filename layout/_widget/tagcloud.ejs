@@ -3,7 +3,7 @@
     <h3 class="title"><%= __('tagcloud') %></h3>
     <div class="content tag-cloud">
       <% var config = theme.tagcloud_config;%>
-        <%-tagcloud({
+        <%-tagcloud(site.tags,{
             min_font: config.min_font,
             max_font: config.max_font,
             unit: config.unit,

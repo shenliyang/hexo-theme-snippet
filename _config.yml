@@ -1,24 +1,24 @@
 # layout -- 布局相关
-# language: zh-CN
+# 
+language: zh-CN
 
 ##menu 导航菜单显示
 menu:
 - page: home
   url: /
   icon: fa-home
-- page: 前端
-  url: /categories/前端/
+- page: Java
+  url: /categories/Java/
   icon: 
 - page: 后端
   url: /categories/后端/
   icon: 
-- page: 工具
-  url: /categories/工具/
+- page: Hexo
+  url: /categories/Hexo/
   icon: 
-- page: 资源
-  url: /categories/资源/
-  icon: 
-
+- page: 简历
+  url: /resume/
+  icon:
 
 ## favicon 
 favicon: /favicon.ico
@@ -31,7 +31,8 @@ date_format: YYYY-MM-DD HH:mm:ss
 
 ## widgets
 widgets:
-- notification
+#- notification
+- introduce
 - social
 - category
 - archive
@@ -42,31 +43,22 @@ widgets:
 
 ## 网站公告设置
 notification: |-
-            <p>主题Snippet v1.1.0版本已经上线！欢迎更新~ <br/>
-            主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
-            <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request。<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
-            </p>
 
+## 个人简介设置
+introduce: |-
+            本人男
+            
 ## 社交设置
 social:
- - name: Github
-   icon: git
-   href: //github.com/shenliyang
  - name: 邮箱
    icon: envelope-o
-   href: mailto:snippet@91h5.cc
- - name: 联系QQ
-   icon: qq
-   href: /
- - name: 微博
-   icon: weibo
-   href: /
- - name: QQ群
-   icon: users
-   href: /
- - name: RSS
-   icon: feed
-   href: /atom.xml
+   href: mailto:itbeezh@gmail.com
+ - name: beezyx
+   icon: wechat
+   href: /img/beezyx.png
+ - name: Github
+   icon: github
+   href: //github.com/itbeezh
 
 ## 文章分类设置
 cate_config:
@@ -79,6 +71,8 @@ arch_config:
    show_count: true
    order: -1
 
+tags: /tags
+   
 ## 彩色标签云设置
 tagcloud_config:
    min_font: 1
@@ -90,7 +84,6 @@ tagcloud_config:
 
 ## 友链设置
 links:
-  - 个人博客: http://www.shenliyang.com
 
 
 # 自定义内容设置
@@ -98,8 +91,6 @@ links:
 ## 添加版权保护 
 archiveCopyright:
   enable: true
-  tip: '商业转载请联系作者获得授权,非商业转载请注明出处 © Snippet'
-
 
 ## 当无目录时的显示文字，默认为'无'
 noCategoryText: '无'
@@ -129,9 +120,7 @@ highlightTheme: default
 
 ## 版权声明文字，支持html/text，但不要使用<li>标签
 cc: |-
-      <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
-      知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
-      </a>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)</a>
 
 
 ## 主题评论
@@ -147,12 +136,12 @@ gitment:
 
 ###友言评论
 uyan:
-  enable: true
-  uyan_id: 1966422
+  enable: false
+  uyan_id: 
 
 
 ## 网盟CNZZ网站统计
-cnzz_anaylytics: 1263868967
+cnzz_anaylytics: 
 
 ## 百度网站统计
 baidu_anaylytics: 

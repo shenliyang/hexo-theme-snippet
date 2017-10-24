@@ -1,0 +1,15 @@
+<p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="<%= page.title %>">
+            <%if(page.link){%>
+            <a href="<%- url_for(page.link) %>" target="_blank"><%= page.title %></a>
+            <%}else{%>
+            <%= page.title||'NO Title!' %>
+            <%}%>
+        </h1>
+    </div>
+    <div class="post-body">
+        <%- page.content %>
+    </div>
+</article>
