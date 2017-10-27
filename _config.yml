@@ -1,11 +1,11 @@
 # layout -- 布局相关
 # language: zh-CN
 
-##menu 导航菜单显示
+## menu 导航菜单显示
 menu:
 - page: home
   url: /
-  icon: fa-home
+  icon: 
 - page: 前端
   url: /categories/前端/
   icon: 
@@ -19,15 +19,14 @@ menu:
   url: /categories/资源/
   icon: 
 
-
 ## favicon 
 favicon: /favicon.ico
 
 ## Feed 
 rss: /atom.xml
 
-## 通用时间格式化
-date_format: YYYY-MM-DD HH:mm:ss
+
+# 各个小工具的设置
 
 ## widgets
 widgets:
@@ -37,8 +36,6 @@ widgets:
 - archive
 - tagcloud
 - friends
-
-# 各个小工具的设置
 
 ## 网站公告设置
 notification: |-
@@ -79,59 +76,54 @@ arch_config:
    show_count: true
    order: -1
 
-## 彩色标签云设置
-tagcloud_config:
-   min_font: 1
-   max_font: 1
-   unit: em
-   amount: 100
-   color: true
-   orderby: 'count'
-
 ## 友链设置
 links:
   - 个人博客: http://www.shenliyang.com
 
 
-# 自定义内容设置
+
+# 主题自定义个性化配置
+
+## 网站宣传语
+branding: 
+
+## 懒加载图片占位符
+placeholder: ./img/loading.gif
+
+## 缩略图自定义随机图片
+defaultImgs:
+  - 
+
+## 截取文章首页描述字数
+excerptLength: 120
+
+## 当无分类时显示文字，默认为'无'
+noCategoryText: '无'
+
+## 代码高亮配置
+highlightTheme: default
+
+## ICON配置
+fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
+
+## 文章过期提醒功能
+warning:
+  days: 300
+  text: '本文于%d天之前发表，文中内容可能已经过时。'
 
 ## 添加版权保护 
 archiveCopyright:
   enable: true
   tip: '商业转载请联系作者获得授权,非商业转载请注明出处 © Snippet'
 
-
-## 当无目录时的显示文字，默认为'无'
-noCategoryText: '无'
-
-## 过低版本的浏览器提醒文字
-outdated_browser_text: '你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。'
-
-## 文章过期提醒功能
-warning:
-  days: 300 
-  text: '本文于%d天之前发表，文中内容可能已经过时。'
-
-
-## 首页文章简介的图片占位符
-placeholder: ./img/loading.gif
-
-## 首页文章简介的图片
-defaultImgs:
-  - 
-
-### 截取文章首页描述字数
-excerptLength: 120
-
-## 代码高亮配置
-highlightTheme: default
-
-
 ## 版权声明文字，支持html/text，但不要使用<li>标签
 cc: |-
       <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
       知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
       </a>
+
+## 过低版本的浏览器提醒文字
+outdated_browser_text: '你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。'
 
 
 ## 主题评论
@@ -145,25 +137,27 @@ gitment:
   perPage: 10
 
 
-###友言评论
+### 友言评论
 uyan:
   enable: true
   uyan_id: 1966422
 
 
-## 网盟CNZZ网站统计
+## 网站访问统计
+
+### 网盟CNZZ统计
 cnzz_anaylytics: 1263868967
 
-## 百度网站统计
+### 百度统计
 baidu_anaylytics: 
 
-## 百度文章推送
-baidu_push:
+### 谷歌统计
+google_anaylytics: 
 
-## ICON配置
-fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
+### 百度文章推送
+baidu_push:
 
 #网站主题配置
 since: 2017
-robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all，搜索 `meta name="robots"` 或请参考： https://support.google.com/webmasters/answer/79812?hl=zh-Hans
+robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all
 version: 1.1.0

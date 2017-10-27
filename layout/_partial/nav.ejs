@@ -10,7 +10,8 @@
                 <div class="collapse navbar-collapse" id="main-menu">
                     <ul class="menu">
                         <% theme.menu.forEach(function (item) {%>
-                            <li role="presentation" class=""><a href="<%- item.url%>"><%= __(item.page+'') %></a></li>
+                            <li role="presentation"><a href="<%- item.url%>"><i class="fa fa-fw <%- item.icon%>"></i><%= __(item.page+'') %></a>
+                            </li>
                         <%})%>
                     </ul>
                 </div>

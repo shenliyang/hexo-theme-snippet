@@ -52,3 +52,21 @@
 .px2rem(@property,@value){
   @property: @value + 'rem';
 }
+
+@-webkit-keyframes masked-animation {
+    0% {
+        background-position: 0 0
+    }
+    to {
+        background-position: -100% 0
+    }
+}
+
+@keyframes masked-animation {
+    0% {
+        background-position: 0 0
+    }
+    to {
+        background-position: -100% 0
+    }
+}

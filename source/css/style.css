@@ -7,6 +7,22 @@
     MIXINS FOR THEME
 ====================================================*/
 /* _mixins.less */
+@-webkit-keyframes masked-animation {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+@keyframes masked-animation {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
 /*====================================================
     common styles
 ====================================================*/
@@ -235,14 +251,36 @@ pre {
   width: 100%;
   padding-top: 30px;
 }
-.main-header .main-header-box .branding {
-  color: #303030;
+.main-header .main-header-box a.header-avatar img {
+  width: 82px;
+  height: 82px;
+  max-width: 100%;
+  border-radius: 50%;
 }
-.main-header .main-header-box .branding:hover {
+.main-header .main-header-box a.header-avatar:hover {
   text-decoration: none;
 }
-.main-header .main-header-box .branding img {
-  max-width: 100%;
+.main-header .main-header-box .branding {
+  padding-top: 15px;
+}
+.main-header .main-header-box .branding h2 {
+  font-family: "STXingkai", "KaiTi", "Microsoft YaHei", "SimSun", sans-serif;
+  width: 320px;
+  margin: 0 auto;
+  letter-spacing: 3px;
+  color: #e67e22;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  background-image: -webkit-linear-gradient(left, #cddc39, #e67e22 25%, #cddc39 50%, #e67e22 75%, #cddc39) !important;
+  -webkit-text-fill-color: transparent!important;
+  -webkit-background-clip: text!important;
+  background-size: 200% 100%!important;
+  animation: masked-animation 2s infinite linear !important;
+}
+.main-header .main-header-box .branding h2:hover {
+  animation: masked-animation 1s infinite linear !important;
+  text-decoration: none;
 }
 .home-template .main-header {
   padding-top: 62px;

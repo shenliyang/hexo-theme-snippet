@@ -1,9 +1,15 @@
 <header class="main-header">
     <div class="main-header-box">
-        <a class="branding" href="/" title="">
-            <%- image_tag('img/header_logo.png',{alt:'Snippet 博客主题'}) %>
+        <a class="header-avatar" href="/" title="">
+            <%- image_tag('img/avatar.jpg',{alt:'logo头像'}) %>
         </a>
-        <h2 class="text-hide">Snippet主题</h2>
-        <%- image_tag('img/header_logo.png',{alt:'Snippet 博客主题',class:'hide'}) %>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            <% if(theme.branding){ %>
+                <h2> <%= theme.branding %> </h2
+            <% } else { %>
+                 <%- image_tag('img/branding.png',{alt:'Snippet 博客主题'}) %>  
+            <% } %> 
+    	</div>
     </div>
 </header>

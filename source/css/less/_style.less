@@ -211,17 +211,41 @@ pre {
         position: relative;
         width: 100%;
         padding-top: 30px;
-        .branding {
-            color: @grey3_color;
+        a.header-avatar {
+            img {
+            	width: 82px;
+            	height: 82px; 
+                max-width: 100%;
+                border-radius:50%;
+            }
             &:hover {
                 text-decoration: none;
             }
-            img {
-                max-width: 100%;
-            }
+        }
+        .branding {
+        	padding-top:15px;
+        	h2 {
+        		font-family: @font_family_5;
+        		width: 320px;
+        		margin: 0 auto;
+        		letter-spacing: 3px;
+        		color: @theme_color;
+        		.text-ellipsis();
+    			background-image:-webkit-linear-gradient(left,#cddc39,#e67e22 25%,#cddc39 50%,#e67e22 75%,#cddc39)!important;
+			    -webkit-text-fill-color: transparent!important;
+			    -webkit-background-clip: text!important;
+			    background-size: 200% 100%!important;
+        		animation: masked-animation 2s infinite linear!important;
+			    &:hover {
+	        		animation: masked-animation 1s infinite linear!important;
+	                text-decoration: none;
+            	}
+        	}
+
         }
     }
 }
+
 .home-template {
     .main-header {
         padding-top: 62px;

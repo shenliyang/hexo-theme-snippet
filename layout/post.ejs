@@ -13,7 +13,7 @@
                 var diffDays = moment(new Date()).diff(moment(page.date), 'day');
                 var warningTextArr = theme.warning.text.split("%d");
             %>
-            <% if(diffDays > (theme.warning.days || 300)){ %>
+            <% if((theme.warning.days!=0) && diffDays > (theme.warning.days || 300)){ %>
             <p class="fa fa-exclamation-triangle warning">
                 <%- warningTextArr[0]%><strong><%= diffDays %></strong><%- warningTextArr[1]%>
             </p>
