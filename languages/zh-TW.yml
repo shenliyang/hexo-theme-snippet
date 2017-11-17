@@ -18,12 +18,14 @@ rss_feed: RSS
 rss: RSS
 category: 分類
 tag: 標籤
+social: 社交
 friend_links: 友鏈
 read_more: 閱讀全文
 home: 首頁
 archives: 彙整
 about: 關於我
-search_placeholder: 站內搜索...
+search_local: 站內搜索
+search_google: 谷歌搜索
 author: 作者
 date: 發表日期
 update: 最後編輯日期

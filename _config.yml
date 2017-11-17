@@ -30,16 +30,28 @@ rss: /atom.xml
 
 ## widgets
 widgets:
-- notification
-- social
-- category
-- archive
-- tagcloud
-- friends
+  - search
+  - notification
+  - social
+  - category
+  - archive
+  - tagcloud
+  - friends
+
+## 搜索
+jsonContent:
+  searchLocal: true
+  searchGoogle: true
+  posts:
+    title: true
+    text: true
+    content: true
+    categories: false
+    tags: false
 
 ## 网站公告设置
 notification: |-
-            <p>主题Snippet v1.1.0版本已经上线！欢迎更新~ <br/>
+            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
             主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
             <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request。<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
             </p>
@@ -81,14 +93,10 @@ links:
   - 个人博客: http://www.shenliyang.com
 
 
-
 # 主题自定义个性化配置
 
 ## 网站宣传语
 branding: 
-
-## 懒加载图片占位符
-placeholder: ./img/loading.gif
 
 ## 缩略图自定义随机图片
 defaultImgs:
@@ -111,19 +119,12 @@ warning:
   days: 300
   text: '本文于%d天之前发表，文中内容可能已经过时。'
 
-## 添加版权保护 
-archiveCopyright:
+## 文章内声明
+declaration:
   enable: true
-  tip: '商业转载请联系作者获得授权,非商业转载请注明出处 © Snippet'
-
-## 版权声明文字，支持html/text，但不要使用<li>标签
-cc: |-
-      <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
-      知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
-      </a>
-
-## 过低版本的浏览器提醒文字
-outdated_browser_text: '你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。'
+  title: '转载声明'
+  tip: |-
+      商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
 
 
 ## 主题评论
@@ -160,4 +161,4 @@ baidu_push:
 #网站主题配置
 since: 2017
 robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all
-version: 1.1.0
+version: 1.2.0

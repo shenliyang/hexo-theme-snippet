@@ -20,14 +20,14 @@
             <% } %>
     </div>
     <%- partial('_partial/gallery',{post:page})%>
-    <div class="post-body">
+    <div class="post-body post-content">
         <%- page.content %>
     </div>
 
     <div class="post-footer">   
         <div>
-            <% if(theme.archiveCopyright){ %>
-                转载声明: <%- theme.archiveCopyright.tip %>
+            <% if(theme.declaration.enable){ %>
+                <%- theme.declaration.title %>：<%- theme.declaration.tip %><%- theme.cc %>
             <% } %>
         </div>
         <div>

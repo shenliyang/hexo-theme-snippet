@@ -13,21 +13,22 @@ recent_posts: 最新文章
 newer: Newer
 older: Older
 share: Share
-powered_by: Powered by
 rss_feed: RSS
 rss: RSS
 category: 分类
 tag: 标签
+social: 社交
 friend_links: 友链
 read_more: 阅读全文
 home: 首页
 about: 关于我
 archives: 归档
-search_placeholder: 站内搜索...
+search_local: 站内搜索
+search_google: 谷歌搜索
 author: 作者
 date: 发表日期
 update: 最后编辑日期
 post_categories: 文章分类
 post_tags: 文章标签
 post_licence: 版权声明
-popular_post: 热门文章
+

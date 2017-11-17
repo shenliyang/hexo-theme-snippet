@@ -11,7 +11,7 @@
         <% if(post.img) { %>
             <div class="post-media">
                 <a href="javascript:">
-                    <img class="img-ajax" src="<%= theme.placeholder %>"  data-src="<%- post.img %>"  alt="<%- post.title %>"> 
+                    <img class="img-ajax" src="<%- url_for('/img/loading.gif') %>"  data-src="<%- post.img %>"  alt="<%- post.title %>"> 
                 </a>
             </div>
         <% } %>

@@ -1,7 +1,12 @@
-<%if(theme.highlightTheme && is_post() ){%>
+<%if (theme.highlightTheme && is_post() ){%>
   <%- js('assets/highlight.pack.js?rev=@@hash') %>
   <script>
     hljs.initHighlightingOnLoad(); //初始化代码高亮 
   </script>
 <%}%>
+
+<%if (theme.jsonContent.searchLocal){%>
+	<%- js('js/search.js?rev=@@hash') %>
+<%}%>
+
 <%- js('js/app.js?rev=@@hash') %>

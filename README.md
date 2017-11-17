@@ -1,6 +1,6 @@
 # hexo-theme-snippet
 
-Snippet 简洁而不简单，也许是一款你寻找已久的hexo主题。坚持hexo初心：快速、简洁，高效！
+Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 
 如果本主题也是你喜欢的菜，请动动手指 [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers) 支持一下:pray:
 
@@ -24,8 +24,8 @@ Snippet 简洁而不简单，也许是一款你寻找已久的hexo主题。坚�
 - [x] 网站公告功能
 - [x] 首页图片懒加载
 - [x] 首页文章缩略图自动检索文章内图片，支持自动随机图片
-- [x] 支持响应式
-- [x] 对IE浏览器的检测和警告
+- [x] 主题支持响应式
+- [x] 站内本地搜索和谷歌搜索
 - [x] 评论系统支持友言和Gitment
 - [x] 版权信息可配置
 - [x] 支持网站统计和文章推送
@@ -54,7 +54,7 @@ Snippet 简洁而不简单，也许是一款你寻找已久的hexo主题。坚�
     git clone git://github.com/shenliyang/hexo-theme-snippet.git themes/snippet
 ``` 
 
-### 3. 安装插件
+### 3. 安装主题插件
 
 因为 **hexo-theme-snippet** 使用了 `ejs` 模版引擎 、 `Less` CSS预编译语言以及在官方插件的基础上
 进行功能的开发，以下为必装插件：
@@ -131,6 +131,7 @@ rss: /atom.xml
 
 ## widgets -- 6个左边小工具{@widgets:[notification,category,archive,tagcloud,friends]}
 widgets:
+- search
 - notification 
 - social
 - category
@@ -139,6 +140,17 @@ widgets:
 - friends
 
 # 各个小工具的设置
+
+## 搜索
+jsonContent:
+  searchLocal: true // 是否启用本地搜索
+  searchGoogle: true //是否启用谷歌搜索
+  posts:
+    title: true 
+    text: true
+    content: true
+    categories: false
+    tags: false
 
 ## notification config --网站公告设置,支持 html 和 纯文本
 notification: |- 
@@ -173,8 +185,6 @@ links:
 ## 网站宣传语{@branding：网站宣传语(不设置显示本地图片)}
 branding: 从未如此简单有趣
 
-## 懒加载图片占位符
-placeholder: ./img/loading.gif //为了友好，不建议改动
 
 ## 首页文章列表缩略图
 ### 加载规则: 自定义文章缩略图(在Front-matter中添加的'img'字段) > 文章内的图片 > defaultImgs(随机获取) > 无图模式列表
@@ -201,19 +211,12 @@ warning:
   days: 300  
   text: '本文于%d天之前发表，文中内容可能已经过时。'
   
-## 添加版权保护{@archiveCopyright: {enable:是否开启,tip:提示信息}}
-archiveCopyright:
+## 文章内声明{@declaration: {enable:是否开启,title:声明标题,tip:提示内容}}
+declaration:
   enable: true
-  tip: '商业转载请联系作者获得授权,非商业转载请注明出处 © Snippet'
-
-## 版权声明文字，支持html/text，但不要使用<li>标签
-cc: |-
-      <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
-      知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
-      </a>
-
-## 过低版本的浏览器提醒文字
-outdated_browser_text: '你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。'
+  title: '转载声明'
+  tip: |-
+      商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
 
 
 ## 主题评论
@@ -256,11 +259,11 @@ fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
 ## 网站主题配置
 since: 2017
 robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all
-version: 1.1.0
+version: 1.2.0
 
 ```
 
-### 使用技巧
+### 主题使用技巧及功能扩展
 1. 修改新增文章Front-matter模板,修改`scaffolds`目录下的`post.md`模板
 ``` yml
 --- 
@@ -273,6 +276,13 @@ img:               // 自定义缩略图
 ---
 ```
 
+2. 启用站内本地搜索功能
+
+如果要使用本地站点搜索，必须安装插件hexo-generator-json-content来创建本地搜索json文件 
+```bash
+    npm i hexo-generator-json-content@2.2.0 -S
+```
+然后修改主题配置_config.yml文件下`jsonContent`相关参数。
 
 # **提升篇**
 
@@ -372,15 +382,16 @@ Gulp 执行启用主题二次开发模式
 - 重构样式并优化Less文件，方便二次开发和自定义主题样式。
 - 新增 右侧社交边栏 小工具。
 
+### v1.2.0
+- 增加本地搜索和谷歌搜索
+- 增加返回顶部
 
 ## 最近更新日志
-- 增加谷歌统计
-- 增加自定义网站宣传语
-- 文章过期提醒增加关闭功能
-- 修复云标签链接 undefinedtag Bug
-- 优化主题代码和主题配置
-- 重构中文README.md文档
-
+- 修改loading图片加载Bug
+- 修改table样式覆盖问题
+- 简化主题配置项
+- 优化css样式显示
+- 修改主题语言配置 //TODO
 
 ## License
 
