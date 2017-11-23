@@ -1,1 +1,32 @@
-<%- partial('_partial/article', {post: page, index: false}) %>
+<div class="about">
+	<%if(is_tag()){%>
+	    <article class="post">
+	        <h1 class="post-head">共计<%- site.tags.length%>个标签</h1>
+	        <div class="post-body">
+	            <%- tagcloud({min_font: 14, max_font: 30, amount: 200, color: true, start_color: '#ccc', end_color: '#111'}) %>
+	        </div>
+	    </article>
+	<% } else if(is_category()) { %>
+	    <article class="post">
+	        <h1 class="post-head">共计<%- site.categories.length%>个分类</h1>
+	        <div class="post-body">
+	        <% site.categories.forEach(function (item) {%>
+	            <li class="post-items" >
+	                <h3 class="post-item-title">
+	                    <a href="<%- item.href%>" title="<%- item.name%>" target="_blank">
+	                        <%- item.name%>
+	                    </a>
+	                </h3>
+	            </li>
+	        <%})%>
+	        </div>
+	    </article>
+	<% } else{ %>
+	    <article class="post">
+	        <h1 class="post-head">关于我</h1>
+	        <div class="post-body">
+	            <%- page.content %>
+	        </div>
+	    </article>
+	<%}%>
+</div>
