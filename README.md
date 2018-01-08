@@ -6,7 +6,7 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 
 [![Build Status](https://www.travis-ci.org/shenliyang/hexo-theme-snippet.svg?branch=master)](https://www.travis-ci.org/shenliyang/hexo-theme-snippet)
 [![codebeat badge](https://codebeat.co/badges/6ef2dcd2-af90-40e0-9628-ac689441f774)](https://codebeat.co/projects/github-com-shenliyang-hexo-theme-snippet-master)
-[![mnt-image](https://img.shields.io/maintenance/yes/2017.svg)](../../commits/master)
+[![mnt-image](https://img.shields.io/maintenance/yes/2018.svg)](../../commits/master)
 [![hexo version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/shenliyang/hexo-theme-snippet/blob/master/LICENSE)
 
@@ -26,7 +26,7 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 - [x] 首页文章缩略图自动检索文章内图片，支持自动随机图片
 - [x] 主题支持响应式
 - [x] 站内本地搜索和谷歌搜索
-- [x] 评论系统支持友言和Gitment
+- [x] 评论系统支持来必力、友言和Gitment
 - [x] 版权信息可配置
 - [x] 支持网站统计和文章推送
 - [x] 移动端的简洁设计
@@ -111,9 +111,6 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 
 ``` yaml
 
-# layout -- 布局相关
-# language: zh-CN 默认语言
-
 ## menu -- 导航菜单显示{[@page:名字,@url:地址,@icon:图标]}
 menu:
 - page: home 
@@ -178,7 +175,7 @@ arch_config:
 ## 友链设置{@链接名称：链接地址{@links:[,,,]}}
 links:
     - 主题作者: http://www.shenliyang.com
-
+    
 
 # 主题自定义个性化配置
 
@@ -188,7 +185,6 @@ branding: 从未如此简单有趣
 ## 设置banner背景图片
 banner:
     img:
-
 
 ## 首页文章列表缩略图
 ### 加载规则: 自定义文章缩略图(在Front-matter中添加的'img'字段) > 文章内的图片 > defaultImgs(随机获取) > 无图模式列表
@@ -200,9 +196,6 @@ defaultImgs:
 
 ## 截取文章首页描述字数
 excerptLength: 120
-
-## 当无目录时的显示文字，默认为'无'
-noCategoryText: '无'
 
 ## 代码高亮配置{@highlightTheme: 主题名称,(配置暂时不可用，后续开发中…)}
 
@@ -234,9 +227,14 @@ gitment:
   perPage: 
   maxCommentHeight:
   
-### 友言评论(默认选项)
-uyan:
+### 来必力(默认选项)
+livere: 
   enable: true
+  livere_uid: 
+
+### 友言评论
+uyan:
+  enable: false
   uyan_id: 
 
 
@@ -262,9 +260,9 @@ tencent_analytics:
 fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
 
 ## 网站主题配置
-since: 2017
-robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all
-version: 1.2.0
+since: 2017  //建站时间
+robot: 'all'  //控制搜索引擎的抓取和索引编制行为，默认为all
+version: 1.2.1  //当前主题版本号
 
 ```
 
@@ -397,7 +395,9 @@ Gulp 执行启用主题二次开发模式
 - 整理归类第三方评论
 
 ## 最近更新日志
-- 修改代码高亮
+- 整理归类第三方评论
+- 增加来必力评论
+- 删除自定义无分类字段
 
 
 ## License

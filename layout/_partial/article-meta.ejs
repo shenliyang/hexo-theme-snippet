@@ -3,7 +3,7 @@
     <%
         var _showLevel = (theme.whichCategory ? Math.min(theme.whichCategory, post.categories.data.length) : post.categories.data.length) - 1,
                 _data = post.categories.data[_showLevel],
-                _categoryInfo = _data ? _data.name : (theme.noCategoryText || "null");
+                _categoryInfo = _data ? _data.name : " ";
     %>
     <span class="categories-meta fa-wrap">
         <i class="fa fa-folder-open-o"></i>

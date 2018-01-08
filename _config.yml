@@ -1,7 +1,9 @@
-# layout -- 布局相关
-# language: zh-CN
+# ---------------------------------------------------------------
+#   Site Information And Theme Configuration Settings
+#   language: zh-CN
+# ---------------------------------------------------------------
 
-## menu 导航菜单显示
+## menu 
 menu:
 - page: home
   url: /
@@ -109,9 +111,6 @@ defaultImgs:
 ## 截取文章首页描述字数
 excerptLength: 120
 
-## 当无分类时显示文字，默认为'无'
-noCategoryText: '无'
-
 ## 代码高亮配置
 highlightTheme: 
 
@@ -132,6 +131,7 @@ declaration:
 
 
 ## 主题评论
+
 ### gitment
 gitment:
   enable: false
@@ -141,12 +141,15 @@ gitment:
   client_secret: 
   perPage: 10
 
+### 来必力
+livere: 
+  enable: true
+  livere_uid: MTAyMC8zMzA1MS85NjEz
 
 ### 友言评论
 uyan:
-  enable: true
+  enable: false
   uyan_id: 1966422
-
 
 ## 网站访问统计
 
@@ -168,4 +171,4 @@ baidu_push:
 #网站主题配置
 since: 2017
 robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all
-version: 1.2.0
+version: 1.2.1
