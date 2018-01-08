@@ -1,6 +1,6 @@
 {
     "name": "hexo-theme-snippet", 
-    "version": "1.1.0", 
+    "version": "1.2.1", 
     "description": "Snippet 简洁而不简单，也许是一款你寻找已久的hexo主题", 
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"

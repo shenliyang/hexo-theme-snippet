@@ -2,7 +2,7 @@
 
 Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 
-如果本主题也是你喜欢的菜，请动动手指 [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers) 支持一下:pray:
+如果本主题也是你喜欢的菜，请动动手指 [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers) 支持一下
 
 [![Build Status](https://www.travis-ci.org/shenliyang/hexo-theme-snippet.svg?branch=master)](https://www.travis-ci.org/shenliyang/hexo-theme-snippet)
 [![codebeat badge](https://codebeat.co/badges/6ef2dcd2-af90-40e0-9628-ac689441f774)](https://codebeat.co/projects/github-com-shenliyang-hexo-theme-snippet-master)
@@ -204,11 +204,9 @@ excerptLength: 120
 ## 当无目录时的显示文字，默认为'无'
 noCategoryText: '无'
 
-## 代码高亮配置{@highlightTheme: 主题名称(默认为default)}
-主题名称：[参考网站](https://cdnjs.com/libraries/highlight.js)
-## 常用可配置名称[default,github,foundation,googlecode,monokai-sublime,monokai,monokai,xcode,vs2015,tomorrow,hybrid]
+## 代码高亮配置{@highlightTheme: 主题名称,(配置暂时不可用，后续开发中…)}
 
-highlightTheme: default 
+highlightTheme: default //TODO
 
 ## 文章过期提醒功能 {@warning:{days:临界天数(默认300天,设置0关闭功能),text:提醒文字/*%d为过期总天数占位符*/}}
 warning:
@@ -374,10 +372,11 @@ Gulp 执行启用主题二次开发模式
 在设计这款主题的时候参考了好多主题和博客的设计和创意，深表感谢！ 
 
 ## 贡献
-接受各种形式的贡献，包括但不限于提交问题或需求，修复代码。
+致力主题简洁轻量，力求使用简单方便，接受各种形式的贡献，包括但不限于提交问题或需求，修复代码。
 欢迎大家提Issue或者Pull Request。
 
 如果觉得本主题还不错，==欢迎  [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers)下==，您的支持和鼓励才是后续更新最大的动力
+
 
 ## 版本更新
 
@@ -393,16 +392,13 @@ Gulp 执行启用主题二次开发模式
 - 增加本地搜索和谷歌搜索
 - 增加返回顶部
 
-## 最近更新日志
-- 修改loading图片加载Bug
-- 修改table样式覆盖问题
-- 简化配置项，方便用户下载即可使用
-- 优化Less文件，方便二次开发和专属定制
-- 修改主题样式显示细节
-- 修改主题语言配置 //TODO
+### v1.2.1
+- 去掉highlight.js插件，启用本地高亮
+- 整理归类第三方评论
 
-- 整理归类统计代码并增加腾讯统计
-- 更新高亮代码库
+## 最近更新日志
+- 修改代码高亮
+
 
 ## License
 

@@ -1,0 +1,149 @@
+pre,
+.highlight {
+  overflow: auto;
+  margin: 20px 0;
+  padding: 0;
+  color: #c5c8c6;
+  font-size: 13px;
+  background: #1d1f21;
+  line-height: 1.6;
+}
+code {
+  padding: 2px 4px;
+  .text-ellipsis();
+  color: @black6_color;
+  background: #eee;
+  .border-radius(3px)
+}
+pre {
+  code {
+    padding: 0;
+    color: #c5c8c6;
+    background: none;
+    text-shadow: none;
+  }
+  .meta {
+    color: #b294bb;
+  }
+  .comment {
+    color: #969896;
+  }
+}
+.highlight {
+  .border-radius(1px);
+  pre {
+    border: none;
+    margin: 0;
+    padding: 10px 0;
+  }
+  table {
+    margin: 0;
+    width: auto;
+    border: none;
+  }
+  td {
+    border: none;
+    padding: 0;
+  }
+  figcaption {
+    font-size: 1em;
+    color: #c5c8c6;
+    line-height: 1em;
+    margin-bottom: 1em;
+    a {
+      float: right;
+      color: #c5c8c6;
+      &:hover {
+        border-bottom-color: #c5c8c6;
+      }
+    }
+  }
+  .gutter {
+    pre {
+      padding-left: 10px;
+      padding-right: 10px;
+      color: #888f96;
+      text-align: right;
+      background-color: #000;
+    }
+  }
+  .code {
+    pre {
+      width: 100%;
+      padding-left: 10px;
+      padding-right: 10px;
+      background-color: #1d1f21;
+    }
+  }
+  .line {
+    height: 20px;
+  }
+}
+.gutter {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.gist {
+  table {
+    width: auto;
+    td {
+      border: none;
+    }
+  }
+}
+pre .variable,
+pre .attribute,
+pre .tag,
+pre .regexp,
+pre .ruby .constant,
+pre .xml .tag .title,
+pre .xml .pi,
+pre .xml .doctype,
+pre .html .doctype,
+pre .css .id,
+pre .css .class,
+pre .css .pseudo {
+  color: #c66;
+}
+pre .number,
+pre .preprocessor,
+pre .built_in,
+pre .literal,
+pre .params,
+pre .constant,
+pre .command {
+  color: #de935f;
+}
+pre .ruby .class .title,
+pre .css .rules .attribute,
+pre .string,
+pre .value,
+pre .inheritance,
+pre .header,
+pre .ruby .symbol,
+pre .xml .cdata,
+pre .special,
+pre .number,
+pre .formula {
+  color: #b5bd68;
+}
+pre .title,
+pre .css .hexcolor {
+  color: #8abeb7;
+}
+pre .function,
+pre .python .decorator,
+pre .python .title,
+pre .ruby .function .title,
+pre .ruby .title .keyword,
+pre .perl .sub,
+pre .javascript .title,
+pre .coffeescript .title {
+  color: #81a2be;
+}
+pre .keyword,
+pre .javascript .function {
+  color: #b294bb;
+}

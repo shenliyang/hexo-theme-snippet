@@ -113,7 +113,7 @@ excerptLength: 120
 noCategoryText: '无'
 
 ## 代码高亮配置
-highlightTheme: default
+highlightTheme: 
 
 ## ICON配置
 fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css

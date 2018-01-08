@@ -1,4 +1,4 @@
-/*! style.css v1.1.0 | MIT License | github.com/shenliyang */
+/*! style.css v1.2.0 | MIT License | github.com/shenliyang */
 /*====================================================
     COLOR VARIABLE FOR THEME
 ====================================================*/
@@ -572,9 +572,7 @@ pre {
   position: relative;
   clear: both;
   outline: 0;
-  margin: 10px 0 30px;
-  padding: 0;
-  min-height: 100px;
+  margin: 10px 0;
 }
 .post-content figure img {
   display: block;
@@ -674,13 +672,11 @@ pre {
 }
 .post-content pre {
   margin: 1.64em 0;
-  padding: 7px;
   border: none;
   border-left: 3px solid #dadada;
   padding-left: 10px;
   overflow: auto;
   line-height: 1.5;
-  font-size: 0.96em;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   color: #808080;
   background-color: #f9f9f9;
@@ -707,12 +703,6 @@ pre {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-.post-content table pre {
-  margin: 0;
-  padding: 0;
-  border: none;
-  background: none;
 }
 .post-content th {
   text-align: left;
@@ -1040,21 +1030,155 @@ pre {
   height: 30px;
   line-height: 30px;
 }
-/* highlight */
 /*====================================================
     highlight
 ====================================================*/
+pre,
 .highlight {
-  overflow-x: auto;
+  overflow: auto;
+  margin: 20px 0;
+  padding: 0;
+  color: #c5c8c6;
+  font-size: 13px;
+  background: #1d1f21;
+  line-height: 1.6;
+}
+code {
+  padding: 2px 4px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #666666;
+  background: #eee;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+pre code {
+  padding: 0;
+  color: #c5c8c6;
+  background: none;
+  text-shadow: none;
+}
+pre .meta {
+  color: #b294bb;
+}
+pre .comment {
+  color: #969896;
+}
+.highlight {
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+.highlight pre {
+  border: none;
+  margin: 0;
+  padding: 10px 0;
 }
 .highlight table {
-  width: 100%;
+  margin: 0;
+  width: auto;
+  border: none;
 }
-.highlight .gutter {
-  display: none;
+.highlight td {
+  border: none;
+  padding: 0;
+}
+.highlight figcaption {
+  font-size: 1em;
+  color: #c5c8c6;
+  line-height: 1em;
+  margin-bottom: 1em;
+}
+.highlight figcaption a {
+  float: right;
+  color: #c5c8c6;
+}
+.highlight figcaption a:hover {
+  border-bottom-color: #c5c8c6;
+}
+.highlight .gutter pre {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #888f96;
+  text-align: right;
+  background-color: #000;
 }
 .highlight .code pre {
-  margin-bottom: 0;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #1d1f21;
+}
+.highlight .line {
+  height: 20px;
+}
+.gutter {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.gist table {
+  width: auto;
+}
+.gist table td {
+  border: none;
+}
+pre .variable,
+pre .attribute,
+pre .tag,
+pre .regexp,
+pre .ruby .constant,
+pre .xml .tag .title,
+pre .xml .pi,
+pre .xml .doctype,
+pre .html .doctype,
+pre .css .id,
+pre .css .class,
+pre .css .pseudo {
+  color: #c66;
+}
+pre .number,
+pre .preprocessor,
+pre .built_in,
+pre .literal,
+pre .params,
+pre .constant,
+pre .command {
+  color: #de935f;
+}
+pre .ruby .class .title,
+pre .css .rules .attribute,
+pre .string,
+pre .value,
+pre .inheritance,
+pre .header,
+pre .ruby .symbol,
+pre .xml .cdata,
+pre .special,
+pre .number,
+pre .formula {
+  color: #b5bd68;
+}
+pre .title,
+pre .css .hexcolor {
+  color: #8abeb7;
+}
+pre .function,
+pre .python .decorator,
+pre .python .title,
+pre .ruby .function .title,
+pre .ruby .title .keyword,
+pre .perl .sub,
+pre .javascript .title,
+pre .coffeescript .title {
+  color: #81a2be;
+}
+pre .keyword,
+pre .javascript .function {
+  color: #b294bb;
 }
 /*====================================================
     media
