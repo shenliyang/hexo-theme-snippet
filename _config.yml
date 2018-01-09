@@ -1,24 +1,22 @@
-# ---------------------------------------------------------------
-#   Site Information And Theme Configuration Settings
-#   language: zh-CN
-# ---------------------------------------------------------------
+# layout -- 布局相关
+# language: zh-CN
 
-## menu 
+## menu 导航菜单显示
 menu:
-- page: home
+- page: 主页
   url: /
   icon: 
-- page: 前端
-  url: /categories/前端/
+- page: web
+  url: /categories/web/
   icon: 
-- page: 后端
-  url: /categories/后端/
-  icon: 
+- page: 基础
+  url: /categories/basic/
+  icon:  
 - page: 工具
-  url: /categories/工具/
+  url: /categories/tool/
   icon: 
 - page: 资源
-  url: /categories/资源/
+  url: /categories/resource/
   icon: 
 
 ## favicon 
@@ -43,7 +41,7 @@ widgets:
 ## 搜索
 jsonContent:
   searchLocal: true
-  searchGoogle: false
+  searchGoogle: true
   posts:
     title: true
     text: true
@@ -53,28 +51,28 @@ jsonContent:
 
 ## 网站公告设置
 notification: |-
-            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
-            主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
-            <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
-            </p>
+            <p>之前的博客由于重装系统丢失，现重新搭建，不断挖坑和填坑中</p>
 
 ## 社交设置
 social:
  - name: Github
    icon: git
-   href: //github.com/shenliyang
+   href: //github.com/Vaniot-s
  - name: 邮箱
    icon: envelope-o
-   href: mailto:snippet@91h5.cc
- - name: 联系QQ
-   icon: qq
-   href: /
- - name: 微博
-   icon: weibo
-   href: /
- - name: QQ群
-   icon: users
-   href: /
+   href: mailto:vaniot@yeah.net
+ # - name: 联系QQ
+ #   icon: qq
+ #   href: /
+ # - name: 微博
+ #   icon: weibo
+ #   href: /
+ - name: Telegram
+   icon: telegram
+   href: //t.me/fromblog
+## - name: QQ群
+ ##  icon: users
+##   href: /
  - name: RSS
    icon: feed
    href: /atom.xml
@@ -92,7 +90,7 @@ arch_config:
 
 ## 友链设置
 links:
-  - 个人博客: http://www.shenliyang.com
+  - 个人博客: https://vaniot-s.github.io/
 
 
 # 主题自定义个性化配置
@@ -111,8 +109,11 @@ defaultImgs:
 ## 截取文章首页描述字数
 excerptLength: 120
 
+## 当无分类时显示文字，默认为'无'
+noCategoryText: '无'
+
 ## 代码高亮配置
-highlightTheme: 
+highlightTheme: default
 
 ## ICON配置
 fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
@@ -127,35 +128,25 @@ declaration:
   enable: true
   title: '转载声明'
   tip: |-
-      商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+      商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Vaniot</a>
 
 
 ## 主题评论
-
 ### gitment
 gitment:
-  enable: false
-  owner: 
-  repo: 
-  client_id: 
-  client_secret: 
+  enable: true
+  owner: Vaniot-s
+  repo: vaniot-s.github.io
+  client_id: 13cbe7103381a4dd58cf
+  client_secret: 81a0c1eca119dc73db82809561586beb2a1fdc86
   perPage: 10
 
-### 来必力
-livere: 
-  enable: true
-  livere_uid: MTAyMC8zMzA1MS85NjEz
 
 ### 友言评论
 uyan:
   enable: false
   uyan_id: 1966422
 
-### Disqus评论
-disqus:
-  enable: false
-  shortname: snippet
-  count: false
 
 ## 网站访问统计
 
@@ -177,4 +168,4 @@ baidu_push:
 #网站主题配置
 since: 2017
 robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all
-version: 1.2.1
+version: 1.2.0

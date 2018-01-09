@@ -2,11 +2,11 @@
 
 Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 
-如果本主题也是你喜欢的菜，请动动手指 [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers) 支持一下
+如果本主题也是你喜欢的菜，请动动手指 [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers) 支持一下:pray:
 
 [![Build Status](https://www.travis-ci.org/shenliyang/hexo-theme-snippet.svg?branch=master)](https://www.travis-ci.org/shenliyang/hexo-theme-snippet)
 [![codebeat badge](https://codebeat.co/badges/6ef2dcd2-af90-40e0-9628-ac689441f774)](https://codebeat.co/projects/github-com-shenliyang-hexo-theme-snippet-master)
-[![mnt-image](https://img.shields.io/maintenance/yes/2018.svg)](../../commits/master)
+[![mnt-image](https://img.shields.io/maintenance/yes/2017.svg)](../../commits/master)
 [![hexo version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/shenliyang/hexo-theme-snippet/blob/master/LICENSE)
 
@@ -26,7 +26,7 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 - [x] 首页文章缩略图自动检索文章内图片，支持自动随机图片
 - [x] 主题支持响应式
 - [x] 站内本地搜索和谷歌搜索
-- [x] 评论系统支持来必力、友言和Gitment
+- [x] 评论系统支持友言和Gitment
 - [x] 版权信息可配置
 - [x] 支持网站统计和文章推送
 - [x] 移动端的简洁设计
@@ -111,6 +111,9 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 
 ``` yaml
 
+# layout -- 布局相关
+# language: zh-CN 默认语言
+
 ## menu -- 导航菜单显示{[@page:名字,@url:地址,@icon:图标]}
 menu:
 - page: home 
@@ -175,7 +178,7 @@ arch_config:
 ## 友链设置{@链接名称：链接地址{@links:[,,,]}}
 links:
     - 主题作者: http://www.shenliyang.com
-    
+
 
 # 主题自定义个性化配置
 
@@ -185,6 +188,7 @@ branding: 从未如此简单有趣
 ## 设置banner背景图片
 banner:
     img:
+
 
 ## 首页文章列表缩略图
 ### 加载规则: 自定义文章缩略图(在Front-matter中添加的'img'字段) > 文章内的图片 > defaultImgs(随机获取) > 无图模式列表
@@ -197,9 +201,14 @@ defaultImgs:
 ## 截取文章首页描述字数
 excerptLength: 120
 
-## 代码高亮配置{@highlightTheme: 主题名称,(配置暂时不可用，后续开发中…)}
+## 当无目录时的显示文字，默认为'无'
+noCategoryText: '无'
 
-highlightTheme: default //TODO
+## 代码高亮配置{@highlightTheme: 主题名称(默认为default)}
+主题名称：[参考网站](https://cdnjs.com/libraries/highlight.js)
+## 常用可配置名称[default,github,foundation,googlecode,monokai-sublime,monokai,monokai,xcode,vs2015,tomorrow,hybrid]
+
+highlightTheme: default 
 
 ## 文章过期提醒功能 {@warning:{days:临界天数(默认300天,设置0关闭功能),text:提醒文字/*%d为过期总天数占位符*/}}
 warning:
@@ -227,21 +236,10 @@ gitment:
   perPage: 
   maxCommentHeight:
   
-### 来必力(默认选项)
-livere: 
-  enable: true
-  livere_uid: 
-
-### 友言评论
+### 友言评论(默认选项)
 uyan:
-  enable: false
+  enable: true
   uyan_id: 
-  
-### Disqus评论
-disqus:
-  enable: false
-  shortname: snippet
-  count: false
 
 
 ## 网站访问统计
@@ -266,9 +264,9 @@ tencent_analytics:
 fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
 
 ## 网站主题配置
-since: 2017  //建站时间
-robot: 'all'  //控制搜索引擎的抓取和索引编制行为，默认为all
-version: 1.2.1  //当前主题版本号
+since: 2017
+robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all
+version: 1.2.0
 
 ```
 
@@ -376,11 +374,10 @@ Gulp 执行启用主题二次开发模式
 在设计这款主题的时候参考了好多主题和博客的设计和创意，深表感谢！ 
 
 ## 贡献
-致力主题简洁轻量，力求使用简单方便，接受各种形式的贡献，包括但不限于提交问题或需求，修复代码。
+接受各种形式的贡献，包括但不限于提交问题或需求，修复代码。
 欢迎大家提Issue或者Pull Request。
 
 如果觉得本主题还不错，==欢迎  [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers)下==，您的支持和鼓励才是后续更新最大的动力
-
 
 ## 版本更新
 
@@ -396,14 +393,16 @@ Gulp 执行启用主题二次开发模式
 - 增加本地搜索和谷歌搜索
 - 增加返回顶部
 
-### v1.2.1
-- 去掉highlight.js插件，启用本地高亮
-- 整理归类第三方评论
+## 最近更新日志
+- 修改loading图片加载Bug
+- 修改table样式覆盖问题
+- 简化配置项，方便用户下载即可使用
+- 优化Less文件，方便二次开发和专属定制
+- 修改主题样式显示细节
+- 修改主题语言配置 //TODO
 
-## 最新提交更新日志
-- 增加disqus评论
-- 增加缩略图文章链接
-
+- 整理归类统计代码并增加腾讯统计
+- 更新高亮代码库
 
 ## License
 

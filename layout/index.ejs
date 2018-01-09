@@ -1,7 +1,6 @@
-<div class="carousel">
-    <%- image_tag('img/head-img.jpg') %>
-</div>
-
+<!--  <div class="carousel">
+ <%- image_tag('img/head-img.jpg') %>
+</div> -->
 <% if(page.posts && page.posts.length){ %>
 <% page.posts.forEach(function (post, i) { %>
 <%
@@ -16,7 +15,7 @@
 <article class="post">
     <% if(_photoUrl) {%>
         <div class="post-media">
-            <a href="<%- url_for(post.path) %>">
+            <a href="javascript:">
                 <img class="img-ajax" src="<%- url_for('/img/loading.gif') %>"  data-src="<%- url_for(_photoUrl) %>"   alt="<%- post.title %>"> 
             </a>
         </div>
