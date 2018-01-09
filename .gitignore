@@ -5,4 +5,4 @@ ehthumbs.db
 node_modules/
 public/
 .deploy*/
-_config.yml
+/_config.yml
