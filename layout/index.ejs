@@ -16,7 +16,7 @@
 <article class="post">
     <% if(_photoUrl) {%>
         <div class="post-media">
-            <a href="javascript:">
+            <a href="<%- url_for(post.path) %>">
                 <img class="img-ajax" src="<%- url_for('/img/loading.gif') %>"  data-src="<%- url_for(_photoUrl) %>"   alt="<%- post.title %>"> 
             </a>
         </div>

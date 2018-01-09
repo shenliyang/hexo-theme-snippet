@@ -1,16 +1,16 @@
 <h3> 
-<% if(page.tag) { %>
-    <%= page.tag %> 
-<% } if(page.category) { %>
-    <%= page.category %> 
-<% } else { %>
-<% } %>
+    <% if(page.tag) { %>
+        <%= page.tag %> 
+    <% } if(page.category) { %>
+        <%= page.category %> 
+    <% } else { %>
+    <% } %>
 </h3>
 <% page.posts.each(function(post){ %>
     <article class="post">
         <% if(post.img) { %>
             <div class="post-media">
-                <a href="javascript:">
+                <a href="<%- url_for(post.path) %>">
                     <img class="img-ajax" src="<%- url_for('/img/loading.gif') %>"  data-src="<%- post.img %>"  alt="<%- post.title %>"> 
                 </a>
             </div>

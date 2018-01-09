@@ -3,9 +3,9 @@
     <div class="post-head">
         <h1 id="<%= page.title %>">
             <%if(page.link){%>
-            <a href="<%- url_for(page.link) %>" target="_blank"><%= page.title %></a>
-            <%}else{%>
-            <%= page.title||'NO Title!' %>
+	            <a href="<%- url_for(page.link) %>" target="_blank"><%= page.title %></a>
+	            <%}else{%>
+	            <%= page.title||'NO Title!' %>
             <%}%>
         </h1>
         <%- partial('_partial/article-meta', {post: page}) %>
@@ -17,7 +17,7 @@
             <p class="fa fa-exclamation-triangle warning">
                 <%- warningTextArr[0]%><strong><%= diffDays %></strong><%- warningTextArr[1]%>
             </p>
-            <% } %>
+        <% } %>
     </div>
     <%- partial('_partial/gallery',{post:page})%>
     <div class="post-body post-content">
