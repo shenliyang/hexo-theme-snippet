@@ -236,6 +236,12 @@ livere:
 uyan:
   enable: false
   uyan_id: 
+  
+### Disqus评论
+disqus:
+  enable: false
+  shortname: snippet
+  count: false
 
 
 ## 网站访问统计
@@ -394,10 +400,8 @@ Gulp 执行启用主题二次开发模式
 - 去掉highlight.js插件，启用本地高亮
 - 整理归类第三方评论
 
-## 最近更新日志
-- 整理归类第三方评论
-- 增加来必力评论
-- 删除自定义无分类字段
+## 最新提交更新日志
+- 增加disqus评论
 
 
 ## License

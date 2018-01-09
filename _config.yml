@@ -151,6 +151,12 @@ uyan:
   enable: false
   uyan_id: 1966422
 
+### Disqus评论
+disqus:
+  enable: false
+  shortname: snippet
+  count: false
+
 ## 网站访问统计
 
 ### 网盟CNZZ统计
