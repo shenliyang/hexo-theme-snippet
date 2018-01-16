@@ -3,6 +3,10 @@
 <meta name="description" content="<%= config.description%>"/>
 <% } %>
 
+<% if(config.keywords){ %>
+<meta name="keywords" content="<%= config.keywords%>"/>
+<% } %>
+
 <% var robotMeta = theme.robot||'all'; %>
 <meta name="robots" content="<%= robotMeta%>" />
 <meta name="google" content="<%= robotMeta%>" />
