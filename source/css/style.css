@@ -358,11 +358,10 @@ pre {
   border-bottom: 2px solid #e67e22;
   margin-bottom: -2px;
 }
-/* navbar */
-.navbar-header {
+.main-navigation .navbar-header {
   text-align: center;
 }
-.navbar-header i {
+.main-navigation .navbar-header i {
   height: 56px;
   line-height: 56px;
   font-size: 2em;
@@ -444,6 +443,7 @@ pre {
   text-align: left;
 }
 .post .post-content p.brief {
+  overflow: hidden;
   color: #666666;
 }
 .post .post-body {

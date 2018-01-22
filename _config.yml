@@ -146,7 +146,7 @@ livere:
   enable: true
   livere_uid: MTAyMC8zMzA1MS85NjEz
 
-### 友言评论
+### 友言评论(服务不稳定)
 uyan:
   enable: false
   uyan_id: 1966422
@@ -156,6 +156,12 @@ disqus:
   enable: false
   shortname: snippet
   count: false
+
+### 畅言评论(需要ICP备案)
+changyan:
+  enable: false
+  appid: cyt8KmUC1
+  conf: prod_855a68d3b3d91855360a6215672a505a
 
 ## 网站访问统计
 

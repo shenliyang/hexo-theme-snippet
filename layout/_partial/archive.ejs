@@ -27,7 +27,11 @@
                 </div>
             </div>
             <p class="brief">
-                <%- truncate(strip_html(post.content), {length: theme.excerptLength || 120, omission: '...'}) %>
+                <% if(post.excerpt) { %>
+                    <%= strip_html(post.excerpt) + '…' %>
+                <% } else { %>
+                    <%= truncate(strip_html(post.content), {length: theme.excerptLength || 120, separator: ''}) %>
+                <% } %>
             </p> 
         </div>
     </article>

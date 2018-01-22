@@ -5,7 +5,7 @@
 <% if(page.posts && page.posts.length){ %>
 <% page.posts.forEach(function (post, i) { %>
 <%
-    var urls = pickImgs(post);
+    var urls = lazyImage(post);
     var random = Math.floor(Math.random() * (urls.length));
     if(theme.defaultImgs && theme.defaultImgs.length >0){
         var urls2 = theme.defaultImgs;
@@ -33,7 +33,11 @@
             </div>
         </div>
         <p class="brief">
-            <%- truncate(strip_html(post.content), {length: theme.excerptLength || 120, omission: '...'}) %>
+            <% if(post.excerpt) { %>
+                <%= strip_html(post.excerpt) + '…' %>
+            <% } else { %>
+                <%= truncate(strip_html(post.content), {length: theme.excerptLength || 120, separator: ''}) %>
+            <% } %>
         </p> 
     </div>
     <footer class="post-footer clearfix">

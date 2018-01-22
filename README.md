@@ -26,7 +26,7 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 - [x] 首页文章缩略图自动检索文章内图片，支持自动随机图片
 - [x] 主题支持响应式
 - [x] 站内本地搜索和谷歌搜索
-- [x] 评论系统支持来必力、友言和Gitment
+- [x] 支持多个第三方评论系统
 - [x] 版权信息可配置
 - [x] 支持网站统计和文章推送
 - [x] 移动端的简洁设计
@@ -194,7 +194,9 @@ defaultImgs:
   - http://www.example.jpg //远程图片链接示例
   - /img/default-1.jpg //本地图片链接示例
 
-## 截取文章首页描述字数
+### 文章摘要{@摘要显示优先级：自定义摘要 > 自动截取摘要 }
+### 自定义摘要范围{@<!--more-->:截取more之前的内容为摘要}
+### 自动截取摘要{@excerptLength:自动截取文章前多少个字为摘要，不配置默认：120字}
 excerptLength: 120
 
 ## 代码高亮配置{@highlightTheme: 主题名称,(配置暂时不可用，后续开发中…)}
@@ -232,16 +234,22 @@ livere:
   enable: true
   livere_uid: 
 
-### 友言评论
+### 友言评论(服务不稳定，经常无法加载)
 uyan:
   enable: false
   uyan_id: 
   
-### Disqus评论
+### Disqus评论(需要翻墙，或者搭建代理)
 disqus:
   enable: false
   shortname: snippet
   count: false
+  
+### 畅言评论(需要ICP备案)
+changyan:
+  enable: true
+  appid: cyt8KmUC1
+  conf: prod_855a68d3b3d91855360a6215672a505a
 
 
 ## 网站访问统计
@@ -261,7 +269,6 @@ google_anaylytics:
 ### 腾讯分析 参考网站：[腾讯分析](http://ta.qq.com/)
 tencent_analytics: 
 
-
 ## ICON配置 (不配则启用本地Font Icon)
 fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
 
@@ -269,7 +276,6 @@ fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
 since: 2017  //建站时间
 robot: 'all'  //控制搜索引擎的抓取和索引编制行为，默认为all
 version: 1.2.1  //当前主题版本号
-
 ```
 
 ### 主题使用技巧及功能扩展
@@ -330,14 +336,14 @@ install:
 
 before_script:
   - export TZ='Asia/Shanghai' #设置时区
-  - npm install -g gulp  #安装Gulp
+  - npm install -g gulp  #全局安装Gulp
   - chmod +x _travis.sh  #授权脚本执行权限
 
 script:
   - hexo clean && hexo g #清除缓存并生成静态文件
   - gulp #执行gulp任务
 
-after_success: #实行成功时(以后扩展功能使用)
+after_success: #执行成功时(以后扩展功能使用)
 
 after_script:
   - ./_travis.sh #执行部署脚本
@@ -376,10 +382,13 @@ Gulp 执行启用主题二次开发模式
 在设计这款主题的时候参考了好多主题和博客的设计和创意，深表感谢！ 
 
 ## 贡献
-致力主题简洁轻量，力求使用简单方便，接受各种形式的贡献，包括但不限于提交问题或需求，修复代码。
+接受各种形式的贡献，包括但不限于提交问题或需求，修复代码。
 欢迎大家提Issue或者Pull Request。
 
-如果觉得本主题还不错，==欢迎  [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers)下==，您的支持和鼓励才是后续更新最大的动力
+如果觉得本主题还不错，++==欢迎  [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers)下==++，您的支持和鼓励才是后续更新最大的动力
+
+## 宗旨
+致力主题简洁轻量，力求使用配置方便，不求页面花里胡哨，但求功能简单实用
 
 
 ## 版本更新
@@ -401,8 +410,10 @@ Gulp 执行启用主题二次开发模式
 - 整理归类第三方评论
 
 ## 最新提交更新日志
-- 增加disqus评论
-- 增加缩略图文章链接
+- 增加自定义配置文章摘要(在文章内加入<!--more-->)
+- 增加畅言评论系统(需要ICP备案)
+- 修改首页摘要显示Bug
+- 优化代码结构
 
 
 ## License

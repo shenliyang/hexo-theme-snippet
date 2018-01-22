@@ -6,6 +6,8 @@
 	<%- partial('_vendor/comments/livere') %>
 <% } else if(theme.disqus.enable && is_post()) { %>
 	<%- partial('_vendor/comments/disqus') %>	
+<% } else if(theme.changyan.enable && is_post()) { %>
+	<%- partial('_vendor/comments/changyan') %>	
 <% } else { %>
    <p>评论系统未开启，无法评论！</p>
 <% } %>

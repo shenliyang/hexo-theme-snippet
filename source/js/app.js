@@ -12,6 +12,18 @@ window.onload = function() {
         $backToTop = document.getElementById("back-to-top"),
         timer = null;
 
+    //设备判断
+    var isPC = true;
+    (function(designPercent) {
+        function params(u, p) {
+            var m = new RegExp("(?:&|/?)" + p + "=([^&$]+)").exec(u);
+            return m ? m[1] : '';
+        }
+        if (/iphone|ios|android|ipod/i.test(navigator.userAgent.toLowerCase()) == true && params(location.search, "from") != "mobile") {
+            isPC = false;
+        } 
+    })();
+
     //手机菜单导航
     $mnav.onclick = function(){  
         var navOpen = $mainMenu.getAttribute("class");
@@ -21,28 +33,6 @@ window.onload = function() {
             $mainMenu.setAttribute("class","collapse navbar-collapse in");
         }
     };
-
-    //设备判断
-    var isPC = true;
-    (function(designPercent) {
-        function params(u, p) {
-            var m = new RegExp("(?:&|/?)" + p + "=([^&$]+)").exec(u);
-            return m ? m[1] : '';
-        }
-        if (/iphone|ios|android|ipod/i.test(navigator.userAgent.toLowerCase()) == true && params(location.search, "from") != "mobile") {
-            var mainWidth = document.body.clientWidth;
-            var fontSize = mainWidth / designPercent + 'px';
-            document.documentElement.style.fontSize = fontSize;
-            window.onresize = function() {
-                var mainWidth = document.body.clientWidth;
-                fontSize = mainWidth / designPercent + 'px';
-                document.documentElement.style.fontSize = fontSize;
-            };
-            isPC = false;
-        } else {
-        	document.documentElement.style.fontSize = '610%'
-        };
-    })(450 / 100);
 
     //首页文章图片懒加载
     function imgsAjax($targetEles) {

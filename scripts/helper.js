@@ -1,4 +1,4 @@
-function pickImgs(post) {
+function lazyImage(post) {
     var content = post.content.toString();
     var imgRe = /<img.*?\ssrc=[\'\"]\S+[\'\"]\s.*?>/gim;
     var urlRe = /(http:|https:|\/|\.)\S+(?="\s)/i;
@@ -10,4 +10,6 @@ function pickImgs(post) {
     return data;
 }
 
-hexo.extend.helper.register('pickImgs',pickImgs);
+hexo.extend.helper.register('lazyImage',lazyImage);
+
+
