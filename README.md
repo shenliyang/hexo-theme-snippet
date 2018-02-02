@@ -247,9 +247,9 @@ disqus:
   
 ### 畅言评论(需要ICP备案)
 changyan:
-  enable: true
-  appid: cyt8KmUC1
-  conf: prod_855a68d3b3d91855360a6215672a505a
+  enable: false
+  appid: 
+  conf:
 
 
 ## 网站访问统计
