@@ -427,6 +427,12 @@ pre {
   margin-right: 5px;
   white-space: nowrap;
 }
+.post .post-head .post-meta span a {
+  color: #959595;
+}
+.post .post-head .post-meta span a:hover {
+  color: #e67e22;
+}
 .post .post-media {
   position: relative;
   margin-right: 15px;
@@ -537,12 +543,6 @@ pre {
 }
 .post-content a {
   word-wrap: break-word;
-  -moz-text-decoration-color: rgba(0, 0, 0, 0.4);
-  text-decoration-color: rgba(0, 0, 0, 0.4);
-}
-.post-content a:hover {
-  -moz-text-decoration-color: rgba(0, 0, 0, 0.6);
-  text-decoration-color: rgba(0, 0, 0, 0.6);
 }
 .post-content a img {
   border: none;

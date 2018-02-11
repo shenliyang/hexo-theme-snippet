@@ -399,6 +399,12 @@ pre {
             span {
                 margin-right: 5px;
                 white-space: nowrap;
+                a {
+                    color:@sepia_color;
+                    &:hover{
+                        color:@theme_color;
+                    }
+                } 
             }
         }
     }
@@ -515,12 +521,6 @@ pre {
     }
     a {
         word-wrap: break-word;
-        -moz-text-decoration-color: rgba(0, 0, 0, 0.4);
-        text-decoration-color: rgba(0, 0, 0, 0.4);
-        &:hover {
-            -moz-text-decoration-color: rgba(0, 0, 0, 0.6);
-            text-decoration-color: rgba(0, 0, 0, 0.6);
-        }
         img {
             border: none;
         }
