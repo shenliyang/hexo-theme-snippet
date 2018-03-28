@@ -233,7 +233,7 @@ pre {
   width: 100%;
 }
 /*====================================================
-    header 
+    header
 ====================================================*/
 .main-header {
   position: relative;
@@ -244,6 +244,7 @@ pre {
   background: #fff url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner.jpg);
   background-repeat: repeat;
   background-attachment: fixed;
+  overflow: hiddle;
 }
 .main-header .banneriframe {
   width: 100%;
@@ -1006,7 +1007,7 @@ pre {
   color: #666666;
 }
 /*====================================================
-   back-to-top 
+   back-to-top
 ====================================================*/
 #back-to-top {
   position: fixed;
@@ -1195,6 +1196,9 @@ pre .javascript .function {
   .main-navigation .menu li:hover > a {
     color: #e67e22;
     text-decoration: none;
+  }
+  .main-navigation .menu li a {
+    padding: 0;
   }
   .main-navigation .menu li ul {
     visibility: visible;
