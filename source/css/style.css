@@ -978,6 +978,10 @@ pre {
 .widget #search-form #result-wrap #search-result .item .title:hover {
   color: #e67e22;
 }
+.widget #search-form #result-wrap #search-result .item .title b {
+  margin: 0 2px;
+  color: #e67e22;
+}
 .widget #search-form #result-wrap #search-result .item .content {
   font-size: 14px;
   color: #666666;
