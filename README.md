@@ -12,7 +12,7 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 
 [主题预览 Demo](http://shenliyang.github.io) 
 
-![hexo-theme-snippet](http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/snippet-screenshots2000.jpg)
+![hexo-theme-snippet](http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/snippet-screenshots1000.jpg)
 
 
 ## 主题特点
