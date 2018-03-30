@@ -17,7 +17,7 @@
     <% if(_photoUrl) {%>
         <div class="post-media">
             <a href="<%- url_for(post.path) %>">
-                <img class="img-ajax" src="<%- url_for('/img/loading.gif') %>"  data-src="<%- url_for(_photoUrl) %>"   alt="<%- post.title %>"> 
+                <img class="img-ajax" src="<%- url_for('/img/loading.gif') %>"  data-src="<%- url_for(_photoUrl) %>"   alt="<%- post.title %>">
             </a>
         </div>
     <% } %>
@@ -38,17 +38,19 @@
             <% } else { %>
                 <%= truncate(strip_html(post.content), {length: theme.excerptLength || 120, separator: ''}) %>
             <% } %>
-        </p> 
+        </p>
     </div>
-    <footer class="post-footer clearfix">
-        <div class="pull-left tag-list">
-            <%- partial('_partial/article-meta', {post: post}) %>
-        </div>
+    <% if(theme.homePanel) { %>
+        <footer class="post-footer clearfix">
+            <div class="pull-left tag-list">
+                <%- partial('_partial/article-meta', {post: post}) %>
+            </div>
 
-        <div class="post-permalink"> 
-            <a href="<%- url_for(post.path) %>" class="btn btn-default">阅读全文</a>
-        </div>
-    </footer>
+            <div class="post-permalink">
+                <a href="<%- url_for(post.path) %>" class="btn btn-default">阅读全文</a>
+            </div>
+        </footer>
+    <% } %>
 </article>
 <% }) %>
 <%}%>

@@ -104,15 +104,18 @@ branding:
 banner:
     img: http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg
 
+## 首页列表底部面板
+homePanel: true
+
 ## 缩略图自定义随机图片
 defaultImgs:
-  - 
+  -
 
 ## 截取文章首页描述字数
 excerptLength: 120
 
 ## 代码高亮配置
-highlightTheme: 
+highlightTheme:
 
 ## ICON配置
 fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css

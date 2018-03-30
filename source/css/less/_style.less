@@ -402,6 +402,7 @@ pre {
                 white-space: nowrap;
                 a {
                     color:@sepia_color;
+                    margin-left: 3px;
                     &:hover{
                         color:@theme_color;
                     }
@@ -456,9 +457,15 @@ pre {
                     margin-right: 10px;
                 }
             }
+            .tags-meta{
+                a{
+                    &:nth-child(n+2){
+                        margin-left:4px;
+                    }
+                }
+            }
             a {
                 color: @sepia_color;
-                margin-left: 7px;
                 &:hover {
                     color: @theme_color;
                 }

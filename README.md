@@ -10,7 +10,7 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 [![hexo version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/shenliyang/hexo-theme-snippet/blob/master/LICENSE)
 
-[主题预览 Demo](http://shenliyang.github.io) 
+[主题预览 Demo](http://shenliyang.github.io)
 
 ![hexo-theme-snippet](http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/snippet-screenshots1000.jpg)
 
@@ -103,7 +103,7 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 ``` bash
     cd themes/snippet
     git pull
-``` 
+```
 
 # **主题篇**
 
@@ -113,7 +113,7 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 
 ## menu -- 导航菜单显示{[@page:名字,@url:地址,@icon:图标]}
 menu:
-- page: home 
+- page: home
   url: /
   icon: fa-home
 
@@ -129,7 +129,7 @@ rss: /atom.xml
 ## widgets -- 6个左边小工具{@widgets:[notification,category,archive,tagcloud,friends]}
 widgets:
 - search
-- notification 
+- notification
 - social
 - category
 - archive
@@ -143,14 +143,14 @@ jsonContent:
   searchLocal: true // 是否启用本地搜索
   searchGoogle: true //是否启用谷歌搜索
   posts:
-    title: true 
+    title: true
     text: true
     content: true
     categories: false
     tags: false
 
 ## notification config --网站公告设置,支持 html 和 纯文本
-notification: |- 
+notification: |-
             <p>主题已经上线！欢迎下载或更新~ <br/>
             主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
             <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a></p>
@@ -160,7 +160,7 @@ social:
  - name: Github
    icon: git
    href: //github.com/shenliyang
-   
+
 ## 文章分类设置{@cate_config:{@show_count:是否显示数字，@show_current: 是否高亮当前category}}
 cate_config:
    show_count: true
@@ -186,9 +186,12 @@ branding: 从未如此简单有趣
 banner:
     img:
 
+## 首页列表底部面板{@homePanel: 是否开启}
+homePanel: true
+
 ## 首页文章列表缩略图
 ### 加载规则: 自定义文章缩略图(在Front-matter中添加的'img'字段) > 文章内的图片 > defaultImgs(随机获取) > 无图模式列表
-  
+
 ## 自定义随机图片
 defaultImgs:
   - http://www.example.jpg //远程图片链接示例
@@ -221,53 +224,53 @@ declaration:
 ### gitment
 gitment:
   enable: false
-  owner: 
-  repo: 
-  client_id: 
-  client_secret: 
-  labels: 
-  perPage: 
+  owner:
+  repo:
+  client_id:
+  client_secret:
+  labels:
+  perPage:
   maxCommentHeight:
-  
+
 ### 来必力(默认选项)
-livere: 
+livere:
   enable: true
-  livere_uid: 
+  livere_uid:
 
 ### 友言评论(服务不稳定，经常无法加载)
 uyan:
   enable: false
-  uyan_id: 
-  
+  uyan_id:
+
 ### Disqus评论(需要翻墙，或者搭建代理)
 disqus:
   enable: false
   shortname: snippet
   count: false
-  
+
 ### 畅言评论(需要ICP备案)
 changyan:
   enable: false
-  appid: 
+  appid:
   conf:
 
 
 ## 网站访问统计
 
-### 网盟CNZZ统计 参考网站: [网盟CNZZ](http://www.umeng.com/) 
-cnzz_anaylytics: 
+### 网盟CNZZ统计 参考网站: [网盟CNZZ](http://www.umeng.com/)
+cnzz_anaylytics:
 
 ### 百度统计 参考网站: [百度统计](https://tongji.baidu.com/)
-baidu_anaylytics: 
+baidu_anaylytics:
 
-### 百度文章推送  参考网站: [百度站长](http://zhanzhang.baidu.com/)  
+### 百度文章推送  参考网站: [百度站长](http://zhanzhang.baidu.com/)
 baidu_push:
 
 ### 谷歌统计 参考网站：[谷歌统计](https://www.google-analytics.com/)
-google_anaylytics: 
+google_anaylytics:
 
 ### 腾讯分析 参考网站：[腾讯分析](http://ta.qq.com/)
-tencent_analytics: 
+tencent_analytics:
 
 ## ICON配置 (不配则启用本地Font Icon)
 fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
@@ -281,7 +284,7 @@ version: 1.2.1  //当前主题版本号
 ### 主题使用技巧及功能扩展
 1. 修改新增文章Front-matter模板,修改`scaffolds`目录下的`post.md`模板
 ``` yml
---- 
+---
 title: {{ title }} // 标题
 date: {{ date }}   // 时间
 categories:        // 分类
@@ -293,7 +296,7 @@ img:               // 自定义缩略图
 
 2. 启用站内本地搜索功能
 
-如果要使用本地站点搜索，必须安装插件hexo-generator-json-content来创建本地搜索json文件 
+如果要使用本地站点搜索，必须安装插件hexo-generator-json-content来创建本地搜索json文件
 ```bash
     npm i hexo-generator-json-content@2.2.0 -S
 ```
@@ -410,10 +413,10 @@ Gulp 执行启用主题二次开发模式
 - 整理归类第三方评论
 
 ## 最新提交更新日志
-- 增加自定义配置文章摘要(在文章内加入<!--more-->)
-- 增加畅言评论系统(需要ICP备案)
-- 修改首页摘要显示Bug
-- 优化代码结构
+- 增加首页底部面板开关功能
+- 修改文章标签最多显示3个
+- 优化文章页面上下翻页导航
+- 优化部分样式
 
 
 ## License
