@@ -31,7 +31,7 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 - [x] 支持网站统计和文章推送
 - [x] 移动端的简洁设计
 - [x] 支持代码高亮并支持自定义高亮样式
-- [x] 支持Shell脚本一键使用Travis CI持续部署Hexo博客
+- [x] 支持Shell脚本一键使用Travis CI自动化部署博客
 
 
 # **基础篇**
@@ -52,7 +52,7 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 2. Git方式，在Hexo根目录执行：
 ``` bash
     git clone git://github.com/shenliyang/hexo-theme-snippet.git themes/snippet
-``` 
+```
 
 ### 3. 安装主题插件
 
@@ -175,7 +175,7 @@ arch_config:
 ## 友链设置{@链接名称：链接地址{@links:[,,,]}}
 links:
     - 主题作者: http://www.shenliyang.com
-    
+
 
 # 主题自定义个性化配置
 
@@ -208,9 +208,9 @@ highlightTheme: default //TODO
 
 ## 文章过期提醒功能 {@warning:{days:临界天数(默认300天,设置0关闭功能),text:提醒文字/*%d为过期总天数占位符*/}}
 warning:
-  days: 300  
+  days: 300
   text: '本文于%d天之前发表，文中内容可能已经过时。'
-  
+
 ## 文章内声明{@declaration: {enable:是否开启,title:声明标题,tip:提示内容}}
 declaration:
   enable: true
@@ -319,10 +319,10 @@ CI即持续集成系统。对个人而言，就是让你的代码在提交到远
 language: node_js #使用Node语言环境
 node_js: stable #安装稳定版Node
 
-sudo: false  
+sudo: false
 
 #cache 启用缓存，加快构建速度
-cache: 
+cache:
   directories:
     - "node_modules"
 
@@ -366,7 +366,7 @@ env:
 ## 3. 主题开发
 Gulp 执行启用主题二次开发模式
 ``` bash
-    gulp dev 
+    gulp dev
 ```
 会监听样式less或者JS文件的变动。然后执行上面的【主题发布】即可。
 
@@ -381,14 +381,13 @@ Gulp 执行启用主题二次开发模式
 # **其他**
 
 ## 感谢
-
-在设计这款主题的时候参考了好多主题和博客的设计和创意，深表感谢！ 
+在设计这款主题的时候参考了好多主题和博客的设计和创意，深表感谢！
 
 ## 贡献
 接受各种形式的贡献，包括但不限于提交问题或需求，修复代码。
 欢迎大家提Issue或者Pull Request。
 
-如果觉得本主题还不错，++==欢迎  [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers)下==++，您的支持和鼓励才是后续更新最大的动力
+如果觉得本主题还不错，== 欢迎  [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers)下 ==，您的支持和鼓励才是后续更新最大的动力
 
 ## 宗旨
 致力主题简洁轻量，力求使用配置方便，不求页面花里胡哨，但求功能简单实用
