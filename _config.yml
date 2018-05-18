@@ -3,28 +3,28 @@
 #   language: zh-CN
 # ---------------------------------------------------------------
 
-## menu 
+## menu
 menu:
 - page: home
   url: /
-  icon: 
+  icon:
 - page: 前端
   url: /categories/前端/
-  icon: 
+  icon:
 - page: 后端
   url: /categories/后端/
-  icon: 
+  icon:
 - page: 工具
   url: /categories/工具/
-  icon: 
+  icon:
 - page: 资源
   url: /categories/资源/
-  icon: 
+  icon:
 
-## favicon 
+## favicon
 favicon: /favicon.ico
 
-## Feed 
+## Feed
 rss: /atom.xml
 
 
@@ -32,6 +32,7 @@ rss: /atom.xml
 
 ## widgets
 widgets:
+  - stick
   - search
   - notification
   - social
@@ -66,14 +67,14 @@ social:
  - name: 邮箱
    icon: envelope-o
    href: mailto:snippet@91h5.cc
+ - name: QQ群
+   icon: users
+   href: //jq.qq.com/?_wv=1027&k=5Cl8cXO
  - name: 联系QQ
    icon: qq
    href: /
  - name: 微博
    icon: weibo
-   href: /
- - name: QQ群
-   icon: users
    href: /
  - name: RSS
    icon: feed
@@ -117,8 +118,11 @@ excerptLength: 120
 ## 代码高亮配置
 highlightTheme:
 
+## bootstrap配置
+bootstrap:
+
 ## ICON配置
-fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
+fontAwesome:
 
 ## 文章过期提醒功能
 warning:
@@ -138,14 +142,14 @@ declaration:
 ### gitment
 gitment:
   enable: false
-  owner: 
-  repo: 
-  client_id: 
-  client_secret: 
+  owner:
+  repo:
+  client_id:
+  client_secret:
   perPage: 10
 
 ### 来必力
-livere: 
+livere:
   enable: false
   livere_uid: MTAyMC8zMzA1MS85NjEz
 
@@ -172,13 +176,13 @@ changyan:
 cnzz_analytics: 1263868967
 
 ### 百度统计
-baidu_analytics: 
+baidu_analytics:
 
 ### 谷歌统计
-google_analytics: 
+google_analytics:
 
 ### 腾讯分析
-tencent_analytics: 
+tencent_analytics:
 
 ### 百度文章推送
 baidu_push:
