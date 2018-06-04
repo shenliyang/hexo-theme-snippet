@@ -5,3 +5,4 @@ ehthumbs.db
 node_modules/
 public/
 .deploy*/
+.idea/

@@ -1000,9 +1000,29 @@ pre {
 }
 
 /*====================================================
-   back-to-top
+   toc
 ====================================================*/
-#back-to-top {
+#article-toc {
+    padding-top:1em;
+    background-color:@white_color;
+    .toc-link{
+        display: block;
+        color: @black3_color;
+        text-decoration: none;
+        padding: 5px 0;
+        line-height: 1;
+        position: relative;
+        width: 100%;
+        .text-ellipsis();
+        &:hover{
+            color:@theme_color;
+        }
+    }
+}
+/*====================================================
+   back-to-top and toc-btn
+====================================================*/
+#back-to-top,#toc-btn {
     position: fixed;
     right: 30px;
     bottom: 30px;
@@ -1011,6 +1031,7 @@ pre {
     text-align: center;
     .border-radius;
     z-index: 1;
+    cursor:pointer;
     &:hover {
         background: @theme_color;
         .transition()
@@ -1020,6 +1041,9 @@ pre {
         height: 30px;
         line-height: 30px
     }
+}
+#toc-btn{
+    bottom:65px;
 }
 
 /*====================================================
@@ -1086,7 +1110,7 @@ pre {
             margin: 0 0 1em 0;
         }
     }
-    .post-footer{
+    .post-footer , #article-toc{
         display:none;
     }
     .content-wrap {

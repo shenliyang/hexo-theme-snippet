@@ -1014,9 +1014,32 @@ pre {
   color: #666666;
 }
 /*====================================================
-   back-to-top
+   toc
 ====================================================*/
-#back-to-top {
+#article-toc {
+  padding-top: 1em;
+  background-color: #fff;
+}
+#article-toc .toc-link {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 5px 0;
+  line-height: 1;
+  position: relative;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#article-toc .toc-link:hover {
+  color: #e67e22;
+}
+/*====================================================
+   back-to-top and toc-btn
+====================================================*/
+#back-to-top,
+#toc-btn {
   position: fixed;
   right: 30px;
   bottom: 30px;
@@ -1027,16 +1050,22 @@ pre {
   -moz-border-radius: 2px;
   border-radius: 2px;
   z-index: 1;
+  cursor: pointer;
 }
-#back-to-top:hover {
+#back-to-top:hover,
+#toc-btn:hover {
   background: #e67e22;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-#back-to-top i {
+#back-to-top i,
+#toc-btn i {
   width: 30px;
   height: 30px;
   line-height: 30px;
+}
+#toc-btn {
+  bottom: 65px;
 }
 /*====================================================
     highlight
@@ -1240,7 +1269,8 @@ pre .javascript .function {
     height: auto;
     margin: 0 0 1em 0;
   }
-  .post-footer {
+  .post-footer,
+  #article-toc {
     display: none;
   }
   .content-wrap .m-post {

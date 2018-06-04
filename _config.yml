@@ -32,7 +32,6 @@ rss: /atom.xml
 
 ## widgets
 widgets:
-  - stick
   - search
   - notification
   - social
