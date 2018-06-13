@@ -1047,6 +1047,12 @@ pre {
 }
 
 /*====================================================
+    timeline
+====================================================*/
+
+@import "_timeline";
+
+/*====================================================
     highlight
 ====================================================*/
 
@@ -1055,7 +1061,7 @@ pre {
 /*====================================================
     media
 ====================================================*/
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .main-navigation {
         text-align: left;
         .menu {
@@ -1128,13 +1134,13 @@ pre {
     }
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .nav-toggle-button {
         display: none;
     }
 }
 
-@media (min-width: 1100px) {
+@media screen and (min-width: 1100px) {
     .post-content {
         blockquote {
             padding-left: 20px;

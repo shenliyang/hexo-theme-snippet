@@ -182,9 +182,9 @@ links:
 ## 网站宣传语{@branding：网站宣传语(不设置显示本地图片)}
 branding: 从未如此简单有趣
 
-## 设置banner背景图片
+## 设置banner背景图片{@img:imgUrl自定义图片地址,主题默认{"静态背景":"banner.jpg"},{"动态背景":"banner2.jpg"}}
 banner:
-    img:
+    img: imgUrl
 
 ## 首页列表底部面板{@homePanel: 是否开启}
 homePanel: true
@@ -413,6 +413,8 @@ Gulp 执行启用主题二次开发模式
 
 ## 最新提交更新日志
 - 增加文章目录toc功能
+- 修改新增页面模板
+- 增加文章归档时间轴
 
 
 ## License
