@@ -243,8 +243,7 @@ pre {
   width: 100%;
   background: #fff url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner.jpg);
   background-repeat: repeat;
-  background-attachment: fixed;
-  overflow: hiddle;
+  overflow: hidden;
 }
 .main-header .banneriframe {
   width: 100%;
@@ -300,8 +299,21 @@ pre {
   text-align: center;
   background: #fff;
   border-top: 1px solid #ebebeb;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border-bottom: 2px solid #e1e1e1;
+}
+.main-navigation .navbar-collapse {
+  border-top: 1px solid #ebebeb;
+}
+.main-navigation .navbar-brand {
+  max-width: 90%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 19px 0 0 0;
+  font-size: 14px;
+  color: #505050;
+  display: none;
 }
 .main-navigation .menu {
   padding: 0;
@@ -368,12 +380,16 @@ pre {
   font-size: 2em;
   cursor: pointer;
 }
+.main-navigation .navbar-header i:hover {
+  color: #e67e22;
+}
 /*====================================================
     main post area
 ====================================================*/
 #main {
   background: #fff;
   padding: 10px 0;
+  margin-bottom: 10px;
 }
 .post {
   padding: 20px;
@@ -1307,6 +1323,9 @@ pre .javascript .function {
 @media screen and (max-width: 767px) {
   .main-navigation {
     text-align: left;
+  }
+  .main-navigation .navbar-brand {
+    display: block;
   }
   .main-navigation .menu li {
     display: block;

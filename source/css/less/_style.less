@@ -207,8 +207,7 @@ pre {
     width: 100%;
     background:@white_color url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner.jpg);
     background-repeat: repeat;
-    background-attachment: fixed;
-    overflow:hiddle;
+    overflow: hidden;
     .banneriframe {
         width: 100%;
         height: 100%;
@@ -248,11 +247,9 @@ pre {
 	                text-decoration: none;
             	}
         	}
-
         }
     }
 }
-
 .home-template {
     .main-header {
         padding-top: 62px;
@@ -269,8 +266,19 @@ pre {
     text-align: center;
     background:  @white_color;
     .border-top(#ebebeb);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border-bottom: 2px solid #e1e1e1;
+    .navbar-collapse{
+        border-top:1px solid #ebebeb
+    }
+    .navbar-brand{
+        max-width: 90%;
+        .text-ellipsis();
+        padding:19px 0 0 0;
+        font-size:14px;
+        color:@grey5_color;
+        display:none;
+    }
     .menu {
         padding: 0;
         margin: 0;
@@ -337,12 +345,12 @@ pre {
             line-height: 56px;
             font-size: 2em;
             cursor: pointer;
+            &:hover{
+                color: @theme_color
+            }
         }
     }
-
-
 }
-
 
 /*====================================================
     main post area
@@ -350,6 +358,7 @@ pre {
 #main{
     background: @white_color;
     padding:10px 0;
+    margin-bottom: 10px;
 }
 .post {
     padding: 20px;
@@ -1064,6 +1073,9 @@ pre {
 @media screen and (max-width: 767px) {
     .main-navigation {
         text-align: left;
+        .navbar-brand{
+            display: block;
+        }
         .menu {
             li {
                 display: block;
