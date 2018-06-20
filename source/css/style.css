@@ -822,9 +822,13 @@ pre {
 .sidebar .widget ul li {
   list-style: none;
 }
+.sidebar .widget ul li.archive-list-item {
+  width: 50%;
+  display: inline-block;
+}
 .sidebar .widget .archive-list-count,
 .sidebar .widget .category-list-count {
-  margin-left: 5px;
+  margin-left: 4px;
 }
 .sidebar .widget .archive-list-count:before,
 .sidebar .widget .category-list-count:before {
@@ -1036,20 +1040,30 @@ pre {
   padding-top: 1em;
   background-color: #fff;
 }
-#article-toc .toc-link {
+#article-toc ol {
+  list-style: none;
+}
+#article-toc .toc {
+  overflow-y: auto;
+  padding-left: 2em;
+}
+#article-toc .toc .toc-item .toc-link {
   display: block;
   color: #333;
   text-decoration: none;
-  padding: 5px 0;
-  line-height: 1;
+  padding: 3px 0;
+  line-height: 1.25em;
   position: relative;
   width: 100%;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
-#article-toc .toc-link:hover {
+#article-toc .toc .toc-item .toc-link:hover {
   color: #e67e22;
+}
+#article-toc .toc .toc-item.toc-level-2 > .toc-link {
+  font-size: 15px;
 }
 /*====================================================
    back-to-top and toc-btn
