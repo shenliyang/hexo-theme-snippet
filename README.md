@@ -430,7 +430,10 @@ npm i hexo-generator-json-content@2.2.0 -S
 | pagination_dir     | 分页目录      |   page |
 
 
-## 版本更新更新日志
+> 没有找到我需要的问题： [提Issues](https://github.com/shenliyang/hexo-theme-snippet/issues/new)
+
+
+## 版本更新日志
 - 增加文章目录toc功能
 - 修改新增页面模板
 - 增加文章归档时间轴
