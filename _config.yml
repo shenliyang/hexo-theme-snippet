@@ -67,14 +67,14 @@ social:
  - name: 邮箱
    icon: envelope-o
    href: mailto:snippet@91h5.cc
- - name: QQ群
-   icon: users
-   href: //jq.qq.com/?_wv=1027&k=5Cl8cXO
  - name: 联系QQ
    icon: qq
+   href: //t.cn/RrdplPG
+ - name: 微信
+   icon: weixin
    href: /
- - name: 微博
-   icon: weibo
+ - name: QQ群
+   icon: users
    href: /
  - name: RSS
    icon: feed
@@ -114,6 +114,9 @@ defaultImgs:
 
 ## 截取文章首页描述字数
 excerptLength: 120
+
+## 是否开启文章目录
+toc: true
 
 ## 代码高亮配置
 highlightTheme:

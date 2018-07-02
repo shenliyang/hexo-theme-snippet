@@ -202,6 +202,9 @@ defaultImgs:
 ### 自动截取摘要{@excerptLength:自动截取文章前多少个字为摘要，不配置默认：120字}
 excerptLength: 120
 
+## 是否开启文章目录
+toc: true
+
 ## 代码高亮配置{@highlightTheme: 主题名称,(配置暂时不可用，后续开发中…)}
 
 highlightTheme: default //TODO
@@ -439,6 +442,7 @@ npm i hexo-generator-json-content@2.2.0 -S
 - 增加文章归档时间轴
 - 修改手机导航菜单样式
 - 修改样式细节
+- 增加是否开启文章目录toc功能
 
 ## License
 
