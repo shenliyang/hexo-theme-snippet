@@ -9,7 +9,7 @@
                 <main class="col-md-8 main-content <%if(is_post()){%>m-post<%}%>">
                     <%- body %>
                 </main>
-                <% if(is_post()){ %>
+                <% if(theme.toc && is_post()){ %>
                     <%- partial('_partial/toc', null, {cache:false}) %>
                 <% } else { %>
                     <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>

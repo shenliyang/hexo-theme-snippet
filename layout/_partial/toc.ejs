@@ -1,12 +1,10 @@
-<% 
-    var TOC = toc(page.content,{list_number:false})
-    if(TOC) {
-    %>
-	<aside id="article-toc" role="navigation" class="col-md-4">
-	    <div class="widget">
-	        <h3 class="title">文章目录</h3>
-	        <%- toc(page.content,{list_number:false}) %>
-	    </div>
-	</aside>
-    <% }
-%>
+<aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        <% if(toc(page.content)){ %>
+            <%- toc(page.content,{list_number:false}) %>
+        <% } else { %>
+            <p>暂无目录</p>
+        <% } %>
+    </div>
+</aside>
