@@ -472,16 +472,18 @@ pre {
 }
 .post .post-body {
   margin-top: 15px;
-  padding: 25px 0;
+  padding: 15px 0;
   border-top: 1px solid #eee;
   overflow: hidden;
 }
 .post .post-body p {
-  font-size: 1em;
+  font-size: 0.95em;
   line-height: 1.5;
 }
 .post .post-body p img {
   max-width: 100%;
+  margin: 5px auto;
+  display: block;
 }
 .post .post-footer {
   margin-top: 15px;
@@ -560,6 +562,8 @@ pre {
 }
 .post-content p {
   font-size: 15px;
+  text-indent: 30px;
+  margin-bottom: 5px;
 }
 .post-content a {
   word-wrap: break-word;
@@ -623,10 +627,15 @@ pre {
   border-top: #dededc 1px solid;
 }
 .post-content blockquote {
-  margin: 0 0 1.64em 0;
-  border-left: 3px solid #e67e22;
-  padding-left: 12px;
-  color: #666666;
+  padding: 8px 0;
+  margin: 5px 0;
+  color: #4b4b4b;
+  background-color: #f9f9f9;
+  font-size: 92%;
+  border-radius: 1px;
+  font-family: 'consolas','Microsoft Yahei',Monaco,courier,monospace;
+  box-shadow: 0 2px 3px rgba(1,1,1,0.08) inset;
+  border-left: 4px solid rgba(255,90,90,0.96);
 }
 .post-content blockquote a {
   color: #666666;
@@ -1192,8 +1201,10 @@ pre,
   padding: 0;
   color: #c5c8c6;
   font-size: 13px;
-  background: #1d1f21;
+  background: rgba(102, 128, 153, 0.04);
   line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid #ddd;
 }
 code {
   padding: 2px 4px;
@@ -1255,13 +1266,13 @@ pre .comment {
   padding-right: 10px;
   color: #888f96;
   text-align: right;
-  background-color: #000;
+  box-shadow: 1px 0 5px rgba(1, 1, 1, 0.12);
 }
 .highlight .code pre {
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #1d1f21;
+  background-color: transparent !important;
 }
 .highlight .line {
   height: 20px;
