@@ -1079,7 +1079,7 @@ pre {
   text-align: center;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  border-radius: 2px;
+  border-radius: 15px;
   z-index: 1;
   cursor: pointer;
 }
