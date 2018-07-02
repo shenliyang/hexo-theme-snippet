@@ -3,6 +3,7 @@
  * ======================================================================== */
 window.onload = function() {
     var $body = document.body,
+        $fixnav = document.getElementById("fixnav"),
         $mnav = document.getElementById("mnav"), //获取导航三角图标
         $mainMenu = document.getElementById("main-menu"), //手机导航
         $process = document.getElementById('process'), //进度条
