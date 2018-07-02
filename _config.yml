@@ -8,21 +8,24 @@ menu:
 - page: home
   url: /
   icon:
-- page: 前端
-  url: /categories/前端/
+- page: 业余
+  url: /categories/业余小作/
   icon:
-- page: 后端
-  url: /categories/后端/
+- page: 学习
+  url: /categories/学习参考/
   icon:
-- page: 工具
-  url: /categories/工具/
+- page: 生活
+  url: /categories/生活感悟/
   icon:
 - page: 时间轴
   url: /archives/
   icon:
+- page: 关于我
+  url: /posts/b5f422e3/
+  icon:
 
 ## favicon
-favicon: /favicon.ico
+favicon: /img/favicon.ico
 
 ## Feed
 rss: /atom.xml
@@ -63,19 +66,13 @@ notification: |-
 social:
  - name: Github
    icon: git
-   href: //github.com/shenliyang
+   href: //github.com/dinphy
  - name: 邮箱
    icon: envelope-o
-   href: mailto:snippet@91h5.cc
- - name: 联系QQ
-   icon: qq
-   href: //t.cn/RrdplPG
- - name: 微信
-   icon: weixin
-   href: /
- - name: QQ群
-   icon: users
-   href: /
+   href: mailto:2027821710@qq.com
+ - name: 博客园
+   icon: code
+   href: //cnblogs.com/dinphy
  - name: RSS
    icon: feed
    href: /atom.xml
@@ -93,13 +90,26 @@ arch_config:
 
 ## 友链设置
 links:
-  - 个人博客: http://www.shenliyang.com
+  - 三步枫: https://blog.adymilk.cn/
+  - 珍惜小窝: https://www.zxnest.cn/
+  - 慧行说: https://www.liuyude.com/
+  - 时节雨: http://web.coder666.cn:18080/
+  - 沈立洋博客: http://www.shenliyang.com/
+  - 91前端网: http://www.91h5.cc/
+  - TZLoop: https://www.whereareyou.site/
+  - LzCMS: http://www.lzcms.top/
+  - 423down: http://www.423down.com/
+  - 装机员: http://www.7xp.com/cj.html
+  - th-sjy汉化: http://www.th-sjy.com/
+  - 睿派克: https://www.repaik.com/
+  - 淡蓝斯宇: http://idoog.me/
+  - 申请链接: /posts/b5f422e3/
 
 
 # 主题自定义个性化配置
 
 ## 网站宣传语
-branding:
+branding: 生活不易，快乐就好
 
 ## 设置banner背景图片
 banner:
@@ -203,6 +213,6 @@ tencent_analytics:
 baidu_push:
 
 #网站主题配置
-since: 2017
+since: 2018
 robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all
 version: 1.2.1
