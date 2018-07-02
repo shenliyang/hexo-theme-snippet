@@ -1051,7 +1051,7 @@ pre {
   display: block;
   color: #333;
   text-decoration: none;
-  padding: 3px 0;
+  padding: 3px 8px;;
   line-height: 1.25em;
   position: relative;
   width: 100%;
@@ -1061,6 +1061,7 @@ pre {
 }
 #article-toc .toc .toc-item .toc-link:hover {
   color: #e67e22;
+  border-left: 3px solid #ddd;
 }
 #article-toc .toc .toc-item.toc-level-2 > .toc-link {
   font-size: 15px;
