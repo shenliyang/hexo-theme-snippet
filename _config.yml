@@ -173,6 +173,18 @@ changyan:
   appid: cyt8KmUC1
   conf: prod_855a68d3b3d91855360a6215672a505a
 
+## Valine评论
+valine:
+  enable: true # 如果你想使用valine，请将值设置为 true
+  appId: EdyGwWrx3Uxu5hRnY4d4pswD-gzGzoHsz # your leancloud appId
+  appKey: 4pmmj56YRbawceTeHCkLMT7n # your leancloud appKey
+  notify: false # Mail notify
+  verify: false # Verify code
+  avatar: mm # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
+  placeholder: Hi,留下您的足迹吧~ # Comment Box placeholder
+  guest_info: nick,mail,link # Comment header info
+  pageSize: 10 # comment list page size
+  
 ## 网站访问统计
 
 ### 网盟CNZZ统计
