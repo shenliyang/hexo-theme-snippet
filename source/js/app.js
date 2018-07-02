@@ -98,6 +98,27 @@ window.onload = function() {
             scrollCallback();
         }, 200);
     });
+	
+    //监听导航滚动事件
+    window.addEventListener('scroll', function() {
+        if($fixnav){
+            var top = $fixnav.offsetTop;
+            var width = $fixnav.offsetWidth;
+            if(getScrollTop() <= top){
+                $fixnav.style = "";
+            } else {
+                $fixnav.style.position = "fixed";
+                $fixnav.style.top = "0";
+                $fixnav.style.width = "100%";
+                $fixnav.style.zIndex = "1";
+                $fixnav.style.opacity = "0.9";
+            }
+        }
+        clearTimeout(timer);
+        timer = setTimeout(function fn() {
+            scrollCallback();
+        }, 200);
+    });	
 
     //返回顶部
 	$backToTop.onclick = function() {
