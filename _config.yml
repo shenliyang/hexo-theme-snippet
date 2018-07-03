@@ -27,6 +27,9 @@ favicon: /favicon.ico
 ## Feed
 rss: /atom.xml
 
+## Carousel
+carousel:
+  img: img/head-img.jpg
 
 # 各个小工具的设置
 
