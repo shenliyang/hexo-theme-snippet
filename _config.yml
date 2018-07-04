@@ -212,6 +212,12 @@ google_analytics:
 ### 腾讯分析
 tencent_analytics:
 
+### “不蒜子”访问量统计，详见 http://ibruce.info/2015/04/04/busuanzi/
+visit_counter:
+  enable: true
+  site_uv:
+  site_pv:
+
 ### 百度文章推送
 baidu_push:
 
