@@ -1,6 +1,8 @@
-<div class="carousel">
-    <%- image_tag('img/head-img.jpg') %>
-</div>
+<% if (theme.carousel.img){ %>
+    <div class="carousel">
+        <%- image_tag(theme.carousel.img) %>
+    </div>
+<% } %>
 
 <% if(page.posts && page.posts.length){ %>
 <% page.posts.forEach(function (post, i) { %>
@@ -47,7 +49,7 @@
             </div>
 
             <div class="post-permalink">
-                <a href="<%- url_for(post.path) %>" class="btn btn-default">阅读全文</a>
+                <a href="<%- url_for(post.path) %>" class="btn btn-default"><%= __('read_more') %></a>
             </div>
         </footer>
     <% } %>

@@ -1,6 +1,6 @@
 <aside id="article-toc" role="navigation" class="col-md-4">
     <div class="widget">
-        <h3 class="title">文章目录</h3>
+        <h3 class="title"><%= __('toc') %></h3>
         <% if(toc(page.content)){ %>
             <%- toc(page.content,{list_number:false}) %>
         <% } else { %>
