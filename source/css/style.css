@@ -111,12 +111,12 @@ a img {
 }
 input[type="search"] {
   box-sizing: border-box;
-  width: 75%;
+  width: 70%;
   height: 32px;
   line-height: 16px;
   padding: 7px 11px 7px 7px;
   border-radius: 4px 0 0 4px;
-  margin-bottom: 1em;
+  //margin-bottom: 1em;
   border: 1px solid #ebebeb;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -328,7 +328,7 @@ pre {
   color: #505050;
   line-height: 4em;
   display: block;
-  padding: 0 21px;
+  padding: 0 15px;
 }
 .main-navigation .menu li:hover > a {
   color: #e67e22;
@@ -381,6 +381,19 @@ pre {
   cursor: pointer;
 }
 .main-navigation .navbar-header i:hover {
+  color: #e67e22;
+}
+.main-navigation .searchbar-header {
+  height: auto;
+}
+.main-navigation .searchbar-header i {
+  height: 56px;
+  line-height: 56px;
+  font-size: 2em;
+  cursor: pointer;
+  margin-right: 18px;
+}
+.main-navigation .searchbar-header i:hover {
   color: #e67e22;
 }
 /*====================================================
@@ -925,10 +938,11 @@ pre {
 .widget #search-form {
   position: relative;
   width: 100%;
+  margin-top: 12px;
 }
 .widget #search-form .search-form-submit {
   float: right;
-  width: 25%;
+  width: 30%;
   height: 32px;
   background: #e67e22;
   color: #fff;
@@ -984,6 +998,8 @@ pre {
   margin-right: -20px;
   max-height: 400px;
   overflow-y: auto;
+  text-align: left;
+  z-index: 666;
 }
 .widget #search-form #result-wrap #search-result .tips {
   text-align: center;
@@ -1412,6 +1428,9 @@ pre .javascript .function {
 }
 @media screen and (min-width: 768px) {
   .nav-toggle-button {
+    display: none;
+  }
+  .search-toggle-button {
     display: none;
   }
 }
