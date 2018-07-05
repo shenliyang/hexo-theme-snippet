@@ -50,7 +50,7 @@ h6 {
   color: #303030;
 }
 h1 {
-  font-size: 2em;
+  font-size: 1.8em;
 }
 h2 {
   font-size: 1.5em;
@@ -227,7 +227,7 @@ pre {
   z-index: 99;
 }
 .carousel {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .carousel img {
   width: 100%;
@@ -431,9 +431,11 @@ pre {
   text-align: center;
 }
 .post .post-head .post-title {
-  font-size: 1.5em;
+  font-size: 1.2em;
   line-height: 1.35em;
-  margin: 0;
+  margin: 0 0 8px 0;
+  border-left: 3px solid #e67e22;
+  padding-left: 8px;
 }
 .post .post-head .post-title a {
   color: #303030;
@@ -466,10 +468,10 @@ pre {
 }
 .post .post-media {
   position: relative;
-  margin-right: 15px;
-  width: 220px;
-  height: 160px;
-  float: left;
+  //margin-right: 15px;
+  width: auto;
+  height: 220px;
+  //float: left;
   overflow: hidden;
 }
 .post .post-media img {
@@ -521,6 +523,7 @@ pre {
 }
 .post .post-footer .tag-list a:hover {
   color: #e67e22;
+  text-decoration: none;
 }
 .post .post-footer .post-permalink {
   text-align: right;
@@ -640,7 +643,7 @@ pre {
   border-top: #dededc 1px solid;
 }
 .post-content blockquote {
-  padding: 8px 0;
+  padding: 8px 8px;
   margin: 5px 0;
   color: #4b4b4b;
   background-color: #f9f9f9;
@@ -1044,7 +1047,7 @@ pre {
    copyright
 ====================================================*/
 .copyright {
-  background: #111;
+  background: #222;
   font-size: 13px;
   text-align: center;
   color: #666666;
@@ -1064,6 +1067,10 @@ pre {
 #article-toc {
   padding-top: 1em;
   background-color: #fff;
+  top: 0px;
+  bottom: 140px;
+  overflow-y: auto;
+  
 }
 #article-toc ol {
   list-style: none;
@@ -1097,14 +1104,14 @@ pre {
 #back-to-top,
 #toc-btn {
   position: fixed;
-  right: 30px;
-  bottom: 30px;
+  right: 50px;
+  bottom: 50px;
   background-color: #959595;
   color: #fff;
   text-align: center;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  border-radius: 15px;
+  border-radius: 20px;
   z-index: 1;
   cursor: pointer;
 }
@@ -1116,9 +1123,9 @@ pre {
 }
 #back-to-top i,
 #toc-btn i {
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
 }
 #toc-btn {
   bottom: 65px;
@@ -1411,7 +1418,7 @@ pre .javascript .function {
   .post .post-media {
     float: none;
     width: 100%;
-    height: auto;
+    height: 200px;
     margin: 0 0 1em 0;
   }
   .post-footer,

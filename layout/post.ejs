@@ -27,7 +27,12 @@
     <div class="post-footer">
         <div>
             <% if(theme.declaration.enable){ %>
-                <%- theme.declaration.title %>：<%- theme.declaration.tip %><%- theme.cc %>
+                <blockquote style="margin: 0.4em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;list-style: none;font-size:14px;">
+                    <b>本文标题：</b><%- page.title %><br>
+                    <b>最后更新：</b><%= date(page.updated, 'YYYY 年 MM 月 DD 日 - HH:MM') %><br>
+                    <b>本文链接：</b><a href="<%= page.permalink %>"><%= page.permalink %></a><br>
+                    <b><%- theme.declaration.title %>：</b><%- theme.declaration.tip %><%- theme.cc %>		    
+                </blockquote>		
             <% } %>
         </div>
         <div>

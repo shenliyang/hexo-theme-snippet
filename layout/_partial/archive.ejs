@@ -20,11 +20,6 @@
                 <h1 class="post-title"> 
                     <a href="<%- url_for(post.path) %>"><%- post.title %></a>
                 </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        <%- date(post.date,"YYYY年MM月DD日") %>
-                    </time>
-                </div>
             </div>
             <p class="brief">
                 <% if(post.excerpt) { %>
@@ -34,6 +29,18 @@
                 <% } %>
             </p> 
         </div>
+    <% if(theme.homePanel) { %>
+        <footer class="post-footer clearfix">
+            <div class="pull-left tag-list">
+                <%- partial('_partial/article-meta', {post: post}) %>
+            </div>
+
+            <div class="post-permalink">
+                <a href="<%- url_for(post.path) %>" class="btn btn-default"><%= __('read_more') %></a>
+            </div>
+        </footer>
+    <% } %>
+	
     </article>
  <% }) %>
 

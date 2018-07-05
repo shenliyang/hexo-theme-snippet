@@ -16,23 +16,18 @@
     var _photoUrl = post.img || (urls.length > 0 && urls[random]) || (urls2.length > 0 && urls2[random2]) || '';
 %>
 <article class="post">
-    <% if(_photoUrl) {%>
-        <div class="post-media">
-            <a href="<%- url_for(post.path) %>">
-                <img class="img-ajax" src="<%- url_for('/img/loading.gif') %>"  data-src="<%- url_for(_photoUrl) %>"   alt="<%- post.title %>">
-            </a>
-        </div>
-    <% } %>
     <div class="post-content">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="<%- url_for(post.path) %>"><%- post.title %></a>
             </h1>
-            <div class="post-meta">  &bull;
-                <time class="post-date" datetime="" title="">
-                    <%- date(post.date,"YYYY年MM月DD日") %>
-                </time>
-            </div>
+    <% if(_photoUrl) {%>
+        <div class="post-media">
+            <!--<a href="<%- url_for(post.path) %>">-->
+                <img class="img-ajax" src="<%- url_for('/img/loading.gif') %>"  data-src="<%- url_for(_photoUrl) %>"   alt="<%- post.title %>">
+            <!--</a>-->
+        </div>
+    <% } %>			
         </div>
         <p class="brief">
             <% if(post.excerpt) { %>
