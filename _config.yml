@@ -220,16 +220,16 @@ valine:
 ## 网站访问统计
 
 ### 网盟CNZZ统计
-cnzz_analytics: 1263868967
+cnzz_analytics: 1273798106
 
 ### 百度统计
-baidu_analytics:
+baidu_analytics: 3fabe56e1599321476f3206be87a31b5
 
 ### 谷歌统计
 google_analytics:
 
 ### 腾讯分析
-tencent_analytics:
+tencent_analytics: 65917606
 
 ### “不蒜子”访问量统计，详见 http://ibruce.info/2015/04/04/busuanzi/
 visit_counter:
@@ -238,7 +238,7 @@ visit_counter:
   site_pv:
 
 ### 百度文章推送
-baidu_push:
+baidu_push: bxXthxpFQo
 
 #网站主题配置
 since: 2018
