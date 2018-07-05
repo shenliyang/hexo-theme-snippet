@@ -1,8 +1,12 @@
 <% if (site.tags.length){ %>
   <div class="widget">
     <h3 class="title"><%= __('tagcloud') %></h3>
-    <div class="content tag-cloud">
-        <%-tagcloud() %>
+    <div id="myCanvasContainer">
+        <div style="width:310px;margin:0 auto;">
+            <canvas width="310" height="310" id="resCanvas">
+                <%-tagcloud() %>
+            </canvas>
+        </div>
     </div>
   </div>
 <% } %>
