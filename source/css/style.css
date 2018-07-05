@@ -1039,6 +1039,9 @@ pre {
 #article-toc {
   padding-top: 1em;
   background-color: #fff;
+  top: 0px;
+  bottom: 140px;
+  overflew-y: auto;
 }
 #article-toc ol {
   list-style: none;
