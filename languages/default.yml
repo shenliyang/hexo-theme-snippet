@@ -25,6 +25,7 @@ archives: Archives
 about: About
 search_local: localSearch
 search_google: googleSearch
+search_placeholder: search
 author: Author
 date: Published Date
 update: Updated Date
