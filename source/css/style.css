@@ -936,7 +936,17 @@ pre {
   font-size: 20px;
 }
 .widget .friends-link a {
-  margin-right: 15px;
+  margin-right: 5px;
+}
+.widget .friends-link { 
+  text-align:justify;
+  text-align-last:justify;
+}
+.widget .friends-link:after{
+    display:inline-block;
+    content:'';
+    overflow:hidden;
+    width:100%;
 }
 .widget #search-form {
   position: relative;
