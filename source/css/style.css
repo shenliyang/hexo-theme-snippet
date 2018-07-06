@@ -584,20 +584,22 @@ pre {
 .post-content h4 {
   font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
   color: #333;
-  font-size: 1em;
-  margin: 1.6em 0 1em 0;
+  font-size: 1.05em;
+  margin: 1em 0;
+  font-weight: 700;
 }
 .post-content h5 {
   font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
   color: #333;
   font-size: 1em;
-  margin: 1.6em 0 1em 0;
+  margin: 1em 0;
+  font-weight: 600;
 }
 .post-content h6 {
   font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
   color: #333;
   font-size: 1em;
-  margin: 1.6em 0 1em 0;
+  margin: 1em 0;
   font-weight: 500;
 }
 .post-content > h1 {
@@ -685,12 +687,12 @@ pre {
   color: #666666;
 }
 .post-content ul {
-  margin: 0 0 24px 6px;
+  margin: 0 0 8px 6px;
   padding-left: 16px;
   list-style-type: square;
 }
 .post-content ol {
-  margin: 0 0 24px 6px;
+  margin: 0 0 8px 6px;
   padding-left: 16px;
   list-style-type: decimal;
 }
@@ -771,20 +773,21 @@ pre {
   max-width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  margin-bottom: 1.5em;
-  font-size: 0.96em;
+  margin-bottom: 1.2em;
+  font-size: 0.9em;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .post-content th {
   text-align: left;
-  padding: 4px 8px 4px 10px;
+  padding: 4px 8px;
   border: 1px solid #dadada;
 }
 .post-content td {
   text-align: left;
-  padding: 4px 8px 4px 10px;
+  padding: 4px 8px;
   border: 1px solid #dadada;
   vertical-align: top;
 }
@@ -1105,8 +1108,8 @@ pre {
 #article-toc {
   padding-top: 1em;
   background-color: #fff;
-  top: 0px;
-  bottom: 140px;
+  top: 0;
+  bottom: 70px;
   overflow-y: auto;
   
 }
@@ -1114,7 +1117,6 @@ pre {
   list-style: none;
 }
 #article-toc .toc {
-  overflow-y: auto;
   padding-left: 2em;
 }
 #article-toc .toc .toc-item .toc-link {
