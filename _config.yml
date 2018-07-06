@@ -8,21 +8,24 @@ menu:
 - page: home
   url: /
   icon:
-- page: 前端
-  url: /categories/前端/
+- page: 业余
+  url: /categories/业余小作/
   icon:
-- page: 后端
-  url: /categories/后端/
+- page: 学习
+  url: /categories/学习参考/
   icon:
-- page: 工具
-  url: /categories/工具/
+- page: 生活
+  url: /categories/生活感悟/
   icon:
 - page: 时间轴
   url: /archives/
   icon:
+- page: 关于我
+  url: /posts/b5f422e3/
+  icon:
 
 ## favicon
-favicon: /favicon.ico
+favicon: /img/favicon.ico
 
 ## Feed
 rss: /atom.xml
@@ -56,29 +59,23 @@ jsonContent:
 
 ## 网站公告设置
 notification: |-
-            <p>主题Snippet v1.2.1版本已经上线！欢迎更新~ <br/>
-            主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
-            主题使用：<a href="https://github.com/shenliyang/hexo-theme-snippet/blob/master/README.md#常见问题" title="" target="_blank">常见使用问题</a> <br/>
-            <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
+            <p>新版主题Snippet v1.2.1已经上线！欢迎更新~ <br/>
+            主题下载：<a href="https://github.com/dinphy/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+            主题使用：<a href="https://github.com/dinphy/hexo-theme-snippet/blob/master/README.md#常见问题" title="" target="_blank">常见使用问题</a> <br/>
+            <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/dinphy/hexo-theme-snippet/stargazers">Star一下</a>
             </p>
 
 ## 社交设置
 social:
  - name: Github
    icon: git
-   href: //github.com/shenliyang
+   href: //github.com/dinphy
  - name: 邮箱
    icon: envelope-o
-   href: mailto:snippet@91h5.cc
- - name: 联系QQ
-   icon: qq
-   href: //t.cn/RrdplPG
- - name: 微信
-   icon: weixin
-   href: /
- - name: QQ群
-   icon: users
-   href: /
+   href: mailto:2027821710@qq.com
+ - name: 博客园
+   icon: code
+   href: //cnblogs.com/dinphy
  - name: RSS
    icon: feed
    href: /atom.xml
@@ -96,13 +93,26 @@ arch_config:
 
 ## 友链设置
 links:
-  - 个人博客: http://www.shenliyang.com
+  - 三步枫: https://blog.adymilk.cn/
+  - 珍惜小窝: https://www.zxnest.cn/
+  - 慧行说: https://www.liuyude.com/
+  - 时节雨: http://web.coder666.cn:18080/
+  - 沈立洋博客: http://www.shenliyang.com/
+  - 91前端网: http://www.91h5.cc/
+  - TZLoop: https://www.whereareyou.site/
+  - LzCMS: http://www.lzcms.top/
+  - 423down: http://www.423down.com/
+  - 装机员: http://www.7xp.com/cj.html
+  - th-sjy汉化: http://www.th-sjy.com/
+  - 睿派克: https://www.repaik.com/
+  - 淡蓝斯宇: http://idoog.me/
+  - 申请链接: /posts/b5f422e3/
 
 
 # 主题自定义个性化配置
 
 ## 网站宣传语
-branding:
+branding: 生活不易，快乐就好
 
 ## 设置banner背景图片
 banner:
@@ -113,10 +123,29 @@ homePanel: true
 
 ## 缩略图自定义随机图片
 defaultImgs:
-  -
-
+  - /img/random/1.jpg
+  - /img/random/2.jpg
+  - /img/random/3.jpg
+  - /img/random/4.jpg
+  - /img/random/5.jpg
+  - /img/random/6.jpg
+  - /img/random/7.jpg
+  - /img/random/8.jpg
+  - /img/random/9.jpg
+  - /img/random/10.jpg  
+  - /img/random/11.jpg
+  - /img/random/12.jpg
+  - /img/random/13.jpg
+  - /img/random/14.jpg
+  - /img/random/15.jpg
+  - /img/random/16.jpg
+  - /img/random/17.jpg
+  - /img/random/18.jpg
+  - /img/random/19.jpg
+  - /img/random/20.jpg 
+  
 ## 截取文章首页描述字数
-excerptLength: 120
+excerptLength: 180
 
 ## 是否开启文章目录
 toc: true
@@ -140,7 +169,7 @@ declaration:
   enable: true
   title: '转载声明'
   tip: |-
-      商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+      商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="/posts/b5f422e3/" target="_blank">Dinphy</a>
 
 
 ## 主题评论
@@ -172,28 +201,46 @@ disqus:
 
 ### 畅言评论(需要ICP备案)
 changyan:
-  enable: true
+  enable: false
   appid: cyt8KmUC1
   conf: prod_855a68d3b3d91855360a6215672a505a
 
+## Valine评论
+valine:
+  enable: true # 如果你想使用valine，请将值设置为 true
+  appId: EdyGwWrx3Uxu5hRnY4d4pswD-gzGzoHsz # your leancloud appId
+  appKey: 4pmmj56YRbawceTeHCkLMT7n # your leancloud appKey
+  notify: false # Mail notify
+  verify: false # Verify code
+  avatar: mm # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
+  placeholder: Hi,留下您的足迹吧~ # Comment Box placeholder
+  guest_info: nick,mail,link # Comment header info
+  pageSize: 10 # comment list page size
+  
 ## 网站访问统计
 
 ### 网盟CNZZ统计
-cnzz_analytics: 1263868967
+cnzz_analytics: 1273798106
 
 ### 百度统计
-baidu_analytics:
+baidu_analytics: 3fabe56e1599321476f3206be87a31b5
 
 ### 谷歌统计
 google_analytics:
 
 ### 腾讯分析
-tencent_analytics:
+tencent_analytics: 65917606
+
+### “不蒜子”访问量统计，详见 http://ibruce.info/2015/04/04/busuanzi/
+visit_counter:
+  enable: true
+  site_uv:
+  site_pv:
 
 ### 百度文章推送
-baidu_push:
+baidu_push: bxXthxpFQo
 
 #网站主题配置
-since: 2017
+since: 2018
 robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all
 version: 1.2.1

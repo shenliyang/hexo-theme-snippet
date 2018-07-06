@@ -1,18 +1,26 @@
 <div class="post-meta">
-    <% if(!is_category()){ %>
+    <%
+        var format = 'YYYY年MM月DD日';
+        if (is_archive()) format = "MM/DD";
+    %>
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta"><%- date(post.date, format) %></span>
+    </span>
+    <% if(!is_category() && !is_post()){ %>
     <%
         var _showLevel = (theme.whichCategory ? Math.min(theme.whichCategory, post.categories.data.length) : post.categories.data.length) - 1,
                 _data = post.categories.data[_showLevel],
                 _categoryInfo = _data ? _data.name : " ";
     %>
     <span class="categories-meta fa-wrap">
-        <i class="fa fa-folder-open-o"></i>
+        <i class="fa fa-list-alt"></i>
         <a href="/categories/<%= _categoryInfo %>">
             <%= _categoryInfo %>
         </a>
     </span>
     <% } %>
-    <% if(!is_tag()){ %>
+    <% if(!is_tag() && !is_post()){ %>
     <span class="fa-wrap">
         <i class="fa fa-tags"></i>
         <span class="tags-meta">
@@ -30,13 +38,6 @@
     <% } %>
 
     <% if(is_post()) {%>
-        <%
-            var format = 'YYYY/MM/DD';
-            if (is_archive()) format = "MM/DD";
-        %>
-        <span class="fa-wrap">
-            <i class="fa fa-clock-o"></i>
-            <span class="date-meta"><%- date(post.date, format) %></span>
-        </span>
+        <span><%- partial('_widget/page-visit') %></span> 	
     <% } %>
 </div>

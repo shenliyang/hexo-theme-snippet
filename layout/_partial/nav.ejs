@@ -1,4 +1,4 @@
-<nav class="main-navigation">
+<nav class="main-navigation" id="fixnav">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -7,8 +7,13 @@
                         <i class="fa fa-bars"></i>
                     </span>
                     <a class="navbar-brand" href="<%= config.url %>"><%= config.title %></a>
+                    <div class="searchbar-header"><span class="search-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-search" id="msearch">
+                        <span class="sr-only"></span>
+                            <i class="fa fa-search"></i>
+                        </span>
+                    </div>
                 </div>
-                <div class="collapse navbar-collapse" id="main-menu">
+                <div class="collapse navbar-collapse pull-left" id="main-menu">
                     <ul class="menu">
                         <% theme.menu.forEach(function (item) {%>
                             <li role="presentation" class="text-center">
@@ -17,6 +22,35 @@
                         <%})%>
                     </ul>
                 </div>
+		<% if (theme.jsonContent.searchLocal ||  theme.jsonContent.searchGoogle){ %>
+		    <div class="widget collapse navbar-collapse pull-right" id="main-search">    
+		        <div id="search-form">
+		            <div id="result-mask" class="hide"></div>
+		            <div class="search-area">
+		                <% if (theme.jsonContent.searchLocal) { %>
+		                    <input id="search-key" type="search" autocomplete="off" placeholder="<%= __('search_placeholder') %>">
+		                    <button type="button" class="search-form-submit" id="search-local"><%= __('search_local') %></button>
+		                <% } %>
+		                <% if (theme.jsonContent.searchGoogle) { %>
+		                    <%- search_form({'button':'谷歌搜索','text':'Google Search'}) %>
+		                <% } %>
+		            </div>
+		            <div id="result-wrap" class="hide">
+		                <div id="search-result"></div>
+		            </div>
+		            <div class="hide">
+		                <template id="search-tpl">
+		                    <div class="item">
+		                        <a href="/{path}" title="{title}">
+		                            <div class="title">{title}</div>
+		                            <div class="content">{content}</div>
+		                        </a>
+		                    </div>
+		                </template>
+		            </div>			    
+		        </div>
+		    </div>
+		<% } %>			
             </div>
         </div>
     </div>

@@ -3,8 +3,11 @@
  * ======================================================================== */
 window.onload = function() {
     var $body = document.body,
+        $fixnav = document.getElementById("fixnav"),
         $mnav = document.getElementById("mnav"), //获取导航三角图标
         $mainMenu = document.getElementById("main-menu"), //手机导航
+        $msearch = document.getElementById("msearch"), //获取搜索圆角图标
+        $mainSearch = document.getElementById("main-search"), //手机搜索	
         $process = document.getElementById('process'), //进度条
         $ajaxImgs = document.querySelectorAll('.img-ajax'), //图片懒加载
         $commentsCounter = document.getElementById('comments-count'),
@@ -34,6 +37,16 @@ window.onload = function() {
             $mainMenu.setAttribute("class","collapse navbar-collapse in");
         }
     };
+    
+    //手机搜索
+    $msearch.onclick = function(){
+        var searchOpen = $mainSearch.getAttribute("class");
+        if(searchOpen.indexOf("in") != '-1'){
+            $mainSearch.setAttribute("class","widget collapse");
+        } else {
+            $mainSearch.setAttribute("class","widget collapse in");
+        }
+    };    
 
     //首页文章图片懒加载
     function imgsAjax($targetEles) {
@@ -88,7 +101,7 @@ window.onload = function() {
                 $toc.style = "";
             } else {
                 $toc.style.position = "fixed";
-                $toc.style.top = "5px";
+                $toc.style.top = "72px";
                 $toc.style.left = left + "px";
                 $toc.style.width = width + "px"
             }
@@ -98,6 +111,27 @@ window.onload = function() {
             scrollCallback();
         }, 200);
     });
+	
+    //监听导航滚动事件
+    window.addEventListener('scroll', function() {
+        if($fixnav){
+            var top = $fixnav.offsetTop;
+            var width = $fixnav.offsetWidth;
+            if(getScrollTop() <= top){
+                $fixnav.style = "";
+            } else {
+                $fixnav.style.position = "fixed";
+                $fixnav.style.top = "0";
+                $fixnav.style.width = "100%";
+                $fixnav.style.zIndex = "1";
+                $fixnav.style.opacity = "0.9";
+            }
+        }
+        clearTimeout(timer);
+        timer = setTimeout(function fn() {
+            scrollCallback();
+        }, 200);
+    });	
 
     //返回顶部
 	$backToTop.onclick = function() {

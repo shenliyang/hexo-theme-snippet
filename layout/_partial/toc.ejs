@@ -2,7 +2,7 @@
     <div class="widget">
         <h3 class="title"><%= __('toc') %></h3>
         <% if(toc(page.content)){ %>
-            <%- toc(page.content,{list_number:false}) %>
+            <%- toc(page.content,{list_number: true}) %>
         <% } else { %>
             <p>暂无目录</p>
         <% } %>
