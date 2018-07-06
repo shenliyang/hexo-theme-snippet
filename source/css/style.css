@@ -232,34 +232,6 @@ pre {
 .carousel img {
   width: 100%;
 }
-*::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 7px;
-  height: 7px;
-}
-@media screen and (max-width: 480px) {
-  *::-webkit-scrollbar {
-    height: 3px;
-    width: 3px;
-  }
-}
-*::-webkit-scrollbar-track-piece {
-  background-color: rgba(255, 255, 255, 0);
-}
-*::-webkit-scrollbar-track {
-  background-color: inherit;
-}
-*::-webkit-scrollbar-thumb {
-  max-height: 100px;
-  border-radius: 3px;
-  background-color: rgba(1, 1, 1, 0.12);
-}
-*::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(1, 1, 1, 0.22);
-}
-*::-webkit-scrollbar-thumb:active {
-  background-color: rgba(1, 1, 1, 0.32);
-}
 /*====================================================
     header
 ====================================================*/
@@ -1044,24 +1016,6 @@ pre {
   margin: 0 2px;
 }
 /*====================================================
-   copyright
-====================================================*/
-.copyright {
-  background: #111;
-  font-size: 13px;
-  text-align: center;
-  color: #666666;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-top: 1px solid #303030;
-}
-.copyright span {
-  margin: 0 .5em;
-}
-.copyright a {
-  color: #666666;
-}
-/*====================================================
    toc
 ====================================================*/
 #article-toc {
@@ -1094,6 +1048,24 @@ pre {
 }
 #article-toc .toc .toc-item.toc-level-2 > .toc-link {
   font-size: 15px;
+}
+/*====================================================
+   copyright
+====================================================*/
+.copyright {
+  background: #111;
+  font-size: 13px;
+  text-align: center;
+  color: #666666;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #303030;
+}
+.copyright span {
+  margin: 0 .5em;
+}
+.copyright a {
+  color: #666666;
 }
 /*====================================================
    back-to-top and toc-btn
@@ -1360,6 +1332,26 @@ pre .coffeescript .title {
 pre .keyword,
 pre .javascript .function {
   color: #b294bb;
+}
+/*====================================================
+    scrollbar
+====================================================*/
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  height: 5px;
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: inherit;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background-color: rgba(1, 1, 1, 0.12);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(1, 1, 1, 0.22);
 }
 /*====================================================
     media

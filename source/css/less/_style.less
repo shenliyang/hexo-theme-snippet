@@ -994,25 +994,6 @@ pre {
 }
 
 /*====================================================
-   copyright
-====================================================*/
-.copyright {
-    background: #111;
-    font-size: 13px;
-    text-align: center;
-    color: @black6_color;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-top: 1px solid @grey3_color;
-    span {
-        margin: 0 .5em;
-    }
-    a {
-        color: @black6_color;
-    }
-}
-
-/*====================================================
    toc
 ====================================================*/
 #article-toc {
@@ -1046,10 +1027,28 @@ pre {
                 }
             }
         }
-
     }
-
 }
+
+/*====================================================
+   copyright
+====================================================*/
+.copyright {
+    background: #111;
+    font-size: 13px;
+    text-align: center;
+    color: @black6_color;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid @grey3_color;
+    span {
+        margin: 0 .5em;
+    }
+    a {
+        color: @black6_color;
+    }
+}
+
 /*====================================================
    back-to-top and toc-btn
 ====================================================*/
@@ -1088,6 +1087,12 @@ pre {
 ====================================================*/
 
 @import "_highlight";
+
+/*====================================================
+    scrollbar
+====================================================*/
+
+@import "_scrollbar";
 
 /*====================================================
     media
