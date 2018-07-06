@@ -1016,13 +1016,15 @@ pre {
    toc
 ====================================================*/
 #article-toc {
-    padding-top:1em;
-    background-color:@white_color;
+    padding-top: 1em;
+    background-color: @white_color;
+    top: 0;
+    bottom: 70px;
+    overflow-y: auto;
     ol {
         list-style:none;
     }
     .toc{
-         overflow-y: auto;
          padding-left:2em;
         .toc-item {
             .toc-link{

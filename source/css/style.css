@@ -1039,12 +1039,14 @@ pre {
 #article-toc {
   padding-top: 1em;
   background-color: #fff;
+  top: 0;
+  bottom: 70px;
+  overflow-y: auto;
 }
 #article-toc ol {
   list-style: none;
 }
 #article-toc .toc {
-  overflow-y: auto;
   padding-left: 2em;
 }
 #article-toc .toc .toc-item .toc-link {
