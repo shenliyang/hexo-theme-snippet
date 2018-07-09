@@ -393,8 +393,9 @@ Gulp 执行启用主题二次开发模式
 如果觉得本主题还不错，== 欢迎  [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers)下 ==，您的支持和鼓励才是后续更新最大的动力
 
 ## 宗旨
-致力主题简洁轻量，力求使用配置方便，不求页面花里胡哨，但求功能简单实用
+主题宗旨：**致力主题简洁轻量，配置方便开箱即用**
 
+> Hexo框架追求的是快速、简洁，高效。喜欢绚丽，添加各种功能，折腾的朋友，建议移步至：[wordpress官网](https://cn.wordpress.org/) | [dayup主题](http://www.shenliyang.com/dayup)
 
 ## 常见问题
 
@@ -432,6 +433,13 @@ npm i hexo-generator-json-content@2.2.0 -S
 | per_page     | 每页显示的文章量 (0 = 关闭分页功能) |  10 |
 | pagination_dir     | 分页目录      |   page |
 
+#### 6. 为什么右侧小工具标题都为英文呢？
+
+可能是您忘记预设网站语言，而启用默认语言了，请先在 _config.yml (注意：为hexo的_config.yml配置文件，与themes在同级目录下，不是主题的配置文件!!!) 中调整 language 设定
+
+``` bash
+language: zh-CN
+```
 
 > 没有找到我需要的问题： [提Issues](https://github.com/shenliyang/hexo-theme-snippet/issues/new)
 
