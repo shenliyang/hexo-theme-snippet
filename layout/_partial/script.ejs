@@ -1,5 +1,5 @@
 
-<%if (theme.jsonContent.searchLocal){%>
+<%if (theme.jsonContent.searchLocal && !is_post()){%>
 	<%- js('js/search.js?rev=@@hash') %>
 <%}%>
 
