@@ -257,6 +257,18 @@ changyan:
   appid:
   conf:
 
+### Valine评论 参考网站: [valine评论](https://valine.js.org/)
+  valine:
+   enable: true
+   appId:
+   appKey:
+   placeholder: 说点什么吧
+   notify: false // 邮件通知
+   verify: false // 验证码
+   avatar: mm // avatar头像
+   meta: nick,mail // 输入框内容，可选值nick,mail,link
+   pageSize: 10
+
 
 ## 网站访问统计
 
@@ -445,13 +457,9 @@ language: zh-CN
 
 
 ## 版本更新日志
-- 增加文章目录toc功能
-- 修改新增页面模板
-- 增加文章归档时间轴
-- 修改手机导航菜单样式
-- 修改样式细节
-- 增加是否开启文章目录toc功能
+
+- 增加Valine评论
 
 ## License
 
-[MIT](/LICENSE)
+[MIT License](/LICENSE)

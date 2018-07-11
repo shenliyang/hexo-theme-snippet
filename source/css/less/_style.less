@@ -773,6 +773,43 @@ pre {
     padding: 20px;
     margin-bottom:20px;
 }
+#comments .valine{
+    .vheader{
+        .vinput{
+            border:none;
+            .border-bottom(#f0f0f0);
+            .border-radius(0);
+            .transition();
+            &:focus {
+                .border-bottom(@theme_color);
+            }
+            &:hover {
+                .border-bottom(@theme_color);
+            }
+        }
+    }
+    .vcontrol{
+        .vbtn{
+            &:hover{
+               color:@theme_color;
+               border-color:@theme_color;
+            }
+        }
+    }
+    .item3{
+        input{
+            width:31%;
+            margin:0 1%;
+        }
+    }
+    .item2{
+        input{
+            width:48%;
+            margin:0 1%;
+        }
+    }
+}
+
 /* prev and next link */
 .prev-next-wrap {
     margin-bottom: 25px;

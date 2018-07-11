@@ -801,6 +801,33 @@ pre {
   padding: 20px;
   margin-bottom: 20px;
 }
+#comments .valine .vheader .vinput {
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+#comments .valine .vheader .vinput:focus {
+  border-bottom: 1px solid #e67e22;
+}
+#comments .valine .vheader .vinput:hover {
+  border-bottom: 1px solid #e67e22;
+}
+#comments .valine .vcontrol .vbtn:hover {
+  color: #e67e22;
+  border-color: #e67e22;
+}
+#comments .valine .item3 input {
+  width: 31%;
+  margin: 0 1%;
+}
+#comments .valine .item2 input {
+  width: 48%;
+  margin: 0 1%;
+}
 /* prev and next link */
 .prev-next-wrap {
   margin-bottom: 25px;

@@ -172,9 +172,21 @@ disqus:
 
 ### 畅言评论(需要ICP备案)
 changyan:
-  enable: true
-  appid: cyt8KmUC1
-  conf: prod_855a68d3b3d91855360a6215672a505a
+  enable: false
+  appid:
+  conf:
+
+## Valine评论
+valine:
+   enable: true
+   appId: xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz
+   appKey: erIpQac4azoCmgfBB7Dl9maa
+   placeholder: 说点什么吧
+   notify: false
+   verify: false
+   avatar: mm
+   meta: nick,mail
+   pageSize: 10
 
 ## 网站访问统计
 
