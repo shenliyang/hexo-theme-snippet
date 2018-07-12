@@ -1,10 +1,9 @@
 <% if (theme.valine.enable){ %>
     <div id="vcomments" class="valine"></div>
-    <%- js('//cdn1.lncld.net/static/js/3.0.4/av-min.js','//unpkg.com/valine/dist/Valine.min.js') %>
+    <%- js('//cdn1.lncld.net/static/js/3.0.4/av-min.js','assets/valine.min.js') %>
 
     <script>
-        var valine = new Valine();
-        valine.init({
+        new Valine({
             av: AV,
             el: '#vcomments',
             appId: '<%= theme.valine.appId %>',

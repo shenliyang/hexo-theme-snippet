@@ -773,12 +773,13 @@ pre {
     padding: 20px;
     margin-bottom:20px;
 }
-#comments .valine{
+#comments .v{
     .vheader{
         .vinput{
             border:none;
             .border-bottom(#f0f0f0);
             .border-radius(0);
+            font-size: .9em;
             .transition();
             &:focus {
                 .border-bottom(@theme_color);
@@ -788,11 +789,17 @@ pre {
             }
         }
     }
+    .veditor{
+        font-size:1em;
+    }
     .vcontrol{
         .vbtn{
+            .border-radius();
+            padding: .5rem 2rem;
+            color: @grey8_color;
             &:hover{
-               color:@theme_color;
-               border-color:@theme_color;
+               color: @theme_color;
+               border-color: @theme_color;
             }
         }
     }
@@ -1049,13 +1056,14 @@ pre {
                 display: block;
                 color: @black3_color;
                 text-decoration: none;
-                padding: 3px 0;
+                padding: 4px 0;
                 line-height: 1.25em;
                 position: relative;
                 width: 100%;
                 .text-ellipsis();
                 &:hover{
                     color:@theme_color;
+                    .transition(.15s);
                 }
             }
             &.toc-level-2{

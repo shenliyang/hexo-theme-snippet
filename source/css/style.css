@@ -801,30 +801,41 @@ pre {
   padding: 20px;
   margin-bottom: 20px;
 }
-#comments .valine .vheader .vinput {
+#comments .v .vheader .vinput {
   border: none;
   border-bottom: 1px solid #f0f0f0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  font-size: .9em;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-#comments .valine .vheader .vinput:focus {
+#comments .v .vheader .vinput:focus {
   border-bottom: 1px solid #e67e22;
 }
-#comments .valine .vheader .vinput:hover {
+#comments .v .vheader .vinput:hover {
   border-bottom: 1px solid #e67e22;
 }
-#comments .valine .vcontrol .vbtn:hover {
+#comments .v .veditor {
+  font-size: 1em;
+}
+#comments .v .vcontrol .vbtn {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  padding: .5rem 2rem;
+  color: #808080;
+}
+#comments .v .vcontrol .vbtn:hover {
   color: #e67e22;
   border-color: #e67e22;
 }
-#comments .valine .item3 input {
+#comments .v .item3 input {
   width: 31%;
   margin: 0 1%;
 }
-#comments .valine .item2 input {
+#comments .v .item2 input {
   width: 48%;
   margin: 0 1%;
 }
@@ -1062,7 +1073,7 @@ pre {
   display: block;
   color: #333;
   text-decoration: none;
-  padding: 3px 0;
+  padding: 4px 0;
   line-height: 1.25em;
   position: relative;
   width: 100%;
@@ -1072,6 +1083,8 @@ pre {
 }
 #article-toc .toc .toc-item .toc-link:hover {
   color: #e67e22;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
 }
 #article-toc .toc .toc-item.toc-level-2 > .toc-link {
   font-size: 15px;
