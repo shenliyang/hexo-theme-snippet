@@ -5,14 +5,27 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 如果本主题也是你喜欢的菜，请动动手指 [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers) 支持一下
 
 [![Build Status](https://www.travis-ci.org/shenliyang/hexo-theme-snippet.svg?branch=master)](https://www.travis-ci.org/shenliyang/hexo-theme-snippet)
+[![Read the Docs](https://img.shields.io/readthedocs/pip/stable.svg)](https://github.com/shenliyang/hexo-theme-snippet/blob/master/README.md)
 [![codebeat badge](https://codebeat.co/badges/6ef2dcd2-af90-40e0-9628-ac689441f774)](https://codebeat.co/projects/github-com-shenliyang-hexo-theme-snippet-master)
 [![mnt-image](https://img.shields.io/maintenance/yes/2018.svg)](../../commits/master)
 [![hexo version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/shenliyang/hexo-theme-snippet/blob/master/LICENSE)
 
-[主题预览 Demo](http://shenliyang.github.io)
+## 主题预览
 
-![hexo-theme-snippet](http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/snippet-screenshots1000.jpg)
+#### 快速预览
+[主题Demo戳这里](http://shenliyang.github.io?rf=gh-demo)
+
+#### 移动端扫描二维码
+> 如果微信扫描，请点击微信下方【访问原网页】或在浏览器中打开
+
+![Snippet移动端二维码](http://m.qpic.cn/psb?/V11QGp9W3Dos5V/FLuwClNzuhx7DrN2mk6m2MaEx6.7wkNVN1EfhFzC5K4!/b/dGYBAAAAAAAA&bo=XgFeAQAAAAACV3M! "扫描访问Snippet主题")
+
+![hexo-theme-snippet](http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/snippet-screenshots1000.jpg "Snippet主题")
+
+|  |  |
+| :------: | :------: |
+|![Snippet移动端演示](http://m.qpic.cn/psb?/V11QGp9W3Dos5V/8uUse*HjA0tlH06wVFAPN.vLPXgZbNL9J1*G6xETuuk!/b/dDIBAAAAAAAA&bo=RgIMBAAAAAACl*8!) |![Snippet手机端演示](http://m.qpic.cn/psb?/V11QGp9W3Dos5V/b09lHleJOiOvKmKcKFDtRml*K8szhadAoXCIXi*R2F4!/b/dFkAAAAAAAAA&bo=RgIMBAAAAAACh.8!) |
 
 
 ## 主题特点
