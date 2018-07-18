@@ -857,6 +857,44 @@ pre {
   padding: 20px;
   margin-bottom: 20px;
 }
+#comments .vheader .vinput {
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  font-size: .9em;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+#comments .vheader .vinput:focus {
+  border-bottom: 1px solid #e67e22;
+}
+#comments .vheader .vinput:hover {
+  border-bottom: 1px solid #e67e22;
+}
+#comments .veditor {
+  font-size: 1em;
+}
+#comments .vcontrol .vbtn {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  padding: .5rem 2rem;
+  color: #808080;
+}
+#comments .vcontrol .vbtn:hover {
+  color: #e67e22;
+  border-color: #e67e22;
+}
+#comments .item3 input {
+  width: 31%;
+  margin: 0 1%;
+}
+#comments .item2 input {
+  width: 48%;
+  margin: 0 1%;
+}
 /* prev and next link */
 .prev-next-wrap {
   margin-bottom: 25px;

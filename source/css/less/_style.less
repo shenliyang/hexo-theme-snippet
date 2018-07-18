@@ -773,6 +773,50 @@ pre {
     padding: 20px;
     margin-bottom:20px;
 }
+#comments {
+    .vheader{
+        .vinput{
+            border:none;
+            .border-bottom(#f0f0f0);
+            .border-radius(0);
+            font-size: .9em;
+            .transition();
+            &:focus {
+                .border-bottom(@theme_color);
+            }
+            &:hover {
+                .border-bottom(@theme_color);
+            }
+        }
+    }
+    .veditor{
+        font-size:1em;
+    }
+    .vcontrol{
+        .vbtn{
+            .border-radius();
+            padding: .5rem 2rem;
+            color: @grey8_color;
+            &:hover{
+               color: @theme_color;
+               border-color: @theme_color;
+            }
+        }
+    }
+    .item3{
+        input{
+            width:31%;
+            margin:0 1%;
+        }
+    }
+    .item2{
+        input{
+            width:48%;
+            margin:0 1%;
+        }
+    }
+}
+
 /* prev and next link */
 .prev-next-wrap {
     margin-bottom: 25px;

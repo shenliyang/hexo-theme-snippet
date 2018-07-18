@@ -203,8 +203,8 @@ disqus:
 ### 畅言评论(需要ICP备案)
 changyan:
   enable: false
-  appid: cyt8KmUC1
-  conf: prod_855a68d3b3d91855360a6215672a505a
+  appid:
+  conf:
 
 ## Valine评论
 valine:
@@ -214,8 +214,8 @@ valine:
   notify: false # Mail notify
   verify: false # Verify code
   avatar: mm # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
-  placeholder: Hi,留下您的足迹吧~ # Comment Box placeholder
-  guest_info: nick,mail,link # Comment header info
+  placeholder: Hi,说点什么吧~ # Comment Box placeholder
+  guest_info: nick,mail # Comment header info
   pageSize: 10 # comment list page size
   
 ## 网站访问统计

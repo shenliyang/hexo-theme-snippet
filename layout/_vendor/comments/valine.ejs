@@ -1,15 +1,14 @@
 <% if (theme.valine.enable ){ %>
-    <!-- Valine Comments -->
     <div class="comments vcomment" id="comments"></div>
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
-    <!-- Valine Comments script -->
+    <%- js('//cdn1.lncld.net/static/js/3.0.4/av-min.js','assets/valine.min.js') %>
+
     <script>
         var GUEST_INFO = ['nick','mail','link'];
         var guest_info = '<%= theme.valine.guest_info %>'.split(',').filter(function(item){
           return GUEST_INFO.indexOf(item) > -1
         });
         new Valine({
+            av: AV,
             el: '#comments',
             notify: '<%= theme.valine.notify %>' == 'true',
             verify: '<%= theme.valine.verify %>' == 'true',
@@ -21,5 +20,4 @@
             pageSize: "<%= theme.valine.pageSize %>"
         })
     </script>
-    <!-- Valine Comments end -->
 <% } %>
