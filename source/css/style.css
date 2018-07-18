@@ -1095,31 +1095,13 @@ pre {
   margin: 0 2px;
 }
 /*====================================================
-   copyright
-====================================================*/
-.copyright {
-  background: #222;
-  font-size: 13px;
-  text-align: center;
-  color: #666666;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-top: 1px solid #303030;
-}
-.copyright span {
-  margin: 0 .5em;
-}
-.copyright a {
-  color: #666666;
-}
-/*====================================================
    toc
 ====================================================*/
 #article-toc {
   padding-top: 1em;
   background-color: #fff;
   top: 0;
-  bottom: 70px;
+  bottom: 140px;
   overflow-y: auto;
   
 }
@@ -1147,6 +1129,24 @@ pre {
 }
 #article-toc .toc .toc-item.toc-level-2 > .toc-link {
   font-size: 15px;
+}
+/*====================================================
+   copyright
+====================================================*/
+.copyright {
+  background: #222;
+  font-size: 13px;
+  text-align: center;
+  color: #666666;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #303030;
+}
+.copyright span {
+  margin: 0 .5em;
+}
+.copyright a {
+  color: #666666;
 }
 /*====================================================
    back-to-top and toc-btn
