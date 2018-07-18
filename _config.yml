@@ -8,19 +8,19 @@ menu:
 - page: home
   url: /
   icon:
-- page: 业余
-  url: /categories/业余小作/
+- page: 写作
+  url: /categories/闲言碎语/
   icon:
-- page: 学习
+- page: 知识
   url: /categories/学习参考/
   icon:
-- page: 生活
-  url: /categories/生活感悟/
-  icon:
-- page: 时间轴
+#- page: 生活
+#  url: /categories/业余小作/
+#  icon:
+- page: 归档
   url: /archives/
   icon:
-- page: 关于我
+- page: 关于
   url: /posts/b5f422e3/
   icon:
 
@@ -100,6 +100,7 @@ links:
   - 沈立洋博客: http://www.shenliyang.com/
   - 91前端网: http://www.91h5.cc/
   - TZLoop: https://www.whereareyou.site/
+  - 猴子星球: https://mr-houzi.com/
   - LzCMS: http://www.lzcms.top/
   - 423down: http://www.423down.com/
   - 装机员: http://www.7xp.com/cj.html
