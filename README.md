@@ -62,7 +62,7 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 
 2. Git方式，在Hexo根目录执行：
 ``` bash
-    git clone git://github.com/shenliyang/hexo-theme-snippet.git themes/snippet
+git clone git://github.com/shenliyang/hexo-theme-snippet.git themes/snippet
 ```
 
 ### 3. 安装主题插件
@@ -71,9 +71,7 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 进行功能的开发，以下为必装插件：
 
 ``` bash
-    npm install hexo-renderer-ejs --save
-    npm install hexo-renderer-less --save
-    npm install hexo-deployer-git --save
+npm install hexo-renderer-ejs hexo-renderer-less hexo-deployer-git -S
 ```
 
 ### 4. 部署主题
@@ -83,37 +81,36 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 
 1. Gulp打包构建，压缩优化部署前的代码。  [Gulp入门指南](http://www.gulpjs.com.cn/docs/getting-started/)
 ``` bash
-    npm install   //安装项目依赖
+npm install   //安装项目依赖
 ```
 
 2. 拷贝gulpfile.js文件到项目根目录下(非主题目录)
 ``` bash
-    gulp 或者 gulp default   //执行打包任务
+gulp 或者 gulp default   //执行打包任务
 ```
 
 3. 清空hexo静态文件和缓存，并重新生成
 ``` bash
-    hexo clean && hexo g  //清空缓存并生成静态文件
+hexo clean && hexo g  //清空缓存并生成静态文件
 ```
 
 4. 本地预览，确没有问题再进行发布
 ``` bash
-    hexo s -p 4000 或者 hexo s  //启动本地服务默认
+hexo s -p 4000 或者 hexo s  //启动本地服务默认
 ```
 
 5. 当gulp执行完成，并提示  `please execute： hexo d` 时，可以进行发布
 ``` bash
-    hexo d 或者 gulp deploy  //部署发布
+hexo d 或者 gulp deploy  //部署发布
 ```
-
 
 ### 5. 更新主题
 
 主题可能会不定时优化和更新，更新主题代码：
 
 ``` bash
-    cd themes/snippet
-    git pull
+cd themes/snippet
+git pull
 ```
 
 # **主题篇**
@@ -124,9 +121,9 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 
 ## menu -- 导航菜单显示{[@page:名字,@url:地址,@icon:图标]}
 menu:
-- page: home
-  url: /
-  icon: fa-home
+  - page: home
+    url: /
+    icon: fa-home
 
 ## favicon -- 网站图标位置{@favicon}
 favicon: /favicon.ico
@@ -139,13 +136,13 @@ rss: /atom.xml
 
 ## widgets -- 6个左边小工具{@widgets:[notification,category,archive,tagcloud,friends]}
 widgets:
-- search
-- notification
-- social
-- category
-- archive
-- tagcloud
-- friends
+  - search
+  - notification
+  - social
+  - category
+  - archive
+  - tagcloud
+  - friends
 
 # 各个小工具的设置
 
@@ -168,9 +165,9 @@ notification: |-
 
 ## 社交设置{@name:社交工具名字，@icon:社交工具图标，@href:设置工具链接} [参考图标](http://fontawesome.io/icons/)
 social:
- - name: Github
-   icon: git
-   href: //github.com/shenliyang
+  - name: Github
+    icon: git
+    href: //github.com/shenliyang
 
 ## 文章分类设置{@cate_config:{@show_count:是否显示数字，@show_current: 是否高亮当前category}}
 cate_config:
@@ -185,7 +182,7 @@ arch_config:
 
 ## 友链设置{@链接名称：链接地址{@links:[,,,]}}
 links:
-    - 主题作者: http://www.shenliyang.com
+  - 主题作者: http://www.shenliyang.com
 
 
 # 主题自定义个性化配置
@@ -195,7 +192,7 @@ branding: 从未如此简单有趣
 
 ## 设置banner背景图片{@img:imgUrl自定义图片地址,主题默认{"静态背景":"banner.jpg"},{"动态背景":"banner2.jpg"}}
 banner:
-    img: imgUrl
+  img: imgUrl
 
 ## 首页列表底部面板{@homePanel: 是否开启}
 homePanel: true
@@ -269,16 +266,16 @@ changyan:
   conf:
 
 ### Valine评论 参考网站: [valine评论](https://valine.js.org/)
-  valine:
-   enable: true
-   appId:
-   appKey:
-   placeholder: 说点什么吧
-   notify: false // 邮件通知
-   verify: false // 验证码
-   avatar: mm // avatar头像
-   meta: nick,mail // 输入框内容，可选值nick,mail,link
-   pageSize: 10
+valine:
+  enable: true
+  appId:
+  appKey:
+  placeholder: 说点什么吧
+  notify: false // 邮件通知
+  verify: false // 验证码
+  avatar: mm // avatar头像
+  meta: nick,mail // 输入框内容，可选值nick,mail,link
+  pageSize: 10
 
 
 ## 网站访问统计
@@ -310,21 +307,21 @@ version: 1.2.1  //当前主题版本号
 ### 主题使用技巧及功能扩展
 1. 修改新增文章Front-matter模板,修改`scaffolds`目录下的`post.md`模板
 ``` yml
----
-title: {{ title }} // 标题
-date: {{ date }}   // 时间
-categories:        // 分类
-tags:              // 标签
-comments: false    // 是否开启评论
-img:               // 自定义缩略图
----
+  ---
+  title: {{ title }} // 标题
+  date: {{ date }}   // 时间
+  categories: ['分类1','分类2'] // 分类
+  tags: ['标签1','标签2']       // 标签
+  comments: false    // 是否开启评论
+  img:               // 自定义缩略图
+  ---
 ```
 
 2. 启用站内本地搜索功能
 
 如果要使用本地站点搜索，必须安装插件hexo-generator-json-content来创建本地搜索json文件
 ```bash
-    npm i hexo-generator-json-content@2.2.0 -S
+npm i hexo-generator-json-content@2.2.0 -S
 ```
 然后修改主题配置_config.yml文件下`jsonContent`相关参数。
 
@@ -382,7 +379,7 @@ branches:
   only:
     - dev #需要监听部署的分支
 env:
- global:
+  global:
    - GH_REF: github.com/shenliyang/shenliyang.github.io.git #更改为自己git地址
 ```
 
@@ -392,17 +389,16 @@ env:
 ## 3. 主题开发
 Gulp 执行启用主题二次开发模式
 ``` bash
-    gulp dev
+gulp dev
 ```
 会监听样式less或者JS文件的变动。然后执行上面的【主题发布】即可。
 
 ### 运行预览
 ``` bash
-    hexo clean && hexo g && hexo s -p 4000
+hexo clean && hexo g && hexo s -p 4000
 ```
 
 监听4000端口，使用浏览器打开地址`http://localhost:4000`进行预览。
-
 
 # **其他**
 
@@ -445,7 +441,7 @@ npm i hexo-generator-json-content@2.2.0 -S
 
 #### 4. 在url哪里可以访问到本地静态文件吗？
 
-在主题 `source` 目录下新建文件夹，例如:  `static`文件夹，然后添加静态资源，例如: xxx.pdf文件， 访问：*`http://yoursite.com/static/xxx.pdf`*
+在主题 `source` 目录下新建文件夹，例如: `static`文件夹，然后添加静态资源，例如: xxx.pdf文件， 访问：*`http://yoursite.com/static/xxx.pdf`*
 
 #### 5. 这个主题有分页功能吗？
 
@@ -469,7 +465,7 @@ language: zh-CN
 
 ## 版本更新日志
 
-- 增加Valine评论
+  - 增加Valine评论
 
 ## License
 
