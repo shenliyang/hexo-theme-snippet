@@ -17,14 +17,6 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 
 ![hexo-theme-snippet](http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/snippet-screenshots1000.jpg "Snippet主题")
 
-|  |  |
-| :------: | :------: |
-|![Snippet移动端演示](http://m.qpic.cn/psb?/V11QGp9W3Dos5V/8uUse*HjA0tlH06wVFAPN.vLPXgZbNL9J1*G6xETuuk!/b/dDIBAAAAAAAA&bo=RgIMBAAAAAACl*8!) |![Snippet手机端演示](http://m.qpic.cn/psb?/V11QGp9W3Dos5V/b09lHleJOiOvKmKcKFDtRml*K8szhadAoXCIXi*R2F4!/b/dFkAAAAAAAAA&bo=RgIMBAAAAAACh.8!) |
-
-#### 移动端扫描二维码
-> 如果微信扫描，请点击微信下方【访问原网页】或在浏览器中打开
-
-![Snippet移动端二维码](http://m.qpic.cn/psb?/V11QGp9W3Dos5V/FLuwClNzuhx7DrN2mk6m2MaEx6.7wkNVN1EfhFzC5K4!/b/dGYBAAAAAAAA&bo=XgFeAQAAAAACV3M! "扫描访问Snippet主题")
 
 ## 主题特点
 
