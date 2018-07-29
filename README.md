@@ -13,9 +13,7 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 
 ## 主题预览
 
-[主题Demo戳这里](http://shenliyang.github.io?rf=gh-demo) | 扫描二维码:point_down:
-
-![Snippet移动端二维码](http://m.qpic.cn/psb?/V11QGp9W3Dos5V/0xLXMLZgFNLmpgaNj60dqw80kSlQ91I8sW08*dzwFHQ!/b/dDIBAAAAAAAA&bo=QAFAAQAAAAACR2M! "扫描访问Snippet主题")
+[主题Demo戳这里](http://shenliyang.github.io?rf=gh-demo) 
 
 ![hexo-theme-snippet](http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/snippet-screenshots1000.jpg "Snippet主题")
 
