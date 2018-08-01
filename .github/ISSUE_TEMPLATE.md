@@ -1,5 +1,15 @@
 <!--
-    - [x] 我已阅读 [Snippet主题文档](https://github.com/shenliyang/hexo-theme-snippet/blob/master/README.md)
-    - [x] 已搜索过相关 [Issues](https://github.com/shenliyang/hexo-theme-snippet/issues)并无解决方案
+    1.我已阅读 [Snippet主题README.md文档] 及常见问题。
+    2.已搜索过相关[Issues]并无解决方案。
 -->
+
+### 该问题是怎么引起的？
+
+
+
+### 重现步骤
+
+
+
+### 报错信息
 
