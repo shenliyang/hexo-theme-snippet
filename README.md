@@ -11,9 +11,8 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 [![hexo version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/shenliyang/hexo-theme-snippet/blob/master/LICENSE)
 
-## 主题预览
 
-[主题Demo戳这里](http://shenliyang.github.io?rf=gh-demo) 
+[主题Demo戳这里](http://shenliyang.github.io?rf=gh-demo)
 
 ![hexo-theme-snippet](http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/snippet-screenshots1000.jpg "Snippet主题")
 
