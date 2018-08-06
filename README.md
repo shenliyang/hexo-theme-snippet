@@ -277,14 +277,17 @@ cnzz_anaylytics:
 ### 百度统计 参考网站: [百度统计](https://tongji.baidu.com/)
 baidu_anaylytics:
 
-### 百度文章推送  参考网站: [百度站长](http://zhanzhang.baidu.com/)
-baidu_push:
-
 ### 谷歌统计 参考网站：[谷歌统计](https://www.google-analytics.com/)
 google_anaylytics:
 
 ### 腾讯分析 参考网站：[腾讯分析](http://ta.qq.com/)
 tencent_analytics:
+
+### 百度站点认证
+baidu-site-verification:
+
+### 百度自动推送(@baidu_push: 是否启用百度自动推送)  参考网站: [百度站长资源](https://ziyuan.baidu.com/college/courseinfo?id=267&page=2#h2_article_title18)
+baidu_push:
 
 ## ICON配置 (不配则启用本地Font Icon)
 fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css

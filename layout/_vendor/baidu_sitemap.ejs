@@ -1,7 +1,8 @@
-<%if(theme.baidu_vertification){%>
-    <meta name="baidu-site-verification" content="<%= theme.baidu_push%>" />
+<%if(theme.baidu_site_verification){%>
+    <meta name="baidu-site-verification" content="<%= theme.baidu_site_verification%>" />
+<%}%>
+<%if(theme.baidu_push){%>
     <script>
-        //push
         (function(){
             var bp = document.createElement('script');
             var curProtocol = window.location.protocol.split(':')[0];
