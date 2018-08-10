@@ -39,6 +39,8 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 # **基础篇**
 
 > 如果你在此之前使用的是 `Hexo 2.x` 版本，为了避免未知的错误，请备份好数据，或者建立新的博客目录
+>> "主题目录" => `themes\hexo-theme-snippet`, "Hexo根目录" => 项目主目录;    
+"主题配置" => `themes\hexo-theme-snippet\_config.yml`, "Hexo配置" => 项目主目录下`_config.yml`
 
 ### 1. 环境搭建
 
@@ -53,7 +55,7 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 
 2. Git方式，在Hexo根目录执行：
 ``` bash
-git clone git://github.com/shenliyang/hexo-theme-snippet.git themes/snippet
+git clone git://github.com/shenliyang/hexo-theme-snippet.git themes/hexo-theme-snippet
 ```
 
 ### 3. 安装主题插件
@@ -62,35 +64,40 @@ git clone git://github.com/shenliyang/hexo-theme-snippet.git themes/snippet
 进行功能的开发，以下为必装插件：
 
 ``` bash
-npm install hexo-renderer-ejs hexo-renderer-less hexo-deployer-git -S
+npm i hexo-renderer-ejs hexo-renderer-less hexo-deployer-git -S
 ```
 
 ### 4. 部署主题
 
-> 如果没有更改过主题源文件可以跳过1,2步骤
+> 如果没有更改过主题源文件,也不需要代码优化可以跳过1,2,3步骤
 
 
-1. Gulp打包构建，压缩优化部署前的代码。  [Gulp入门指南](http://www.gulpjs.com.cn/docs/getting-started/)
+1. gulp打包构建，安装项目的开发依赖。  [Gulp入门指南](http://www.gulpjs.com.cn/docs/getting-started/)
 ``` bash
-npm install   //安装项目依赖
+npm i   //安装项目依赖
 ```
 
-2. 拷贝gulpfile.js文件到项目根目录下(非主题目录)
+2. 在Hexo根目录下创建一个名为 gulpfile.js 的文件：
+``` bash
+require('./themes/hexo-theme-snippet/gulpfile');
+```
+
+3. 运行 gulp：
 ``` bash
 gulp 或者 gulp default   //执行打包任务
 ```
 
-3. 清空hexo静态文件和缓存，并重新生成
+4. 清空hexo静态文件和缓存，并重新生成
 ``` bash
 hexo clean && hexo g  //清空缓存并生成静态文件
 ```
 
-4. 本地预览，确没有问题再进行发布
+5. 本地预览，确没有问题再进行发布
 ``` bash
 hexo s -p 4000 或者 hexo s  //启动本地服务默认
 ```
 
-5. 当gulp执行完成，并提示  `please execute： hexo d` 时，可以进行发布
+6. 当gulp执行完成，并提示  `please execute： hexo d` 时，可以进行发布
 ``` bash
 hexo d 或者 gulp deploy  //部署发布
 ```
@@ -100,7 +107,7 @@ hexo d 或者 gulp deploy  //部署发布
 主题可能会不定时优化和更新，更新主题代码：
 
 ``` bash
-cd themes/snippet
+cd themes/hexo-theme-snippet
 git pull
 ```
 
@@ -439,7 +446,7 @@ npm i hexo-generator-json-content@2.2.0 -S
 
 #### 5. 这个主题有分页功能吗？
 
-主题已经集成分页功能，在Hexo根目录下修改 _config.yml 的配置
+主题已经集成分页功能，在Hexo配置中修改
 
 | 参数       | 描述        | 默认值  |
 | ------------- |:-------------:| :-----:|
@@ -448,7 +455,7 @@ npm i hexo-generator-json-content@2.2.0 -S
 
 #### 6. 为什么右侧小工具标题都为英文呢？
 
-可能是您忘记预设网站语言，而启用默认语言了，请先在 _config.yml (注意：为hexo的_config.yml配置文件，与themes在同级目录下，不是主题的配置文件!!!) 中调整 language 设定
+可能是您忘记预设网站语言，而启用默认语言了，请先在Hexo配置中调整 language 设定
 
 ``` bash
 language: zh-CN
