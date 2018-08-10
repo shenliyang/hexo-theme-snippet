@@ -20,7 +20,7 @@
     "version": "3.7.1"
   },
   "dependencies": {
-    "ejs": "^1.0.0",
+    "ejs": "^2.5.5",
     "hexo": "^3.3.8",
     "hexo-abbrlink": "^2.0.4",
     "hexo-deployer-git": "^0.3.1",
