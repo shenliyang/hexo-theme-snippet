@@ -8,6 +8,7 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 [![Read the Docs](https://img.shields.io/readthedocs/pip/stable.svg)](https://github.com/shenliyang/hexo-theme-snippet/blob/master/README.md)
 [![codebeat badge](https://codebeat.co/badges/6ef2dcd2-af90-40e0-9628-ac689441f774)](https://codebeat.co/projects/github-com-shenliyang-hexo-theme-snippet-master)
 [![mnt-image](https://img.shields.io/maintenance/yes/2018.svg)](../../commits/master)
+[![ImgBot](https://img.shields.io/badge/ImgBot-build-brightgreen.svg)]()
 [![hexo version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/shenliyang/hexo-theme-snippet/blob/master/LICENSE)
 
@@ -39,7 +40,7 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 # **基础篇**
 
 > 如果你在此之前使用的是 `Hexo 2.x` 版本，为了避免未知的错误，请备份好数据，或者建立新的博客目录
->> "主题目录" => `themes\hexo-theme-snippet`, "Hexo根目录" => 项目主目录;    
+>> "主题目录" => `themes\hexo-theme-snippet`, "Hexo根目录" => 项目主目录;
 "主题配置" => `themes\hexo-theme-snippet\_config.yml`, "Hexo配置" => 项目主目录下`_config.yml`
 
 ### 1. 环境搭建
@@ -72,7 +73,7 @@ npm i hexo-renderer-ejs hexo-renderer-less hexo-deployer-git -S
 > 如果没有更改过主题源文件,也不需要代码优化可以跳过1,2,3步骤
 
 
-1. gulp打包构建，安装项目的开发依赖。  [Gulp入门指南](http://www.gulpjs.com.cn/docs/getting-started/)
+1. gulp打包构建，拷贝主题目录下`package.json`文件到Hexo根目录下，然后安装项目的开发依赖。  [Gulp入门指南](http://www.gulpjs.com.cn/docs/getting-started/)
 ``` bash
 npm i   //安装项目依赖
 ```
