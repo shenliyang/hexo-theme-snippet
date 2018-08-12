@@ -40,7 +40,8 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 # **基础篇**
 
 > 如果你在此之前使用的是 `Hexo 2.x` 版本，为了避免未知的错误，请备份好数据，或者建立新的博客目录
->> "主题目录" => `themes\hexo-theme-snippet`, "Hexo根目录" => 项目主目录;
+
+>"主题目录" => `themes\hexo-theme-snippet`, "Hexo根目录" => 项目主目录;
 "主题配置" => `themes\hexo-theme-snippet\_config.yml`, "Hexo配置" => 项目主目录下`_config.yml`
 
 ### 1. 环境搭建
