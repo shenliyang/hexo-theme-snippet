@@ -388,10 +388,10 @@ env:
 ```
 
 3. 提交代码到Github，实现自动部署
-4. 当 .travis.yml 配置文件修改完成后，将其提交到远程仓库的 hexo 分支下，此时如果之前的配置一切ok，我们应该能在 Travis CI 的博客项目主页页面中看到自动构建已经在开始执行了。上面会显示出构建过程中的日志信息及状态等。
+4. 当 `.travis.yml `配置文件修改完成后，将其提交到远程仓库的 hexo 分支下，此时如果之前的配置一切ok，我们应该能在 Travis CI 的博客项目主页页面中看到自动构建已经在开始执行了。上面会显示出构建过程中的日志信息及状态等。
 
 ## 3. 主题开发
-Gulp 执行启用主题二次开发模式
+Gulp 执行启用主题开发模式
 ``` bash
 gulp dev
 ```
@@ -465,7 +465,6 @@ language: zh-CN
 ```
 
 > 没有找到我需要的问题： [提Issues](https://github.com/shenliyang/hexo-theme-snippet/issues/new)
-
 
 ## 版本更新日志
 
