@@ -182,7 +182,7 @@ arch_config:
 
 ## 友链设置{@链接名称：链接地址{@links:[,,,]}}
 links:
-  - 主题作者: http://www.shenliyang.com
+  - Hexo官网: https://hexo.io/zh-cn/
 
 
 # 主题自定义个性化配置
@@ -418,7 +418,7 @@ hexo clean && hexo g && hexo s -p 4000
 ## 宗旨
 主题宗旨：**致力主题简洁轻量，配置方便开箱即用**
 
-> Hexo框架追求的是快速、简洁，高效。喜欢绚丽，添加各种功能，折腾的朋友，建议移步至：[wordpress官网](https://cn.wordpress.org/) | [dayup主题](http://www.shenliyang.com/dayup)
+> Hexo框架追求的是快速、简洁，高效。喜欢绚丽，添加各种功能，折腾的朋友，建议移步至：[wordpress官网](https://cn.wordpress.org/)
 
 ## 常见问题
 
