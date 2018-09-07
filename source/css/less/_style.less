@@ -891,13 +891,27 @@ pre {
             font-size:1em!important;
             line-height: 1.5em;
             display: inline-block;
-            margin: 0 7px 7px 0;
+            margin: 0 5px 5px 0;
             .transition;
+            .text-ellipsis();
             &:hover {
                 color: @white_color;
-                background: @theme_color;
+                background-color: @theme_color;
                 .border(@theme_color);
                 text-decoration: none;
+            }
+        }
+    }
+    #tag-cloud-3d {
+        a {
+            padding: 5px 15px;
+            .border-radius(15px);
+            background-color: #f2f4f8;
+            .box-shadow(6px 4px 8px 0 rgba(151,142,136,.34));
+            &:hover {
+                color: @white_color;
+                background-color: @theme_color;
+                .border(@theme_color);
             }
         }
     }

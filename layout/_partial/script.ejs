@@ -3,3 +3,17 @@
 <%}%>
 
 <%- js('js/app.js?rev=@@hash') %>
+
+<% if(theme.tagcloud.tag3d){%>
+    <%- js('js/tagcloud.js?rev=@@hash') %>
+    <script>
+      tagcloud({
+        selector: "#tag-cloud-3d",  //元素选择器
+        radius: 100,         //滚动半径
+        mspeed: '<%= theme.tagcloud.mspeed %>',   //滚动最大速度
+        ispeed: '<%= theme.tagcloud.ispeed %>',   //滚动初速度
+        direction: <%= theme.tagcloud.direction %>,     //初始滚动方向
+        keep: false          //鼠标移出组件后是否继续随鼠标滚动
+      });
+    </script>
+<%}%>

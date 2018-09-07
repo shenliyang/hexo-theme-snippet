@@ -2,7 +2,10 @@
   <div class="widget">
     <h3 class="title"><%= __('tagcloud') %></h3>
     <div class="content tag-cloud">
-        <%-tagcloud() %>
+        <div <% if(theme.tagcloud.tag3d){ %> id="tag-cloud-3d" <% }%> >
+            <%-tagcloud() %>
+        </div>
     </div>
   </div>
 <% } %>
+

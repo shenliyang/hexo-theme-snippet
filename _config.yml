@@ -94,6 +94,13 @@ arch_config:
    show_count: true
    order: -1
 
+## 标签云设置
+tagcloud:
+  tag3d: false
+  mspeed: 'normal'
+  ispeed: 'fast'
+  direction: 135
+
 ## 友链设置
 links:
   - Hexo官网: https://hexo.io/zh-cn/

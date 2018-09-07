@@ -180,6 +180,13 @@ arch_config:
    show_count: true
    order: -1
 
+## 标签云设置{@tag3d:是否加载3D标签云,@mspeed:滚动最大速度,@ispeed:初始滚动速度,@direction:标签云滚动反向角度}
+tagcloud:
+  tag3d: false
+  mspeed: 'normal'
+  ispeed: 'fast'
+  direction: 135
+
 ## 友链设置{@链接名称：链接地址{@links:[,,,]}}
 links:
   - Hexo官网: https://hexo.io/zh-cn/
@@ -468,7 +475,7 @@ language: zh-CN
 
 ## 版本更新日志
 
-  - 增加Valine评论
+  - 增加3D云标签功能
 
 ## License
 

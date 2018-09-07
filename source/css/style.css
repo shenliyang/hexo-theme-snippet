@@ -913,15 +913,32 @@ pre {
   font-size: 1em!important;
   line-height: 1.5em;
   display: inline-block;
-  margin: 0 7px 7px 0;
+  margin: 0 5px 5px 0;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .widget .tag-cloud a:hover {
   color: #fff;
-  background: #e67e22;
+  background-color: #e67e22;
   border: 1px solid #e67e22;
   text-decoration: none;
+}
+.widget #tag-cloud-3d a {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 18px;
+  background-color: #f2f4f8;
+  -webkit-box-shadow: 6px 4px 8px 0 rgba(151, 142, 136, 0.34);
+  -moz-box-shadow: 6px 4px 8px 0 rgba(151, 142, 136, 0.34);
+  box-shadow: 6px 4px 8px 0 rgba(151, 142, 136, 0.34);
+}
+.widget #tag-cloud-3d a:hover {
+  color: #fff;
+  background-color: #e67e22;
+  border: 1px solid #e67e22;
 }
 .widget .social a {
   display: inline-block;
