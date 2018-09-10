@@ -97,9 +97,14 @@ arch_config:
 ## 标签云设置
 tagcloud:
   tag3d: false
-  mspeed: 'normal'
-  ispeed: 'fast'
-  direction: 135
+  textColour: '#444'
+  outlineMethod: 'block'
+  outlineColour: '#FFDAB9'
+  interval: 30
+  freezeActive: true
+  frontSelect: true
+  reverse: true
+  wheelZoom: false
 
 ## 友链设置
 links:

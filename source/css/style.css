@@ -926,20 +926,6 @@ pre {
   border: 1px solid #e67e22;
   text-decoration: none;
 }
-.widget #tag-cloud-3d a {
-  display: inline-block;
-  padding: 5px 15px;
-  border-radius: 18px;
-  background-color: #f2f4f8;
-  -webkit-box-shadow: 6px 4px 8px 0 rgba(151, 142, 136, 0.34);
-  -moz-box-shadow: 6px 4px 8px 0 rgba(151, 142, 136, 0.34);
-  box-shadow: 6px 4px 8px 0 rgba(151, 142, 136, 0.34);
-}
-.widget #tag-cloud-3d a:hover {
-  color: #fff;
-  background-color: #e67e22;
-  border: 1px solid #e67e22;
-}
 .widget .social a {
   display: inline-block;
   text-align: center;

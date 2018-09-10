@@ -180,12 +180,17 @@ arch_config:
    show_count: true
    order: -1
 
-## 标签云设置{@tag3d:是否加载3D标签云,@mspeed:滚动最大速度,@ispeed:初始滚动速度,@direction:标签云滚动反向角度}
+## 标签云设置{/*参数参考：http://www.goat1000.com/tagcanvas-options.php */}
 tagcloud:
-  tag3d: false
-  mspeed: 'normal'
-  ispeed: 'fast'
-  direction: 135
+  tag3d: false // 是否启用3D标签云
+  textColour: '#444' // 字体颜色
+  outlineMethod: 'block' // 选中模式(outline|classic|block|colour|size|none)
+  outlineColour: '#FFDAB9' // 选中模式的颜色
+  interval: 30 // 动画帧之间的时间间隔，值越大，转动幅度越大
+  freezeActive: true // 选中的标签是否继续滚动
+  frontSelect: true // 不选标签云后部的标签
+  reverse: true // 是否反向触发
+  wheelZoom: false // 是否启用鼠标滚轮
 
 ## 友链设置{@链接名称：链接地址{@links:[,,,]}}
 links:
