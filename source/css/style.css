@@ -1154,14 +1154,14 @@ pre {
   overflow: hidden;
 }
 .timeline h2 {
-  height: 60px;
-  line-height: 60px;
+  height: 44px;
+  line-height: 44px;
   font-size: 30px;
   color: #666666;
   font-weight: bold;
-  padding-left: 65px;
-  margin-bottom: 30px;
-  background: url(../img/timeline-clock.gif) #fff no-repeat 158px 0;
+  padding-left: 75px;
+  margin-bottom: 25px;
+  background: url(../img/timeline-clock.gif) #fff no-repeat 165px 0;
 }
 .timeline h2 img {
   vertical-align: -5px;
@@ -1198,7 +1198,7 @@ pre {
 .timeline ul li h3 span {
   color: #666666;
   font-size: 12px;
-  margin-left: 2px;
+  margin-left: 3px;
 }
 .timeline ul li a {
   padding-left: 41px;
