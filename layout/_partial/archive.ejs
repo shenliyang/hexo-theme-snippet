@@ -1,8 +1,8 @@
-<h3> 
+<h3>
     <% if(page.tag) { %>
-        <%= page.tag %> 
+        <%= page.tag %>
     <% } if(page.category) { %>
-        <%= page.category %> 
+        <%= page.category %>
     <% } else { %>
     <% } %>
 </h3>
@@ -11,13 +11,13 @@
         <% if(post.img) { %>
             <div class="post-media">
                 <a href="<%- url_for(post.path) %>">
-                    <img class="img-ajax" src="<%- url_for('/img/loading.gif') %>"  data-src="<%- post.img %>"  alt="<%- post.title %>"> 
+                    <img class="img-ajax" src="<%- url_for('/img/loading.gif') %>"  data-src="<%- post.img %>"  alt="<%- post.title %>">
                 </a>
             </div>
         <% } %>
         <div class="post-content">
             <div class="post-head home-post-head">
-                <h1 class="post-title"> 
+                <h1 class="post-title">
                     <a href="<%- url_for(post.path) %>"><%- post.title %></a>
                 </h1>
                 <div class="post-meta">  &bull;
@@ -32,7 +32,7 @@
                 <% } else { %>
                     <%= truncate(strip_html(post.content), {length: theme.excerptLength || 120, separator: ''}) %>
                 <% } %>
-            </p> 
+            </p>
         </div>
     </article>
  <% }) %>

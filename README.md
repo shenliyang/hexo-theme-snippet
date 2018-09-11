@@ -32,6 +32,7 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 - [x] 支持多个第三方评论系统
 - [x] 支持3D云标签
 - [x] 支持网站统计和文章推送
+- [x] 支持网站统计分析和访客统计
 - [x] 移动端的简洁设计
 - [x] 支持代码高亮并支持自定义高亮样式
 - [x] 支持Shell脚本一键使用Travis CI自动化部署博客
@@ -289,6 +290,10 @@ valine:
   meta: nick,mail // 输入框内容，可选值nick,mail,link
   pageSize: 10
 
+## 网站访客统计 [不蒜子统计](http://busuanzi.ibruce.info/)
+visit_counter:
+   site: true // 总访问量和访问人数统计
+   page: true // 文章阅读量统计
 
 ## 网站访问统计
 

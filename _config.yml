@@ -200,7 +200,12 @@ valine:
    meta: nick,mail
    pageSize: 10
 
-## 网站访问统计
+## 网站访客统计
+visit_counter:
+   site: true
+   page: true
+
+## 网站访问统计分析
 
 ### 网盟CNZZ统计
 cnzz_analytics: 1263868967
