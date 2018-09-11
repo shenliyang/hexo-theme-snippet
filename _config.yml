@@ -202,8 +202,8 @@ valine:
 
 ## 网站访客统计
 visit_counter:
-   site: true
-   page: true
+   site: false
+   page: false
 
 ## 网站访问统计分析
 
