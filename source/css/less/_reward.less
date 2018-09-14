@@ -1,0 +1,92 @@
+.reward {
+    padding: 5px 0;
+    .reward-wrap {
+        position: relative;
+        display: block;
+        font-size: 30px;
+        width: 62px;
+        height: 62px;
+        line-height: 60px;
+        margin: 0 auto;
+        cursor: pointer;
+        text-align: center;
+        vertical-align: middle;
+        color: @reward_color;
+        -webkit-user-select: none;
+        .border(#d9d9d9);
+        .box-shadow(0 0 2px #d9d9d9);
+        .border-radius(50%);
+        .reward-box {
+            position: absolute;
+            top: -220px;
+            left: 50%;
+            display: none;
+            width: 350px;
+            height: 200px;
+            margin-left: -175px;
+            padding: 15px;
+            .border(#e6e6e6);
+            background-color: #fff;
+            .box-shadow(0 1px 1px 1px #efefef);
+            span {
+                display: inline-block;
+                width: 150px;
+                height: 150px;
+                img {
+                    display: inline-block;
+                    float: left;
+                    width: 150px;
+                    height: 150px;
+                    margin: 0 auto;
+                    border: 0
+                }
+                b {
+                    font-size: 14px;
+                    line-height: 26px;
+                    display: block;
+                    text-align: center;
+                    color: #666
+                }
+            }
+            &:before, &:after {
+                position: absolute;
+                content: '';
+                border: 10px solid transparent;
+            }
+            &:before{
+                bottom: -20px;
+                left: 50%;
+                margin-left: -10px;
+                border-top-color: #e6e6e6
+            }
+            &:after{
+                bottom: -19px;
+                left: 50%;
+                margin-left: -10px;
+                border-top-color: #fff
+            }
+
+        }
+        &:hover {
+            color:#fff;
+            background-color: @reward_color;
+            .border(@reward_color);
+            .transition();
+            .reward-box {
+                display: block;
+            }
+        }
+    }
+    .reward-tip {
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: #969696;
+        margin: 15px auto;
+        text-align: center;
+        min-height: 24px;
+    }
+}
+
+
+

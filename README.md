@@ -242,6 +242,12 @@ declaration:
   tip: |-
       商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
 
+## 文章打赏{@reward: {alipay:支付宝打赏,wepay:微信打赏,tip:打赏提示语; 链接都为空,关闭打赏功能}}
+reward:
+  alipay: ''
+  wepay: '../img/reward-wepay.jpg'
+  tip: 赞赏是不耍流氓的鼓励
+
 
 ## 主题评论
 
