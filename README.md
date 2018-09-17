@@ -176,8 +176,10 @@ cate_config:
    show_current: true
 
 ## 文章归档设置{@arch_config:/*参数参考：https://hexo.io/zh-cn/docs/helpers.html#list-archives*/}
+## 推荐组合方式：[{type: 'monthly',format: 'YYYY年MM月'},{type: 'yearly',format: 'YYYY年'}]
 arch_config:
    type: 'monthly'
+   format: 'YYYY年MM月'
    show_count: true
    order: -1
 

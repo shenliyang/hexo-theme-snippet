@@ -91,6 +91,7 @@ cate_config:
 ## 文章归档设置
 arch_config:
    type: 'monthly'
+   format: 'YYYY年MM月'
    show_count: true
    order: -1
 
