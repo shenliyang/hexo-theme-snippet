@@ -34,7 +34,5 @@ post_tags: 文章标签
 post_licence: 版权声明
 notification: 网站公告
 toc: 文章目录
-visit_counter_uv: 本站总访问量
-visit_counter_uv_unit: 次
-visit_counter_pv: 您是第
-visit_counter_pv_unit: 个小伙伴
+visit_counter_uv: 访客数
+visit_counter_pv: 访问量

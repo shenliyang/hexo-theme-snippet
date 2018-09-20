@@ -34,7 +34,5 @@ post_tags: タグ
 post_licence: ライセンス
 notification: お知らせ
 toc: 目次
-visit_counter_uv: 本駅総訪問量
-visit_counter_uv_unit: 次
-visit_counter_pv: あなたは
-visit_counter_pv_unit: 人目のインタビューです
+visit_counter_uv: アクセス量
+visit_counter_pv: 訪問者数

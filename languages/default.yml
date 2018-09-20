@@ -34,7 +34,5 @@ post_tags: Tags
 post_licence: License
 notification: Notification
 toc: Table of Contents
-visit_counter_uv: Total
-visit_counter_uv_unit: views
-visit_counter_pv: You are
-visit_counter_pv_unit: hits
+visit_counter_uv: Visitors
+visit_counter_pv: Total
