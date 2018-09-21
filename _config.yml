@@ -29,7 +29,8 @@ rss: /atom.xml
 
 ## Carousel
 carousel:
-  img: img/head-img.jpg
+  img: 'img/head-img.jpg'
+  url: 'javascript:'
 
 # 各个小工具的设置
 
@@ -42,6 +43,7 @@ widgets:
   - archive
   - tagcloud
   - friends
+
 
 ## 搜索
 jsonContent:
