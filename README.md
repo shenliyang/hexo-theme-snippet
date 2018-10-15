@@ -490,6 +490,22 @@ npm i hexo-generator-json-content@2.2.0 -S
 
 可能是您忘记预设网站语言，而启用默认语言了，请先在Hexo配置中调整 language 设定
 
+#### 7. 关于Hexo标签和分类方法的分歧
+
+> 只有文章支持分类和标签，您可以在 Front-matter 中设置。在其他系统中，分类和标签听起来很接近，但是在 Hexo 中两者有着明显的差别：分类具有顺序性和层次性，也就是说  `Foo, Bar` 不等于 `Bar, Foo`；而标签没有顺序和层次。
+
+如果您有过使用WordPress的经验，就很容易误解Hexo的分类方式。WordPress支持对一篇文章设置多个分类，而且这些分类可以是同级的，也可以是父子分类。但是Hexo不支持指定多个同级分类。下面的指定方法：
+
+``` bash
+categories:
+- Diary
+- Life
+```
+
+会使分类Life成为Diary的子分类，而不是并列分类。因此，有必要为您的文章选择尽可能准确的分类。
+
+Hexo官方文档: [分类方法的分歧](https://hexo.io/zh-cn/docs/front-matter#分类和标签)
+
 ``` bash
 language: zh-CN
 ```
