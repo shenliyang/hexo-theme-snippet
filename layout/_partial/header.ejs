@@ -1,4 +1,4 @@
-<header class="main-header" <% if(theme.banner.img){ %> style="background-image:url(<%= theme.banner.img %>)" <%}%> >
+<header class="main-header" <% if(theme.banner.img){ %> style="background-image:url(<%= url_for(theme.banner.img) %>)" <%}%> >
     <div class="main-header-box">
         <a class="header-avatar" href="/" title='<%= config.author %>'>
             <%- image_tag('img/avatar.jpg',{alt:'logo头像',class:'img-responsive center-block'}) %>
