@@ -207,9 +207,11 @@ links:
 ## 网站宣传语{@branding：网站宣传语(不设置显示本地图片)}
 branding: 从未如此简单有趣
 
-## 设置banner背景图片{@img:imgUrl自定义图片地址,主题默认{"静态背景":"banner.jpg"},{"动态背景":"banner2.jpg"}}
+## 设置banner背景图片{@img:自定义图片地址(支持绝对和相对路径),主题默认{"静态背景":"banner.jpg"},{"动态背景":"banner2.jpg"},{"动态星空背景":"banner3.jpg"}}
+## 例如：http://snippet.shenliyang.com/img/banner|2|3.jpg, 或者 './img/banner-img.jpg'(相对本地资源地址)
 banner:
-  img: imgUrl
+  img: http://snippet.shenliyang.com/img/banner.jpg
+
 
 ## 设置carousel{@img:图片地址,@url:点击跳转链接(默认值:"javascript:")}
 carousel:
