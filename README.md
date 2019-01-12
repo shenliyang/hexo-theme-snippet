@@ -307,6 +307,17 @@ valine:
   meta: nick,mail // 输入框内容，可选值nick,mail,link
   pageSize: 10
 
+## Gitalk评论 参考网站: [一个基于Github Issue和Preact开发的评论插件](https://gitalk.github.io/)
+gitalk:
+   enable: false
+   clientID: "" // Github 应用ID
+   clientSecret: "" // Github 应用密钥
+   repo: "hexo-theme-snippet" // 存储你评论 issue 的 Github 仓库名（建议直接用 GitHub Page 的仓库名），注：只写仓库名称，不写完整地址，比如：hexo-theme-snippet, 而不是 https://github.com/shenliyang/hexo-theme-snippet
+   owner: shenliyang  // Github 用户名(github登录时用的名称)
+   admin: shenliyang // 这个仓库的管理员，可以有多个，用数组表示，一般写自己用户名即可
+   perPage: 10 //每次加载的数据大小，最多100
+   id: "" // 如果为值"location.pathname"不建议填写(除非你有更好的方式)，由于id字段限制长度为50字符，默认为空时主题会进行判断处理。
+
 ## 网站访客统计 [不蒜子统计](http://busuanzi.ibruce.info/)
 visit_counter:
    site: true // 总访问量和访问人数统计
@@ -449,6 +460,7 @@ hexo clean && hexo g && hexo s -p 4000
 
 如果觉得本主题还不错，== 欢迎  [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers)下 ==，您的支持和鼓励才是后续更新最大的动力
 
+
 ## 宗旨
 主题宗旨：**致力主题简洁轻量，配置方便开箱即用**，该主题项目会持续维护和更新，不会跑路，请放心使用。
 
@@ -514,11 +526,13 @@ categories:
 
 Hexo官方文档: [分类方法的分歧](https://hexo.io/zh-cn/docs/front-matter#分类和标签)
 
-> 没有找到我需要的问题： [提Issues](https://github.com/shenliyang/hexo-theme-snippet/issues/new)
+> 没有找到我需要的问题，建议阅读以下文章再 [提Issues](https://github.com/shenliyang/hexo-theme-snippet/issues/new)    
+
+> 强烈推荐阅读 [《提问的智慧》](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way)、[《如何向开源社区提问题》](https://github.com/seajs/seajs/issues/545) 和 [《如何有效地报告 Bug》](http://www.chiark.greenend.org.uk/%7Esgtatham/bugs-cn.html)、[《如何向开源项目提交无法解答的问题》](https://zhuanlan.zhihu.com/p/25795393)，更好的问题更容易获得帮助。
 
 ## 版本更新日志
 
-  - 增加3D云标签功能
+  - 增加Gitalk评论系统
 
 ## License
 

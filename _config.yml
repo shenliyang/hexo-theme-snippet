@@ -165,37 +165,6 @@ reward:
 
 ## 主题评论
 
-### gitment
-gitment:
-  enable: false
-  owner:
-  repo:
-  client_id:
-  client_secret:
-  perPage: 10
-
-### 来必力
-livere:
-  enable: false
-  livere_uid: MTAyMC8zMzA1MS85NjEz
-
-### 友言评论(服务不稳定)
-uyan:
-  enable: false
-  uyan_id: 1966422
-
-### Disqus评论
-disqus:
-  enable: false
-  shortname: snippet
-  count: false
-
-### 畅言评论(需要ICP备案)
-changyan:
-  enable: false
-  appid:
-  conf:
-
 ## Valine评论
 valine:
    enable: true
@@ -207,6 +176,49 @@ valine:
    avatar: mm
    meta: nick,mail
    pageSize: 10
+  
+### 畅言评论(需要ICP备案)
+changyan:
+  enable: false
+  appid:
+  conf:
+
+### 来必力
+livere:
+  enable: false
+  livere_uid: MTAyMC8zMzA1MS85NjEz
+
+## Gitalk评论
+gitalk:
+   enable: false
+   clientID: 
+   clientSecret: 
+   repo: 
+   owner: 
+   admin: 
+   perPage:
+   id:
+
+### Disqus评论
+disqus:
+  enable: false
+  shortname: snippet
+  count: false
+
+### gitment评论(长期不更新，不建议使用)
+gitment:
+  enable: false
+  owner:
+  repo:
+  client_id:
+  client_secret:
+  perPage: 10
+
+### 友言评论(服务不稳定)
+uyan:
+  enable: false
+  uyan_id: 1966422
+
 
 ## 网站访客统计
 visit_counter:
