@@ -7,7 +7,7 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 [![Build Status](https://www.travis-ci.org/shenliyang/hexo-theme-snippet.svg?branch=master)](https://www.travis-ci.org/shenliyang/hexo-theme-snippet)
 [![Read the Docs](https://img.shields.io/readthedocs/pip/stable.svg)](https://github.com/shenliyang/hexo-theme-snippet/blob/master/README.md)
 [![HitCount](http://hits.dwyl.io/shenliyang/hexo-theme-snippet.svg)](http://hits.dwyl.io/shenliyang/hexo-theme-snippet)
-[![mnt-image](https://img.shields.io/maintenance/yes/2018.svg)](../../commits/master)
+[![mnt-image](https://img.shields.io/maintenance/yes/2019.svg)](../../commits/master)
 [![codebeat badge](https://codebeat.co/badges/6ef2dcd2-af90-40e0-9628-ac689441f774)](https://codebeat.co/projects/github-com-shenliyang-hexo-theme-snippet-master)
 [![GitHub stars](https://img.shields.io/github/stars/shenliyang/hexo-theme-snippet.svg)](https://github.com/shenliyang/hexo-theme-snippet/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/shenliyang/hexo-theme-snippet.svg)](https://github.com/shenliyang/hexo-theme-snippet/network)
