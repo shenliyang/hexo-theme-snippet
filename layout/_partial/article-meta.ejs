@@ -1,33 +1,29 @@
 <div class="post-meta">
     <% if(!is_category()){ %>
-    <%
-        var _showLevel = (theme.whichCategory ? Math.min(theme.whichCategory, post.categories.data.length) : post.categories.data.length) - 1,
-                _data = post.categories.data[_showLevel],
-                _categoryInfo = _data ? _data.name : " ";
-    %>
-    <span class="categories-meta fa-wrap">
-        <i class="fa fa-folder-open-o"></i>
-        <a href="/categories/<%= _categoryInfo %>">
-            <%= _categoryInfo %>
-        </a>
-    </span>
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <%- list_categories(post.categories, {
+                show_count: false,
+                style: 'none',
+                separator: ' '
+            }) %>
+        </span>
     <% } %>
 
     <% if(!is_tag()){ %>
-    <span class="fa-wrap">
-        <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            <% if(post.tags && post.tags.length > 0){ %>
-                <% for(var i = 0; i < (post.tags.length > 3 ? 3 : post.tags.length); i++) { %>
-                    <a href="/tags/<%= post.tags.data[i].name %>" title='<%= post.tags.data[i].name %>'>
-                        <%= post.tags.data[i].name %>
-                    </a>
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                <% if (post.tags && post.tags.length){ %>
+                    <%- list_tags(post.tags, {
+                        show_count: false,
+                        style: 'none',
+                        separator: ' ',
+                        amount: 5
+                    }) %>
                 <% } %>
-            <% }else{ %>
-                <%= "" %>
-            <% } %>
+            </span>
         </span>
-    </span>
     <% } %>
 
     <% if(is_post()) {%>
