@@ -4,32 +4,14 @@ about: Create a report to help us improve
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+> 请先确认以下情况：
+- [ ] 拉取主题最新代码，问题依然存在。
+- [ ] 已经搜索Issues历史记录，并阅读过：[主题常见问题](https://github.com/shenliyang/hexo-theme-snippet#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
+- [ ] 提Issues前建议先阅读：[《你不知道的提Issues技巧》](https://github.com/shenliyang/hexo-theme-snippet#你不知道的提Issues技巧)
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+> 为了能精准定位问题，希望尽量提供一下信息
+1. 相关问题截图
+2. 有线上环境，建议提供一下网址
+3. 如果是兼容bug，建议提供下设备型号，浏览器名称及版本
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
-
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
-
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
-
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+------- **如果是意见或建议，可以忽略以内容** ------------
