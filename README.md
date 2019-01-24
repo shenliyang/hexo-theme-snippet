@@ -466,6 +466,13 @@ hexo clean && hexo g && hexo s -p 4000
 
 > Hexo框架追求的是快速、简洁，高效。喜欢绚丽，添加各种功能，折腾的朋友，建议移步至：[wordpress官网](https://cn.wordpress.org/)
 
+
+## 你不知道的提Issues技巧
+> 强烈推荐阅读 [《提问的智慧》](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way)、[《如何向开源社区提问题》](https://github.com/seajs/seajs/issues/545) 和 [《如何有效地报告 Bug》](http://www.chiark.greenend.org.uk/%7Esgtatham/bugs-cn.html)、[《如何向开源项目提交无法解答的问题》](https://zhuanlan.zhihu.com/p/25795393)，更好的问题更容易获得帮助。
+
+<b>* 已阅读以上文章，并知晓，可以 </b> [提Issues](https://github.com/shenliyang/hexo-theme-snippet/issues/new) 了。
+
+
 ## 常见问题
 
 #### 1. 搜索功能不能用，content.json文件找不到？
@@ -526,9 +533,8 @@ categories:
 
 Hexo官方文档: [分类方法的分歧](https://hexo.io/zh-cn/docs/front-matter#分类和标签)
 
-> 没有找到我需要的问题，建议阅读以下文章再 [提Issues](https://github.com/shenliyang/hexo-theme-snippet/issues/new)    
+> 没有找到你需要的问题解决方案，建议阅读[《你不知道的提Issues技巧》](https://github.com/shenliyang/hexo-theme-snippet#你不知道的提Issues技巧) 再提Issues。  
 
-> 强烈推荐阅读 [《提问的智慧》](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way)、[《如何向开源社区提问题》](https://github.com/seajs/seajs/issues/545) 和 [《如何有效地报告 Bug》](http://www.chiark.greenend.org.uk/%7Esgtatham/bugs-cn.html)、[《如何向开源项目提交无法解答的问题》](https://zhuanlan.zhihu.com/p/25795393)，更好的问题更容易获得帮助。
 
 ## 版本更新日志
 
