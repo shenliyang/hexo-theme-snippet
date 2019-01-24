@@ -2,7 +2,7 @@
 <% if(page.keywords){ %>
     <meta name="keywords" content="{{ page.keywords }}" />
 <% } else if(page.tags && page.tags.length) { %>
-    <meta name="keywords" content="<% page.tags.forEach(function (item,index) { %><%= item.name%><% if(index != item.length){%>,<%}%><% }) %>" />
+    <meta name="keywords" content="<% page.tags.forEach(function (item,index) { %><%= item.name%><% if(index + 1 != page.tags.length){%>,<%}%><% }) %>" />
 <% } else{ %>
     <meta name="keywords" content="<%= config.keywords%>" />
 <%}%>
