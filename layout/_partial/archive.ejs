@@ -1,11 +1,18 @@
-<h3>
+<ol class="breadcrumb">
+    
     <% if(page.tag) { %>
-        <%= page.tag %>
+        <li>
+            <%= page.tag %>
+        </li>
     <% } if(page.category) { %>
-        <%= page.category %>
+        <li>
+            <%= page.category %>
+        </li>
     <% } else { %>
     <% } %>
-</h3>
+
+</ol>
+
 <% page.posts.each(function(post){ %>
     <article class="post">
         <% if(post.img) { %>
