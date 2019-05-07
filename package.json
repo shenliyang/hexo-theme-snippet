@@ -36,7 +36,7 @@
     "hexo-server": "^0.3.3"
   },
   "devDependencies": {
-    "gulp": "gulp@3.9.1",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-htmlclean": "^2.7.15",
     "gulp-htmlmin": "^5.0.1",
