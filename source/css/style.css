@@ -728,6 +728,8 @@ pre {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  table-layout: fixed;
+  word-wrap: break-word;
 }
 .post-content th {
   text-align: left;
@@ -812,7 +814,7 @@ pre {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  font-size: .9em;
+  font-size: 0.9em;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -829,7 +831,7 @@ pre {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   color: #808080;
 }
 #comments .v .vcontrol .vbtn:hover {
@@ -1113,7 +1115,7 @@ pre {
   border-top: 1px solid #303030;
 }
 .copyright span {
-  margin: 0 .5em;
+  margin: 0 0.5em;
 }
 .copyright a {
   color: #666666;
