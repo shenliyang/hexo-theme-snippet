@@ -1,5 +1,6 @@
 language: node_js
-node_js: stable
+node_js:
+    - "11.12.0"
 
 sudo: false
 
@@ -13,17 +14,20 @@ notifications:
   webhooks:
     urls:
       - https://oapi.dingtalk.com/robot/send?access_token=${DINGDING_ACCESS_TOKEN}
-    on_success: change 
-    on_failure: always 
+    on_success: change
+    on_failure: always
 
   # 邮件发送部署结果通知
   email:
     recipients:
       - snippet@91h5.cc
-    on_success: never
+    on_success: change
     on_failure: always
 
 # S: Build Lifecycle
+before_install:
+  - sudo apt-get install libnotify-bin
+
 install:
   - npm install
 #  - gem install travis
