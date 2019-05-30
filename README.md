@@ -408,6 +408,10 @@ notifications: #启用通知
     on_failure: always #部署失败时，同上
 
 # S: Build Lifecycle
+
+before_install:
+  - sudo apt-get install libnotify-bin #支持linux桌面提醒库
+
 install:
   - npm install  #安装依赖
 
@@ -456,15 +460,17 @@ hexo clean && hexo g && hexo s -p 4000
 ## 感谢
 在设计这款主题的时候参考了好多主题和博客的设计和创意，深表感谢！
 
-## 贡献
-接受各种形式的贡献，包括但不限于提交问题或需求，修复代码。
-欢迎大家提Issue或者Pull Request。
+## 鼓励
+**如果觉得本主题还不错，您的支持和鼓励才是后续更新最大的动力，== 欢迎  [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers)下 ==**
 
-如果觉得本主题还不错，== 欢迎  [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers)下 ==，您的支持和鼓励才是后续更新最大的动力
-
+![Stargazers over time](https://starchart.cc/shenliyang/hexo-theme-snippet.svg)
 
 ## 宗旨
 主题宗旨：**致力主题简洁轻量，配置方便开箱即用**，该主题项目会持续维护和更新，不会跑路，请放心使用。
+
+## 贡献
+接受各种形式的贡献，包括但不限于提交问题或需求，修复代码。
+欢迎大家提Issue或者Pull Request。
 
 > Hexo框架追求的是快速、简洁，高效。喜欢绚丽，添加各种功能，折腾的朋友，建议移步至：[wordpress官网](https://cn.wordpress.org/)
 
@@ -535,7 +541,7 @@ categories:
 
 Hexo官方文档: [分类方法的分歧](https://hexo.io/zh-cn/docs/front-matter#分类和标签)
 
-> 没有找到你需要的问题解决方案，建议阅读[《你不知道的提Issues技巧》](https://github.com/shenliyang/hexo-theme-snippet#你不知道的提Issues技巧) 再提Issues。  
+> 没有找到你需要的问题解决方案，建议阅读[《你不知道的提Issues技巧》](https://github.com/shenliyang/hexo-theme-snippet#你不知道的提Issues技巧) 再提Issues。
 
 
 ## 版本更新日志
