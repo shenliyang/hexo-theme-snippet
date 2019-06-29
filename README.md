@@ -314,11 +314,15 @@ gitalk:
    enable: false
    clientID: "" // Github 应用ID
    clientSecret: "" // Github 应用密钥
-   repo: "hexo-theme-snippet" // 存储你评论 issue 的 Github 仓库名（建议直接用 GitHub Page 的仓库名），注：只写仓库名称，不写完整地址，比如：hexo-theme-snippet, 而不是 https://github.com/shenliyang/hexo-theme-snippet
-   owner: shenliyang  // Github 用户名(github登录时用的名称)
-   admin: shenliyang // 这个仓库的管理员，可以有多个，用数组表示，一般写自己用户名即可
-   perPage: 10 //每次加载的数据大小，最多100
-   id: "" // 如果为值"location.pathname"不建议填写(除非你有更好的方式)，由于id字段限制长度为50字符，默认为空时主题会进行判断处理。
+   repo: shenliyang.github.io // Github仓库地址
+   owner: shenliyang  // Github 用户名(Github仓库拥有者)
+   admin: shenliyang // GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)可以有一个或多个，如果有多名可使用，例如：admin: admin1,admin2 配置
+   perPage: 10 // 每次加载的数据大小，最多100
+   distractionFreeMode: true // 是否启用无干扰模式，类似Facebook评论框的全屏遮罩效果
+
+   // 以下参数主题会默认处理，不需要配置
+   language // 语言类型，默认为站点配置中选项
+   id // 页面的唯一标识, 已使用md5对pathname转换生成唯一id处理
 
 ## 网站访客统计 [不蒜子统计](http://busuanzi.ibruce.info/)
 visit_counter:
