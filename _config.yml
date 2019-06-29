@@ -197,7 +197,7 @@ gitalk:
    owner:
    admin:
    perPage:
-   id:
+   distractionFreeMode: true
 
 ### Disqus评论
 disqus:
