@@ -545,6 +545,15 @@ categories:
 
 Hexo官方文档: [分类方法的分歧](https://hexo.io/zh-cn/docs/front-matter#分类和标签)
 
+#### 8. tags 以及categories 页面显示不正确，不能访问，显示404？
+
+当使用主题访问，域名+/tags  或 域名+ /categories 若访问404，是正常情况的。因为这些路径本不属于主题或者Hexo框架的一部分。而是由用户主动新建页面扩展而来。
+
+可以新建页面，比如：tags和categories，按以下命令格式：
+```bash 
+ hexo new page tags 和 hexo new page categories
+````
+
 > 没有找到你需要的问题解决方案，建议阅读[《你不知道的提Issues技巧》](https://github.com/shenliyang/hexo-theme-snippet#你不知道的提Issues技巧) 再提Issues。
 
 
