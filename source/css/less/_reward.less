@@ -1,5 +1,6 @@
 .reward {
     padding: 5px 0;
+
     .reward-wrap {
         position: relative;
         display: block;
@@ -16,6 +17,7 @@
         .border(#d9d9d9);
         .box-shadow(0 0 2px #d9d9d9);
         .border-radius(50%);
+
         .reward-box {
             position: absolute;
             top: -220px;
@@ -28,10 +30,12 @@
             .border(#e6e6e6);
             background-color: #fff;
             .box-shadow(0 1px 1px 1px #efefef);
+
             span {
                 display: inline-block;
                 width: 150px;
                 height: 150px;
+
                 img {
                     display: inline-block;
                     float: left;
@@ -40,6 +44,7 @@
                     margin: 0 auto;
                     border: 0
                 }
+
                 b {
                     font-size: 14px;
                     line-height: 26px;
@@ -48,18 +53,22 @@
                     color: #666
                 }
             }
-            &:before, &:after {
+
+            &:before,
+            &:after {
                 position: absolute;
                 content: '';
                 border: 10px solid transparent;
             }
-            &:before{
+
+            &:before {
                 bottom: -20px;
                 left: 50%;
                 margin-left: -10px;
                 border-top-color: #e6e6e6
             }
-            &:after{
+
+            &:after {
                 bottom: -19px;
                 left: 50%;
                 margin-left: -10px;
@@ -67,16 +76,19 @@
             }
 
         }
+
         &:hover {
-            color:#fff;
+            color: #fff;
             background-color: @reward_color;
             .border(@reward_color);
             .transition();
+
             .reward-box {
                 display: block;
             }
         }
     }
+
     .reward-tip {
         font-size: 18px;
         font-weight: 700;
@@ -87,6 +99,3 @@
         min-height: 24px;
     }
 }
-
-
-

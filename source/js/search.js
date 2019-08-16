@@ -51,12 +51,12 @@
         return regExp.test(raw);
     }
 
-    function searchShow(){
+    function searchShow() {
         removeClass(searchWrap, 'hide');
         removeClass(searchMask, 'hide');
     }
 
-    function searchHide(){
+    function searchHide() {
         addClass(searchWrap, 'hide');
         addClass(searchMask, 'hide');
     }
@@ -94,7 +94,7 @@
                 });
             }).join('');
         } else {
-            if(searchWord.value == ''){
+            if (searchWord.value == '') {
                 searchHide();
             } else {
                 html = '<div class="tips"><p>没有找到相关结果!</p></div>';
