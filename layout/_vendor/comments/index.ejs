@@ -1,17 +1,17 @@
 <% if(theme.uyan.enable && is_post()){ %>
-	<%- partial('_vendor/comments/uyan') %>
+<%- partial('_vendor/comments/uyan') %>
 <% } else if(theme.gitment.enable && is_post()) { %>
-	<%- partial('_vendor/comments/gitment') %>
+<%- partial('_vendor/comments/gitment') %>
 <% } else if(theme.livere.enable && is_post()) { %>
-	<%- partial('_vendor/comments/livere') %>
+<%- partial('_vendor/comments/livere') %>
 <% } else if(theme.disqus.enable && is_post()) { %>
-	<%- partial('_vendor/comments/disqus') %>
+<%- partial('_vendor/comments/disqus') %>
 <% } else if(theme.changyan.enable && is_post()) { %>
-	<%- partial('_vendor/comments/changyan') %>
+<%- partial('_vendor/comments/changyan') %>
 <% } else if(theme.valine.enable && is_post()) { %>
-	<%- partial('_vendor/comments/valine') %>
+<%- partial('_vendor/comments/valine') %>
 <% } else if(theme.gitalk.enable && is_post()) { %>
-	<%- partial('_vendor/comments/gitalk') %>
+<%- partial('_vendor/comments/gitalk') %>
 <% } else { %>
-   <p>评论系统未开启，无法评论！</p>
+<p>评论系统未开启，无法评论！</p>
 <% } %>
