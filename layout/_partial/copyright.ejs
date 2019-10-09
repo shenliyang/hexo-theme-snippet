@@ -7,6 +7,9 @@
             <div class="col-sm-12">
                 <span>Copyright &copy;
                     <%= theme.since %>
+                    <% if(theme.beian) { %><a href="//beian.miit.gov.cn/" target="_blank" rel="nofollow">
+                        <%= theme.beian %></a>
+                    <% } %>
                 </span> |
                 <span>
                     Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
