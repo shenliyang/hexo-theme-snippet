@@ -10,6 +10,8 @@
 <%- partial('_vendor/comments/changyan') %>
 <% } else if(theme.valine.enable && is_post()) { %>
 <%- partial('_vendor/comments/valine') %>
+<% } else if(theme.minivaline.enable && is_post()) { %>
+<%- partial('_vendor/comments/minivaline') %>
 <% } else if(theme.gitalk.enable && is_post()) { %>
 <%- partial('_vendor/comments/gitalk') %>
 <% } else { %>
