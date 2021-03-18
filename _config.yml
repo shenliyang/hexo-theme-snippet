@@ -121,7 +121,7 @@ branding:
 
 ## 设置banner背景图片
 banner:
-    img: http://snippet.shenliyang.com/img/banner.jpg
+    img: https://hexo-theme-snippet-1251680922.cos.ap-beijing.myqcloud.com/img/banner.jpg
 
 ## 首页列表底部面板
 homePanel: true
