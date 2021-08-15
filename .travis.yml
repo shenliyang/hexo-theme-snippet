@@ -36,10 +36,10 @@ install:
 before_script:
   - export TZ='Asia/Shanghai'
   - npm install -g gulp
-#  - chmod +x _travis.sh
+  - chmod +x _travis.sh
 
 script:
- # - hexo clean && hexo g
+  - hexo clean && hexo g
   - gulp
 
 after_success:
@@ -47,14 +47,12 @@ after_success:
 # - LAST_BUILD_NUMBER=68
 # - for i in $(seq 1 $LAST_BUILD_NUMBER ); do  travis logs $i --delete --force ; done
 after_script:
-#  - ./_travis.sh
+  - ./_travis.sh
 
 # E: Build LifeCycle
 branches:
   only:
     - dev
-    - develop
-    - master
     
 # - global env
 env:
