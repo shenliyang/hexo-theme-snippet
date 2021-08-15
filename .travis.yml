@@ -50,10 +50,11 @@ after_script:
   - ./_travis.sh
 
 # E: Build LifeCycle
-
 branches:
   only:
     - dev
+    - develop
+    
 env:
   global:
     - GH_REF: github.com/shenliyang/shenliyang.github.io.git
