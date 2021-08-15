@@ -6,8 +6,8 @@ Snippet 简洁而不简单，也许是一款你寻找已久 hexo 主题。
 
 [![Build Status](https://www.travis-ci.org/shenliyang/hexo-theme-snippet.svg?branch=master)](https://www.travis-ci.org/shenliyang/hexo-theme-snippet)
 [![Read the Docs](https://img.shields.io/badge/docs-complete-brightgreen)](https://github.com/shenliyang/hexo-theme-snippet/blob/master/README.md)
-[![HitCount](http://hits.dwyl.io/shenliyang/hexo-theme-snippet.svg)](http://hits.dwyl.io/shenliyang/hexo-theme-snippet)
-[![mnt-image](https://img.shields.io/maintenance/yes/2019.svg)](../../commits/master)
+
+[![mnt-image](https://img.shields.io/maintenance/yes/2021.svg)](../../commits/master)
 [![codebeat badge](https://codebeat.co/badges/6ef2dcd2-af90-40e0-9628-ac689441f774)](https://codebeat.co/projects/github-com-shenliyang-hexo-theme-snippet-master)
 [![GitHub stars](https://img.shields.io/github/stars/shenliyang/hexo-theme-snippet.svg)](https://github.com/shenliyang/hexo-theme-snippet/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/shenliyang/hexo-theme-snippet.svg)](https://github.com/shenliyang/hexo-theme-snippet/network)
@@ -265,6 +265,16 @@ reward:
 
 ## 主题评论
 
+## utterances评论: 一款基于 GitHub issues 的评论工具; 首先在 github 上进行安装 utterances，访问 [utterances应用程序](https://github.com/apps/utterances)；然后在主题内配置 [utterances更多配置](https://utteranc.es/)
+utterances:
+  enable: true
+  repo: shenliyang/snippet-comment // github仓库名字, 格式为 user-name/repo-name
+  issueTerm: pathname // 标识issue类型 1. pathname(推荐); 2. url; 3.title; 3. og:title; 4. issue-number 5. specific-term;
+  issueNumber: 123 // 非必填，当配置 issueTerm = "issue-number"时，需要配置issue号
+  theme: github-light // 主题配置 1. github-light(推荐); 2. github-dark; 3. preferred-color-scheme; 4. github-dark-orange; 5. icy-dark; 6. dark-blue; 7. photon-dark; 8. boxy-light
+  label: // 非必填
+  cdn: // 使用自定义utteranc脚本加载。 非必填，默认："https://utteranc.es/client.js"
+
 ### gitment
 gitment:
   enable: false
@@ -276,9 +286,9 @@ gitment:
   perPage:
   maxCommentHeight:
 
-### 来必力(默认选项)
+### 来必力
 livere:
-  enable: true
+  enable: false
   livere_uid:
 
 ### 友言评论(服务不稳定，经常无法加载)
@@ -298,9 +308,9 @@ changyan:
   appid:
   conf:
 
-### Valine评论 参考网站: [valine评论](https://valine.js.org/)
+### Valine评论(leancloud需要实名认证) 参考网站: [valine评论](https://valine.js.org/)
 valine:
-  enable: true
+  enable: false
   appId:
   appKey:
   placeholder: 说点什么吧

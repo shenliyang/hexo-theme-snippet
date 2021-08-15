@@ -163,9 +163,19 @@ reward:
 
 ## 主题评论
 
+## utterances评论
+utterances:
+  enable: true
+  repo: shenliyang/snippet-comment
+  issueTerm: pathname
+  issueNumber: 
+  theme: github-light
+  label: 
+  cdn: 
+
 ## Valine评论
 valine:
-  enable: true
+  enable: false
   appId: xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz
   appKey: erIpQac4azoCmgfBB7Dl9maa
   placeholder: 说点什么吧
