@@ -4,11 +4,11 @@
         <%= __('categories') %>
     </h3>
     <%- list_categories({
-            showcount: theme.cate_config.show_count,
-            transform: function(name){
-                return '<i class="fa" aria-hidden="true">'+name+'</i>';
-            },
-            show_current: theme.cate_config.show_current
-            }) %>
+        showcount: theme.cate_config.show_count,
+        transform: function(name){
+            return '<i class="fa" aria-hidden="true">'+name+'</i>';
+        },
+        show_current: theme.cate_config.show_current
+    }) %>
 </div>
 <% } %>

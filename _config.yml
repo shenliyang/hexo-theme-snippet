@@ -5,21 +5,21 @@
 
 ## menu
 menu:
-- page: home
-  url: /
-  icon:
-- page: 前端
-  url: /categories/前端/
-  icon:
-- page: 后端
-  url: /categories/后端/
-  icon:
-- page: 工具
-  url: /categories/工具/
-  icon:
-- page: 时间轴
-  url: /archives/
-  icon:
+  - page: home
+    url: /
+    icon:
+  - page: 前端
+    url: /categories/前端/
+    icon:
+  - page: 后端
+    url: /categories/后端/
+    icon:
+  - page: 工具
+    url: /categories/工具/
+    icon:
+  - page: 时间轴
+    url: /archives/
+    icon:
 
 ## favicon
 favicon: /favicon.ico
@@ -29,8 +29,8 @@ rss: /atom.xml
 
 ## Carousel
 carousel:
-  img: './img/head-img.jpg'
-  url: 'https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=xs0pypd2'
+  img: "./img/head-img.jpg"
+  url: "https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=xs0pypd2"
 
 # 各个小工具的设置
 
@@ -43,7 +43,6 @@ widgets:
   - archive
   - tagcloud
   - friends
-
 
 ## 搜索
 jsonContent:
@@ -58,51 +57,51 @@ jsonContent:
 
 ## 网站公告设置
 notification: |-
-            <p>
-                主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
-                主题使用：<a href="https://github.com/shenliyang/hexo-theme-snippet/blob/master/README.md#常见问题" title="" target="_blank">常见使用问题</a> <br/>
-                支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
-            </p>
+  <p>
+      主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+      主题使用：<a href="https://github.com/shenliyang/hexo-theme-snippet/blob/master/README.md#常见问题" title="" target="_blank">常见使用问题</a> <br/>
+      支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
+  </p>
 
 ## 社交设置
 social:
- - name: Github
-   icon: git
-   href: //github.com/shenliyang
- - name: 邮箱
-   icon: envelope-o
-   href: mailto:snippet@91h5.cc
- - name: 联系QQ
-   icon: qq
-   href: /
- - name: 微信
-   icon: weixin
-   href: /
- - name: QQ群
-   icon: users
-   href: /
- - name: RSS
-   icon: feed
-   href: /atom.xml
+  - name: Github
+    icon: git
+    href: //github.com/shenliyang
+  - name: 邮箱
+    icon: envelope-o
+    href: mailto:snippet@91h5.cc
+  - name: 联系QQ
+    icon: qq
+    href: /
+  - name: 微信
+    icon: weixin
+    href: /
+  - name: QQ群
+    icon: users
+    href: /
+  - name: RSS
+    icon: feed
+    href: /atom.xml
 
 ## 文章分类设置
 cate_config:
-   show_count: true
-   show_current: true
+  show_count: true
+  show_current: true
 
 ## 文章归档设置
 arch_config:
-   type: 'monthly'
-   format: 'YYYY年MM月'
-   show_count: true
-   order: -1
+  type: "monthly"
+  format: "YYYY年MM月"
+  show_count: true
+  order: -1
 
 ## 标签云设置
 tagcloud:
   tag3d: false
-  textColour: '#444'
-  outlineMethod: 'block'
-  outlineColour: '#FFDAB9'
+  textColour: "#444"
+  outlineMethod: "block"
+  outlineColour: "#FFDAB9"
   interval: 30
   freezeActive: true
   frontSelect: true
@@ -113,7 +112,6 @@ tagcloud:
 links:
   - Hexo官网: https://hexo.io/zh-cn/
 
-
 # 主题自定义个性化配置
 
 ## 网站宣传语
@@ -121,7 +119,7 @@ branding:
 
 ## 设置banner背景图片
 banner:
-    img: http://snippet.shenliyang.com/img/banner.jpg
+  img: https://hexo-theme-snippet-1251680922.cos.ap-beijing.myqcloud.com/img/banner.jpg
 
 ## 首页列表底部面板
 homePanel: true
@@ -148,34 +146,44 @@ fontAwesome:
 ## 文章过期提醒功能
 warning:
   days: 300
-  text: '本文于%d天之前发表，文中内容可能已经过时。'
+  text: "本文于%d天之前发表，文中内容可能已经过时。"
 
 ## 文章内声明
 declaration:
   enable: true
-  title: '转载声明'
+  title: "转载声明"
   tip: |-
-      商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+    商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
 
 ## 文章打赏
 reward:
-  alipay: ''
-  wepay: ''
+  alipay: ""
+  wepay: ""
   tip: 赞赏是不耍流氓的鼓励
 
 ## 主题评论
 
+## utterances评论
+utterances:
+  enable: true
+  repo: shenliyang/snippet-comment
+  issueTerm: pathname
+  issueNumber: 
+  theme: github-light
+  label: 
+  cdn: 
+
 ## Valine评论
 valine:
-   enable: true
-   appId: xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz
-   appKey: erIpQac4azoCmgfBB7Dl9maa
-   placeholder: 说点什么吧
-   notify: false
-   verify: true
-   avatar: mm
-   meta: nick,mail
-   pageSize: 10
+  enable: false
+  appId: xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz
+  appKey: erIpQac4azoCmgfBB7Dl9maa
+  placeholder: 说点什么吧
+  notify: false
+  verify: true
+  avatar: mm
+  meta: nick,mail
+  pageSize: 10
 
 ### 畅言评论(需要ICP备案)
 changyan:
@@ -190,14 +198,14 @@ livere:
 
 ## Gitalk评论
 gitalk:
-   enable: false
-   clientID:
-   clientSecret:
-   repo:
-   owner:
-   admin:
-   perPage:
-   distractionFreeMode: true
+  enable: false
+  clientID:
+  clientSecret:
+  repo:
+  owner:
+  admin:
+  perPage:
+  distractionFreeMode: true
 
 ### Disqus评论
 disqus:
@@ -219,11 +227,10 @@ uyan:
   enable: false
   uyan_id: 1966422
 
-
 ## 网站访客统计
 visit_counter:
-   site: false
-   page: false
+  site: false
+  page: false
 
 ## 网站访问统计分析
 
@@ -247,6 +254,6 @@ baidu_push: false
 
 #网站主题配置
 since: 2017
-beian: 
-robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all
-version: 1.2.3
+beian:
+robot: "all" ### 控制搜索引擎的抓取和索引编制行为，默认为all
+version: 1.3.0

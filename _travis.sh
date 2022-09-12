@@ -55,7 +55,7 @@ EOF
   git push --force --quiet "https://shenliyang:${GITEE_TOKEN}@${GITEE_REF}" master:master
 
   # Create Tag
-  git tag v1.2.$TRAVIS_BUILD_NUMBER -a -m "Auto Taged By TravisCI With Build $TRAVIS_BUILD_NUMBER"
+  git tag v1.3.$TRAVIS_BUILD_NUMBER -a -m "Auto Taged By TravisCI With Build $TRAVIS_BUILD_NUMBER"
   # Github Pages
   git push --quiet "https://${GH_TOKEN}@${GH_REF}" master:master --tags
   # Gitee Pages

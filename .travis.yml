@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-    - "11.12.0"
+  - "11.12.0"
 
 sudo: false
 
@@ -43,19 +43,19 @@ script:
   - gulp
 
 after_success:
- # - LAST_BUILD_NUMBER=68
- # - for i in $(seq 1 $LAST_BUILD_NUMBER ); do  travis logs $i --delete --force ; done
 
+# - LAST_BUILD_NUMBER=68
+# - for i in $(seq 1 $LAST_BUILD_NUMBER ); do  travis logs $i --delete --force ; done
 after_script:
   - ./_travis.sh
 
 # E: Build LifeCycle
-
 branches:
   only:
     - dev
+    
+# - global env
 env:
- global:
-   - GH_REF: github.com/shenliyang/shenliyang.github.io.git
-   - GITEE_REF: gitee.com/shenliyang/shenliyang.git
-
+  global:
+    - GH_REF: github.com/shenliyang/shenliyang.github.io.git
+    - GITEE_REF: gitee.com/shenliyang/shenliyang.git
