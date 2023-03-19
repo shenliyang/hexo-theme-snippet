@@ -6,7 +6,7 @@ Snippet 简洁而不简单，也许是一款你寻找已久 hexo 主题。
 
 [![Build Status](https://travis-ci.com/shenliyang/hexo-theme-snippet.svg?branch=develop)](https://travis-ci.com/shenliyang/hexo-theme-snippet)
 [![Read the Docs](https://img.shields.io/badge/docs-complete-brightgreen)](https://github.com/shenliyang/hexo-theme-snippet/blob/master/README.md)
-[![mnt-image](https://img.shields.io/maintenance/yes/2021.svg)](../../commits/master)
+[![mnt-image](https://img.shields.io/maintenance/yes/2030.svg)](../../commits/master)
 [![codebeat badge](https://codebeat.co/badges/6ef2dcd2-af90-40e0-9628-ac689441f774)](https://codebeat.co/projects/github-com-shenliyang-hexo-theme-snippet-master)
 [![GitHub stars](https://img.shields.io/github/stars/shenliyang/hexo-theme-snippet.svg)](https://github.com/shenliyang/hexo-theme-snippet/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/shenliyang/hexo-theme-snippet.svg)](https://github.com/shenliyang/hexo-theme-snippet/network)
@@ -425,7 +425,7 @@ cache:
 notifications: #启用通知
   email:
     recipients:
-      - snippet@91h5.cc #接收构建消息的邮件 不需要可设置为false
+      - snippet@aliyun.com #接收构建消息的邮件 不需要可设置为false
     on_success: never #部署成功时，可设置alway never change
     on_failure: always #部署失败时，同上
 
