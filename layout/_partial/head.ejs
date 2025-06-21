@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="<%= config.language%>">
+
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="<%= config.title %>">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="<%= theme.version %>">
+    <meta name="root" content="<%= config.root %>">
+    <link rel="dns-prefetch" href="<%= config.url %>">
+    <%- partial('_head-sections/seo') %>
+    <%- partial('_head-sections/title') %>
+    <%- partial('_head-sections/style') %>
+    <%- partial('_vendor/analytics/index') %>
+    <%- partial('_vendor/baidu_sitemap') %>
+</head>

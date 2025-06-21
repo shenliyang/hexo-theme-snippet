@@ -1,0 +1,7 @@
+<% if(post.photos && post.photos.length > 0){ %>
+<div id="post-gallery">
+    <% post.photos.forEach(function (photo) { %>
+    <img src="<%- url_for(photo) %>" alt="gallery-img" class="gallery">
+    <% }) %>
+</div>
+<% } %>

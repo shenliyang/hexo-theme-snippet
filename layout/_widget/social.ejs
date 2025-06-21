@@ -1,0 +1,14 @@
+<% if(theme.social){%>
+<div class="widget">
+    <h3 class="title">
+        <%= __('social') %>
+    </h3>
+    <div class="content social">
+        <% theme.social.forEach(function (item) {%>
+        <a href="<%- item.href%>" rel="external nofollow" title="<%- item.name%>" target="_blank">
+            <i class="<%- item.icon%> fa fa-<%- item.icon%>"></i>
+        </a>
+        <%})%>
+    </div>
+</div>
+<%}%>

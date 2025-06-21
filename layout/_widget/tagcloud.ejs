@@ -1,0 +1,16 @@
+<% if (site.tags.length){ %>
+<div class="widget">
+    <h3 class="title">
+        <%= __('tagcloud') %>
+    </h3>
+    <div class="content tag-cloud">
+        <% if (theme.tagcloud.tag3d){ %>
+        <canvas width="300" height="300" id="tag-cloud-3d">
+            <%-tagcloud() %>
+        </canvas>
+        <% } else { %>
+        <%- tagcloud() %>
+        <% } %>
+    </div>
+</div>
+<% } %>

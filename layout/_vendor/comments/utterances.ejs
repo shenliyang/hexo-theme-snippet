@@ -1,0 +1,23 @@
+<% if (theme.utterances.enable){ %>
+<div class="utteranc">
+  <% var utterancesCdn = theme.utterances.cdn || "https://utteranc.es/client.js" 
+     var issueTerm = "";
+     var issueNumber = "";
+     if(theme.utterances.issueTerm == 'issue-number'){
+       issueNumber = theme.utterances.issueNumber;
+     } else {
+       issueTerm = theme.utterances.issueTerm;
+     }
+  %>
+  <script
+    src='<%- utterancesCdn %>'
+    repo='<%= theme.utterances.repo %>'
+    issue-term='<%- issueTerm %>'
+    issue-number='<%- issueNumber %>'
+    theme='<%= theme.utterances.theme %>'
+    label='<%= theme.utterances.label %>'
+    crossorigin='anonymous'
+    async
+  ></script>
+</div>
+<% } %>

@@ -1,0 +1,20 @@
+<% if (theme.valine.enable){ %>
+<div id="vcomments" class="valine"></div>
+<%- js('//cdn1.lncld.net/static/js/3.0.4/av-min.js','assets/valine.min.js') %>
+<script>
+    new Valine({
+        av: AV,
+        el: '#vcomments',
+        appId: '<%= theme.valine.appId %>',
+        appKey: '<%= theme.valine.appKey %>',
+        placeholder: '<%= theme.valine.placeholder %>',
+        notify: <%= theme.valine.notify %>,
+        verify: <%= theme.valine.verify %>,
+        avatar: '<%= theme.valine.avatar %>',
+        meta: '<%= theme.valine.meta %>'.split(','),
+        pageSize: '<%= theme.valine.pageSize %>',
+        path: window.location.pathname,
+        lang: '<%= config.language %>'.toLowerCase()
+    })
+    </script>
+<% } %>

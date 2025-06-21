@@ -1,0 +1,44 @@
+<div class="post-meta">
+    <% if(!is_category()){ %>
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <%- list_categories(post.categories, {
+                show_count: false,
+                style: 'none',
+                separator: ' '
+            }) %>
+    </span>
+    <% } %>
+    <% if(!is_tag()){ %>
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            <% if (post.tags && post.tags.length){ %>
+            <%- list_tags(post.tags, {
+                        show_count: false,
+                        style: 'none',
+                        separator: ' ',
+                        amount: 5
+                    }) %>
+            <% } %>
+        </span>
+    </span>
+    <% } %>
+    <% if(is_post()) {%>
+    <%
+            var format = 'YYYY/MM/DD';
+            if (is_archive()) format = "MM/DD";
+        %>
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">
+            <%- date(post.date, format) %></span>
+    </span>
+    <% if(theme.visit_counter.page) {%>
+    <span class="fa-wrap">
+        <i class="fa fa-eye"></i>
+        <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <% } %>
+    <% } %>
+</div>

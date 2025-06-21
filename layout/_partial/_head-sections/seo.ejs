@@ -1,0 +1,18 @@
+<!--SEO-->
+<% if(page.keywords){ %>
+<meta name="keywords" content="{{ page.keywords }}" />
+<% } else if(page.tags && page.tags.length) { %>
+<meta name="keywords" content="<% page.tags.forEach(function (item,index) { %><%= item.name%><% if(index + 1 != page.tags.length){%>,<%}%><% }) %>" />
+<% } else{ %>
+<meta name="keywords" content="<%= config.keywords%>" />
+<%}%>
+<% if(page.content){ %>
+<meta name="description" content="<%- truncate(strip_html(page.content), {length: 100 }) %>" />
+<% } else{ %>
+<meta name="description" content="<%= config.description%>" />
+<%}%>
+<% var robotMeta = theme.robot||'all'; %>
+<meta name="robots" content="<%= robotMeta%>" />
+<meta name="google" content="<%= robotMeta%>" />
+<meta name="googlebot" content="<%= robotMeta%>" />
+<meta name="verify" content="<%= robotMeta%>" />

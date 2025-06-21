@@ -1,0 +1,44 @@
+<ol class="breadcrumb">
+    <% if(page.tag) { %>
+    <li>
+        <%= page.tag %>
+    </li>
+    <% } if(page.category) { %>
+    <li>
+        <%= page.category %>
+    </li>
+    <% } else { %>
+    <% } %>
+</ol>
+<% page.posts.each(function(post){ %>
+<article class="post">
+    <% if(post.img) { %>
+    <div class="post-media">
+        <a href="<%- url_for(post.path) %>">
+            <img class="img-ajax" src="<%- url_for('/img/loading.gif') %>" data-src="<%- url_for(post.img) %>" alt="<%- post.title %>">
+        </a>
+    </div>
+    <% } %>
+    <div class="post-content">
+        <div class="post-head home-post-head">
+            <h1 class="post-title">
+                <a href="<%- url_for(post.path) %>">
+                    <%- post.title %></a>
+            </h1>
+            <div class="post-meta"> &bull;
+                <time class="post-date" datetime="" title="">
+                    <%- date(post.date,"YYYY年MM月DD日") %>
+                </time>
+            </div>
+        </div>
+        <p class="brief">
+            <% if(post.excerpt) { %>
+            <%= strip_html(post.excerpt) + '…' %>
+            <% } else { %>
+            <%= truncate(strip_html(post.content), {length: theme.excerptLength || 120, separator: ''}) %>
+            <% } %>
+        </p>
+    </div>
+</article>
+<% }) %>
+<%- partial('_partial/pagination') %>

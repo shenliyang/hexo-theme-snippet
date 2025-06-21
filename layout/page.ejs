@@ -1,0 +1,31 @@
+<div>
+    <%if(page.title=='tags' || page.type=='tags'){%>
+    <article class="post">
+        <h1 class="post-head">共计
+            <%- site.tags.length%>个标签</h1>
+        <div class="post-body">
+            <div class="widget">
+                <div class="content tag-cloud">
+                    <%- tagcloud({min_font: 14, max_font: 30, amount: 200}) %>
+                </div>
+            </div>
+        </div>
+    </article>
+    <% } else if(page.title=='categories' || page.type=='categories') { %>
+    <article class="post">
+        <h1 class="post-head">共计
+            <%- site.categories.length%>个分类</h1>
+        <div class="post-body">
+            <% site.categories.forEach(function (item) {%>
+            <li class="post-items">
+                <a href="/<%- item.path%>" title="<%- item.name%>" target="_blank">
+                    <%- item.name%>
+                </a>
+            </li>
+            <%})%>
+        </div>
+    </article>
+    <% } else{ %>
+    <%- partial('_partial/article', {post: page, index: false}) %>
+    <%}%>
+</div>

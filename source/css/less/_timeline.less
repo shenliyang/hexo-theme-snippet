@@ -1,0 +1,99 @@
+.timebox {
+    position: relative;
+    width: 100%;
+    padding: 0 20px;
+    margin: 20px auto;
+    background: url(../img/timeline.gif) repeat-y 207px 0;
+    overflow: hidden;
+}
+
+.timeline {
+    h2 {
+        height: 44px;
+        line-height: 44px;
+        font-size: 30px;
+        color: @black6_color;
+        font-weight: bold;
+        padding-left: 75px;
+        margin-bottom: 25px;
+        background: url(../img/timeline-clock.gif) #fff no-repeat 165px 0;
+
+        img {
+            vertical-align: -5px;
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            background: url(../img/timeline-dot.gif) no-repeat 180px 5px;
+            padding-bottom: 20px;
+            zoom: 1;
+            .text-ellipsis();
+
+            &:after {
+                content: " ";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+            h3 {
+                float: left;
+                width: 168px;
+                font-size: 20px;
+                color: @black_color;
+                text-align: right;
+                padding-right: 15px;
+                margin: 0;
+
+                span {
+                    color: @black6_color;
+                    font-size: 12px;
+                    margin-left: 3px;
+                }
+            }
+
+            a {
+                padding-left: 41px;
+                margin-top: -5px;
+                font-weight: normal;
+                font-size: 16px;
+                color: @grey5_color;
+
+                &:hover {
+                    text-decoration: none;
+                    color: @theme_color;
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .timebox {
+        background-position: 97px 0;
+    }
+
+    .timeline {
+        h2 {
+            padding-left: 40%;
+            background-position: 48px 0;
+        }
+
+        ul {
+            li {
+                background-position: 70px 5px;
+
+                h3 {
+                    width: 68px
+                }
+            }
+        }
+    }
+}

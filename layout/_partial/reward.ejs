@@ -1,0 +1,19 @@
+<div class="reward" ontouchstart>
+    <div class="reward-wrap">赏
+        <div class="reward-box">
+            <% if(theme.reward.alipay){ %>
+            <span class="reward-type">
+                <img class="alipay" src="<%= theme.reward.alipay %>"><b>支付宝打赏</b>
+            </span>
+            <% } %>
+            <% if(theme.reward.wepay){ %>
+            <span class="reward-type">
+                <img class="wechat" src="<%= theme.reward.wepay %>"><b>微信打赏</b>
+            </span>
+            <% } %>
+        </div>
+    </div>
+    <p class="reward-tip">
+        <%= theme.reward.tip %>
+    </p>
+</div>

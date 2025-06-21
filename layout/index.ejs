@@ -1,0 +1,61 @@
+<% if (theme.carousel.img) { %>
+<div class="carousel">
+    <a href="<%= theme.carousel.url %>" target="_blank">
+        <img src="<%- url_for(theme.carousel.img) %>" alt="">
+    </a>
+</div>
+<% } %>
+<% if(page.posts && page.posts.length){ %>
+<% page.posts.forEach(function (post, i) { %>
+<%
+    var urls = lazyImage(post);
+    var random = Math.floor(Math.random() * (urls.length));
+    if(theme.defaultImgs && theme.defaultImgs.length >0){
+        var urls2 = theme.defaultImgs;
+        var random2 = Math.floor(Math.random() * (urls2.length));
+    }
+    var _photoUrl = post.img || (urls.length > 0 && urls[random]) || (urls2.length > 0 && urls2[random2]) || '';
+%>
+<article class="post">
+    <% if(_photoUrl) {%>
+    <div class="post-media">
+        <a href="<%- url_for(post.path) %>">
+            <img class="img-ajax" src="<%- url_for('/img/loading.gif') %>" data-src="<%- url_for(_photoUrl) %>" alt="<%- post.title %>">
+        </a>
+    </div>
+    <% } %>
+    <div class="post-content">
+        <div class="post-head home-post-head">
+            <h1 class="post-title">
+                <a href="<%- url_for(post.path) %>">
+                    <%- post.title %></a>
+            </h1>
+            <div class="post-meta"> &bull;
+                <time class="post-date" datetime="" title="">
+                    <%- date(post.date,"YYYY年MM月DD日") %>
+                </time>
+            </div>
+        </div>
+        <p class="brief">
+            <% if(post.excerpt) { %>
+            <%= strip_html(post.excerpt) + '…' %>
+            <% } else { %>
+            <%= truncate(strip_html(post.content), {length: theme.excerptLength || 120, separator: ''}) %>
+            <% } %>
+        </p>
+    </div>
+    <% if(theme.homePanel) { %>
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <%- partial('_partial/article-meta', {post: post}) %>
+        </div>
+        <div class="post-permalink">
+            <a href="<%- url_for(post.path) %>" class="btn btn-default">
+                <%= __('read_more') %></a>
+        </div>
+    </footer>
+    <% } %>
+</article>
+<% }) %>
+<%}%>
+<%- partial('_partial/pagination') %>

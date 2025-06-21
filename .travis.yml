@@ -1,0 +1,61 @@
+language: node_js
+node_js:
+  - "11.12.0"
+
+sudo: false
+
+#cache
+cache:
+  directories:
+    - "node_modules"
+
+notifications:
+  # 钉钉机器人消息推送部署结果
+  webhooks:
+    urls:
+      - https://oapi.dingtalk.com/robot/send?access_token=${DINGDING_ACCESS_TOKEN}
+    on_success: change
+    on_failure: always
+
+  # 邮件发送部署结果通知
+  email:
+    recipients:
+      - snippet@91h5.cc
+    on_success: change
+    on_failure: always
+
+# S: Build Lifecycle
+before_install:
+  - sudo apt-get install libnotify-bin
+
+install:
+  - npm install
+#  - gem install travis
+#  - travis login --pro --github-token ${GH_TOKEN}
+
+before_script:
+  - export TZ='Asia/Shanghai'
+  - npm install -g gulp
+  - chmod +x _travis.sh
+
+script:
+  - hexo clean && hexo g
+  - gulp
+
+after_success:
+
+# - LAST_BUILD_NUMBER=68
+# - for i in $(seq 1 $LAST_BUILD_NUMBER ); do  travis logs $i --delete --force ; done
+after_script:
+  - ./_travis.sh
+
+# E: Build LifeCycle
+branches:
+  only:
+    - dev
+    
+# - global env
+env:
+  global:
+    - GH_REF: github.com/shenliyang/shenliyang.github.io.git
+    - GITEE_REF: gitee.com/shenliyang/shenliyang.git

@@ -1,0 +1,62 @@
+{
+  "name": "hexo-theme-snippet",
+  "version": "2.0.0",
+  "description": "Snippet 简洁而不简单，也许是一款你寻找已久的hexo主题",
+  "author": "shenliyang",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "hexo deploy",
+    "dev": "hexo s",
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shenliyang/hexo-theme-snippet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shenliyang/hexo-theme-snippet/issues"
+  },
+  "homepage": "https://shenliyang.github.io",
+  "hexo": {
+    "version": "7.3.0"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "hexo": "^7.3.0",
+    "hexo-abbrlink": "^2.2.1",
+    "hexo-deployer-git": "^4.0.0",
+    "hexo-generator-archive": "^2.0.0",
+    "hexo-generator-category": "^2.0.0",
+    "hexo-generator-feed": "^3.0.0",
+    "hexo-generator-index": "^4.0.0",
+    "hexo-generator-json-content": "^4.2.3",
+    "hexo-generator-sitemap": "^3.0.1",
+    "hexo-generator-tag": "^2.0.0",
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-marked": "^7.0.1",
+    "hexo-server": "^3.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-htmlclean": "^2.7.22",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-less": "^5.0.0",
+    "gulp-notify": "^5.0.0",
+    "gulp-path": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-rev-append": "^0.1.8",
+    "gulp-sequence": "^1.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1",
+    "jshint": "^2.13.6",
+    "jshint-stylish": "^2.2.1",
+    "notify-send": "^0.1.2"
+  }
+}

@@ -1,0 +1,19 @@
+<% if (theme.links && theme.links.length){ %>
+<div class="widget">
+    <h3 class="title">
+        <%= __('friend_links') %>
+    </h3>
+    <div class="content friends-link">
+        <%  var name, url;
+            theme.links.forEach(function (item) {
+            for(var property in item){
+                name = property;
+                url = item[property];
+            }
+        %>
+        <a href="<%- url %>" class="fa" target="_blank">
+            <%= name%></a>
+        <%});%>
+    </div>
+</div>
+<% } %>

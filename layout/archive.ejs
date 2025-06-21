@@ -1,0 +1,36 @@
+<div id="main">
+    <div class="timebox">
+        <div class="timeline">
+            <ul>
+                <% var years; %>
+                <% site.posts.sort('date','desc').each(function(post){ %>
+                <%
+                       var year = post.date.year();
+                       var month = post.date.format('MM');
+                       var months = (~~month != ~~page.month)? 'hide' : ''
+                    %>
+                <% if((!!page.year && page.year == year) || !page.year) { %>
+                <% if (years != year) { %>
+                <% years = year; %>
+                <h2>
+                    <%= year %>
+                </h2>
+                <% } %>
+                <% if(page.month) { %>
+                <li class="<%= months %>">
+                    <% } else { %>
+                <li>
+                    <% } %>
+                    <h3>
+                        <%= post.date.format('DD') %><span>
+                            <%= post.date.format('MM') %>月</span>
+                    </h3>
+                    <a href="<%- url_for(post.path) %>" title="<%- post.title %>" target="_blank">
+                        <%- post.title %></a>
+                </li>
+                <% } %>
+                <% }) %>
+            </ul>
+        </div>
+    </div>
+</div>

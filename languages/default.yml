@@ -1,0 +1,38 @@
+categories: Categories
+search: Search
+tags: Tags
+tagcloud: Tag Cloud
+tweets: Tweets
+prev: Prev
+next: Next
+comment: Comments
+archive_a: Archives
+archive_b: "Archives: %s"
+page: Page %d
+recent_posts: Recent Posts
+newer: Newer
+older: Older
+share: Share
+rss_feed: RSS
+rss: RSS
+category: Category
+tag: Tag
+social: Social
+friend_links: Friends
+read_more: Read
+home: Home
+archives: Archives
+about: About
+search_local: localSearch
+search_google: googleSearch
+search_placeholder: Search What？
+author: Author
+date: Published Date
+update: Updated Date
+post_categories: Categories
+post_tags: Tags
+post_licence: License
+notification: Notification
+toc: Table of Contents
+visit_counter_uv: Visitors
+visit_counter_pv: Total
