@@ -1,0 +1,35 @@
+name: Hexo-theme-snippet Security Audit
+on: 
+  push:
+    branches: [ master ]
+  pull_request:
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run npm audit
+        run: npm audit --audit-level=moderate
+
+      - name: Scan for secrets
+        uses: gitleaks/gitleaks-action@v2
+
+      - name: Static code analysis
+        run: |
+          npm install eslint-plugin-security --save-dev
+          npx eslint ./source ./scripts --ext .js,.ts
+
+      - name: Verify generation
+        run: |
+          npm install hexo-cli -g
+          hexo clean && hexo g
