@@ -1,4 +1,4 @@
-name: code check
+name: Hexo Theme Security Scan
 
 on:
   push:
@@ -7,68 +7,66 @@ on:
     branches: [ main, master ]
 
 jobs:
-  安全检查:
+  security_scan:  # 使用英文或下划线命名
     runs-on: ubuntu-latest
     
     steps:
-    - name: 检出代码
+    - name: Checkout code
       uses: actions/checkout@v4
       
-    - name: 安装 pnpm
+    - name: Install pnpm
       uses: pnpm/action-setup@v2
       with:
         version: 8
       
-    - name: 设置 Node.js 环境
+    - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '20'
         cache: 'pnpm'
         
-    - name: 安装依赖
+    - name: Install dependencies
       run: pnpm install
       
-    - name: 检查已知漏洞 (pnpm audit)
+    - name: Check for vulnerabilities (pnpm audit)
       run: pnpm audit
       
-    - name: 检查敏感信息
+    - name: Scan for sensitive data
       run: |
-        # 检查是否意外提交了敏感信息
         if grep -r "password\s*=\s*['\"]" themes/; then
-          echo "::error::检测到可能的密码泄露"
+          echo "::error::Potential password leak detected"
           exit 1
         fi
         
         if grep -r "token\s*=\s*['\"]" themes/; then
-          echo "::error::检测到可能的令牌泄露"
+          echo "::error::Potential token leak detected"
           exit 1
         fi
         
         if grep -r "api_key\s*=\s*['\"]" themes/; then
-          echo "::error::检测到可能的API密钥泄露"
+          echo "::error::Potential API key leak detected"
           exit 1
         fi
         
-    - name: 检查不安全的代码模式
+    - name: Check for unsafe code patterns
       run: |
-        # 检查已知的不安全代码模式
         if grep -r "eval(" themes/; then
-          echo "::warning::检测到eval使用，可能存在安全风险"
+          echo "::warning::Detected eval(), potential security risk"
         fi
         
         if grep -r "innerHTML\s*=" themes/; then
-          echo "::warning::检测到innerHTML使用，可能存在XSS风险"
+          echo "::warning::Detected innerHTML, potential XSS risk"
         fi
         
-    - name: 检查过期依赖
+    - name: Check for outdated dependencies
       run: pnpm outdated
       
-    - name: 静态代码分析 (可选)
+    - name: Static code analysis (optional)
       uses: github/codeql-action/analyze@v2
       with:
         languages: javascript
         
-    - name: 运行 Hexo 生成测试
+    - name: Test Hexo build
       run: |
         pnpm install -g hexo-cli
         hexo generate --debug
