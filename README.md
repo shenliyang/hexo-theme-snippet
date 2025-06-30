@@ -604,3 +604,7 @@ Hexo 官方文档: [分类方法的分歧](https://hexo.io/zh-cn/docs/front-matt
 ## License
 
 [MIT License](/LICENSE)
+
+## 访问统计
+<img src="https://profile-counter.glitch.me/hexo-theme-snippet/count.svg" >
+
