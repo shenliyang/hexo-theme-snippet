@@ -1,20 +1,23 @@
-# hexo-theme-snippet
+# hexo-theme-snippet 
 
 > **已升级支持hexo@7+版本**
 
 Snippet 简洁而不简单，也许是一款你寻找已久 hexo 主题。
 
-如果本主题也是你喜欢的菜，请动动手指 [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers) 支持一下 
-
+如果本主题也是你喜欢的菜，请动动手指 [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers) 支持一下  
 
 [![Build Status](https://github.com/shenliyang/hexo-theme-snippet/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/shenliyang/hexo-theme-snippet/actions/workflows/pages/pages-build-deployment)
 [![Read the Docs](https://img.shields.io/badge/docs-complete-brightgreen)](https://github.com/shenliyang/hexo-theme-snippet/blob/master/README.md)
 [![mnt-image](https://img.shields.io/maintenance/yes/2030.svg)](../../commits/master)
 [![codebeat badge](https://codebeat.co/badges/6ef2dcd2-af90-40e0-9628-ac689441f774)](https://codebeat.co/projects/github-com-shenliyang-hexo-theme-snippet-master)
 [![hexo version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io)
+![GitHub Release](https://img.shields.io/github/v/release/shenliyang/hexo-theme-snippet)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/shenliyang/hexo-theme-snippet/blob/master/LICENSE)
+
 [![GitHub stars](https://img.shields.io/github/stars/shenliyang/hexo-theme-snippet.svg)](https://github.com/shenliyang/hexo-theme-snippet/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/shenliyang/hexo-theme-snippet.svg)](https://github.com/shenliyang/hexo-theme-snippet/network)
+
+<img src="https://profile-counter.glitch.me/hexo-theme-snippet/count.svg" />
 
 [主题 Demo 戳这里](http://shenliyang.github.io?rf=gh-demo)
 
@@ -602,9 +605,5 @@ Hexo 官方文档: [分类方法的分歧](https://hexo.io/zh-cn/docs/front-matt
 ![自动化部署结果通知示例](https://s2.ax1x.com/2019/03/06/kvnejs.jpg)
 
 ## License
-
 [MIT License](/LICENSE)
-
-## 访问统计
-<img src="https://profile-counter.glitch.me/hexo-theme-snippet/count.svg" >
 
